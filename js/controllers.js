@@ -15,16 +15,26 @@ app.controller('Header', function($scope) {
 });
 
 app.controller('Summary', function($scope) {
-	$scope.skills = [
+	$scope.traits = [
 		{
 			'name'		: 'Flexible',
 			'icon'		: 'images/icons/flexible.png',
 			'details'	: 'blah blah blah'
 		},
 		{
-			'name'		: 'Flexible',
-			'icon'		: 'images/icons/flexible.png',
+			'name'		: 'Fast',
+			'icon'		: 'images/icons/fast.png',
 			'details'	: 'blah blah blah'
+		},
+	];
+	$scope.skills = [
+		{
+			'name'		: 'JavaScript',
+			'icon'		: 'images/icons/js.png'
+		},
+		{
+			'name'		: 'HTML5',
+			'icon'		: 'images/icons/html.png'
 		},
 	];
 	$scope.information = [

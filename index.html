@@ -22,72 +22,69 @@
     <link rel="shortcut icon" href="favicon.ico">
 
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu">
-    <!--<link rel="stylesheet" href="css/main.css">-->
-
-    <!-- Bootstrap Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
-    <!-- Bootstrap Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!-- HTML5 shim for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
 <body>
 <header ng-controller="Header">
     <a href="/"><h1>{{title}}</h1></a>
 
-    <div id="header-links">
+    <nav>
         <a href="{{link.url}}" ng-repeat="link in links">{{link.text}}</a>
-    </div>
+    </nav>
 </header>
 
+<div id="content">
 
-<div ng-controller="Summary">
+    <section ng-controller="Summary">
 
-    <div id="skills-container">
-        <div class="section" ng-repeat="skill in skills">
-            <img src="{{skill.icon}}" alt="{{skill.name}}" />
-            <h2>{{skill.name}}</h2>
-            <p class="details">{{skill.details}}</p>
-        </div>
-    </div>
+        <section id="traits">
+            <div class="trait" ng-repeat="trait in traits">
+                <img src="{{trait.icon}}" alt="{{trait.name}}" />
+                <h2>{{trait.name}}</h2>
+                <p class="details">{{trait.details}}</p>
+            </div>
+        </section>
 
-    <div id="info-container">
-        <div class="section" ng-repeat="section in information">
-            <h2 id="{{section.id}}" class="heading">{{section.heading}}</h2>
-            <p class="details">{{section.text}}</p>
-        </div>
-    </div>
+        <section id="skills">
+            <div class="skill" ng-repeat="skill in skills">
+                <img src="{{skill.icon}}" alt="{{skill.name}}" />
+                <span>{{skill.name}}</span>
+            </div>
+        </section>
 
-</div>
+        <section id="info-container">
+            <article class="info" ng-repeat="section in information">
+                <h2 id="{{section.id}}" class="heading">{{section.heading}}</h2>
+                <p class="details">{{section.text}}</p>
+            </article>
+        </section>
+
+    </section>
 
 
-<div ng-controller="Projects">
-
-    <div class="projects-container">
+    <section class="projects" ng-controller="Projects">
         <h2>{{title}}</h2>
+
         <div class="project" ng-repeat="project in projects">
             <img src="{{project.thumbnail}}" alt="{{project.name}}" />
             <h3>{{project.name}}</h3>
             <span>{{project.startDate}} &ndash; {{project.endDate}}</span>
             <p>{{project.snippet}}</p>
         </div>
-    
-    </div>
+    </section>
 
 </div>
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<!-- Bootstrap Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<footer>
+
+</footer>
 
 <script src="js/controllers.js"></script>
 </body>
