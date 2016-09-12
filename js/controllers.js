@@ -2,6 +2,7 @@ var app = angular.module("Portfolio", []);
 
 app.controller('Content', function($scope) {
 	$scope.siteTitle = 'Robbie Antenesse';
+	$scope.summaryTitle = 'At a Glance';
 	$scope.traits = [
 		{
 			'name'		: 'Flexible',
@@ -24,15 +25,14 @@ app.controller('Content', function($scope) {
 			'icon'		: 'images/icons/html.png'
 		}
 	];
+	$scope.informationTitle = 'About Me';
 	$scope.information = [
 		{
-			'heading'	: 'About',
-			'id'		: 'about',
+			'heading'	: 'My Story',
 			'text'		: 'Blah blah blah.'
 		},
 		{
-			'heading'	: 'Origin',
-			'id'		: 'origin',
+			'heading'	: 'My Interests',
 			'text'		: 'Blah blah blah.'
 		}
 	];

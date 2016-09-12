@@ -48,11 +48,8 @@
 
                 <links class="collapse" id="navbar-collapse">
                     <ul>
-                        <li><a href="#traits">Traits</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li ng-repeat="section in information">
-                            <a href="#{{section.id}}">{{section.heading}}</a>
-                        </li>
+                        <li><a href="#top">▲ Top</a></li>
+                        <li><a href="#about">About Me</a></li>
                         <li><a href="#projects">Projects</a></li>
                     </ul>
                 </links>
@@ -61,9 +58,10 @@
     </nav>
 
     <section id="summary">
+        <a name="top" class="anchor"></a>
+        <h2>{{summaryTitle}}</h2>
 
         <section id="traits-container">
-            <a name="traits" class="anchor"></a>
             <div class="trait card-container" ng-repeat="trait in traits" ontouchstart="this.classList.toggle('hover');">
                 <div class="card-flipper">
                     <div class="card-front">
@@ -78,7 +76,6 @@
         </section>
 
         <section id="skills-container">
-            <a name="skills" class="anchor"></a>
             <div class="skill card-container" ng-repeat="skill in skills" ontouchstart="this.classList.toggle('hover');">
                 <div class="card-flipper">
                     <div class="card-front">
@@ -92,8 +89,10 @@
         </section>
 
         <section id="info-container">
+            <a name="about" class="anchor"></a>
+            <h2>{{informationTitle}}</h2>
+
             <article class="info" ng-repeat="section in information">
-                <a name="{{section.id}}" class="anchor"></a>
                 <div class="panel-heading">{{section.heading}}</div class="panel-heading">
                 <p class="details">{{section.text}}</p>
             </article>

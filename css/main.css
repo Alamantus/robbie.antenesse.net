@@ -6323,7 +6323,7 @@ button.close {
   .hidden-print {
     display: none !important; } }
 body {
-  padding-top: 80px; }
+  padding-top: 70px; }
 
 a {
   cursor: pointer;
@@ -6336,7 +6336,7 @@ nav .brand {
 .anchor {
   display: block;
   position: relative;
-  top: -100px;
+  top: -90px;
   visibility: hidden; }
 
 section {
