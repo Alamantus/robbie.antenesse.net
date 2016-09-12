@@ -25,7 +25,7 @@ app.controller('Summary', function($scope) {
 			'name'		: 'Fast',
 			'icon'		: 'images/icons/fast.png',
 			'details'	: 'blah blah blah'
-		},
+		}
 	];
 	$scope.skills = [
 		{
@@ -35,7 +35,7 @@ app.controller('Summary', function($scope) {
 		{
 			'name'		: 'HTML5',
 			'icon'		: 'images/icons/html.png'
-		},
+		}
 	];
 	$scope.information = [
 		{

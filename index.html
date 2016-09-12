@@ -22,6 +22,7 @@
     <link rel="shortcut icon" href="favicon.ico">
 
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu">
+    <!-- Sass compiled stylesheet with Bootstrap -->
     <link rel="stylesheet" href="css/main.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
@@ -32,15 +33,29 @@
     <![endif]-->
 </head>
 <body>
-<header ng-controller="Header">
-    <a href="/"><h1>{{title}}</h1></a>
+<nav ng-controller="Header">
+    <container>
+        <header>
+            <button type="button" class="collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="/">{{title}}</a>
 
-    <nav>
-        <a href="{{link.url}}" ng-repeat="link in links">{{link.text}}</a>
-    </nav>
-</header>
+            <links class="collapse" id="navbar-collapse">
+                <ul>
+                    <li ng-repeat="link in links">
+                        <a href="{{link.url}}">{{link.name}}</a>
+                    </li>
+                </ul>
+            </links>
+        </header>
+    </container>
+</nav>
 
-<div id="content">
+<container id="content">
 
     <section ng-controller="Summary">
 
@@ -61,7 +76,7 @@
 
         <section id="info-container">
             <article class="info" ng-repeat="section in information">
-                <h2 id="{{section.id}}" class="heading">{{section.heading}}</h2>
+                <div class="panel-heading" id="{{section.id}}">{{section.heading}}</div class="panel-heading">
                 <p class="details">{{section.text}}</p>
             </article>
         </section>
@@ -80,12 +95,16 @@
         </div>
     </section>
 
-</div>
+</container>
 
 <footer>
 
 </footer>
 
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Bootstrap compiled and minified JavaScript -->
+<script src="bootstrap-sass-3.3.7/assets/javascripts/bootstrap.min.js"></script>
 <script src="js/controllers.js"></script>
 </body>
 </html>
