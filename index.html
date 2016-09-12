@@ -33,50 +33,68 @@
     <![endif]-->
 </head>
 <body>
-<nav ng-controller="Header">
-    <container>
-        <header>
-            <button type="button" class="collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="brand" href="/">{{title}}</a>
+<container id="content" ng-controller="Content">
 
-            <links class="collapse" id="navbar-collapse">
-                <ul>
-                    <li ng-repeat="link in links">
-                        <a href="{{link.url}}">{{link.name}}</a>
-                    </li>
-                </ul>
-            </links>
-        </header>
-    </container>
-</nav>
+    <nav>
+        <container>
+            <header>
+                <button type="button" class="collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="brand" href="/">{{siteTitle}}</a>
 
-<container id="content">
+                <links class="collapse" id="navbar-collapse">
+                    <ul>
+                        <li><a href="#traits">Traits</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li ng-repeat="section in information">
+                            <a href="#{{section.id}}">{{section.heading}}</a>
+                        </li>
+                        <li><a href="#projects">Projects</a></li>
+                    </ul>
+                </links>
+            </header>
+        </container>
+    </nav>
 
-    <section ng-controller="Summary">
+    <section id="summary">
 
-        <section id="traits">
-            <div class="trait" ng-repeat="trait in traits">
-                <img src="{{trait.icon}}" alt="{{trait.name}}" />
-                <h2>{{trait.name}}</h2>
-                <p class="details">{{trait.details}}</p>
+        <section id="traits-container">
+            <a name="traits" class="anchor"></a>
+            <div class="trait card-container" ng-repeat="trait in traits" ontouchstart="this.classList.toggle('hover');">
+                <div class="card-flipper">
+                    <div class="card-front">
+                        <img src="{{trait.icon}}" alt="{{trait.name}}" />
+                    </div>
+                    <div class="card-back">
+                        <h2>{{trait.name}}</h2>
+                        <p class="details">{{trait.details}}</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="skills">
-            <div class="skill" ng-repeat="skill in skills">
-                <img src="{{skill.icon}}" alt="{{skill.name}}" />
-                <span>{{skill.name}}</span>
+        <section id="skills-container">
+            <a name="skills" class="anchor"></a>
+            <div class="skill card-container" ng-repeat="skill in skills" ontouchstart="this.classList.toggle('hover');">
+                <div class="card-flipper">
+                    <div class="card-front">
+                        <img src="{{skill.icon}}" alt="{{skill.name}}" />
+                    </div>
+                    <div class="card-back">
+                        <h2>{{skill.name}}</h2>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="info-container">
             <article class="info" ng-repeat="section in information">
-                <div class="panel-heading" id="{{section.id}}">{{section.heading}}</div class="panel-heading">
+                <a name="{{section.id}}" class="anchor"></a>
+                <div class="panel-heading">{{section.heading}}</div class="panel-heading">
                 <p class="details">{{section.text}}</p>
             </article>
         </section>
@@ -84,8 +102,9 @@
     </section>
 
 
-    <section class="projects" ng-controller="Projects">
-        <h2>{{title}}</h2>
+    <section id="projects-container">
+        <a name="projects" class="anchor"></a>
+        <h2>{{projectsTitle}}</h2>
 
         <div class="project" ng-repeat="project in projects">
             <img src="{{project.thumbnail}}" alt="{{project.name}}" />

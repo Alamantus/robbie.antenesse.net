@@ -1,20 +1,7 @@
 var app = angular.module("Portfolio", []);
 
-app.controller('Header', function($scope) {
-	$scope.title = 'Robbie Antenesse';
-	$scope.links = [
-		{
-			'name'	: 'Home',
-			'url'	: '/'
-		},
-		{
-			'name'	: 'About',
-			'url'	: '#about'
-		}
-	];
-});
-
-app.controller('Summary', function($scope) {
+app.controller('Content', function($scope) {
+	$scope.siteTitle = 'Robbie Antenesse';
 	$scope.traits = [
 		{
 			'name'		: 'Flexible',
@@ -49,10 +36,7 @@ app.controller('Summary', function($scope) {
 			'text'		: 'Blah blah blah.'
 		}
 	];
-});
-
-app.controller('Projects', function($scope) {
-	$scope.title = 'Projects I\'ve worked on';
+	$scope.projectsTitle = 'Projects I\'ve worked on';
 	$scope.projects = [
 		{
 			'name'			: 'This AngularJS Website',
