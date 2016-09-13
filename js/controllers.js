@@ -1,9 +1,10 @@
-var app = angular.module("Portfolio", []);
+var app = angular.module("Portfolio", ["ngSanitize"]);
 var currentDate = new Date();
 
 app.controller("Content", function($scope) {
 	$scope.currentYear = currentDate.getFullYear();
 	$scope.siteTitle = "Robbie Antenesse";
+
 	$scope.summaryTitle = "At a Glance";
 	$scope.traits = [
 		{
@@ -145,6 +146,70 @@ app.controller("Content", function($scope) {
 	];
 	knuthShuffle($scope.skills);
 
+	$scope.projectsTitle = "Portfolio";
+	$scope.projects = [
+		{
+			"name"				: "This Portfolio Site",
+			"thumbnail"		: "images/thumbnails/angular.jpg",
+			"type"				: "Website",
+			"startDate"		: "March 20, 2016",
+			"endDate"			: "March 21, 2016",
+			"link"				: "https://alamantus.github.io",
+			"snippet"			: "Designed and built website with AngularJS, Bootstrap, and Sass",
+			"details"			: ""
+		},
+		{
+			"name"				: "Radio Silence",
+			"thumbnail"		: "images/thumbnails/radio-silence.jpg",
+			"type"				: "Game",
+			"startDate"		: "September 1, 2016",
+			"endDate"			: "September 11, 2016",
+			"link"				: "https://alamantus.itch.io/radio-silence",
+			"snippet"			: "Built with C# in Unity 3D in 10 days for the <a href='https://itch.io/jam/fermi-paradox-jam' target='_blank'>Fermi Paradox Jam</a>",
+			"details"			: ""
+		},
+		{
+			"name"				: "Public Pinboard",
+			"thumbnail"		: "images/thumbnails/public-pinboard.jpg",
+			"type"				: "Tool",
+			"startDate"		: "May 29, 2016",
+			"endDate"			: "June 2, 2016",
+			"link"				: "http://alamantus.github.io/Public-Pinboard",
+			"snippet"			: "Built with PHP for posting small post-it note-like messages to a public space that allows anyone to also remove the messages.",
+			"details"			: ""
+		},
+		{
+			"name"				: "Trade Winds",
+			"thumbnail"		: "images/thumbnails/radio-silence.jpg",
+			"type"				: "Game",
+			"startDate"		: "April 1, 2016",
+			"endDate"			: "May 18, 2016",
+			"link"				: "https://alamantus.itch.io/trade-winds",
+			"snippet"			: "Designed and built with JavaScript and HTML5 Canvas in 14 days for the <a href='https://itch.io/jam/lowrezjam2016' target='_blank'>2016 LOWREZJAM</a> and updated incrementally",
+			"details"			: ""
+		},
+		{
+			"name"				: "Time-to-Page Calculator",
+			"thumbnail"		: "images/thumbnails/time-to-page.jpg",
+			"type"				: "Tool",
+			"startDate"		: "June 15, 2015",
+			"endDate"			: "June 19, 2015",
+			"link"				: "https://alamantus.itch.io/time-to-page",
+			"snippet"			: "Built with JavaScript to convert audiobook time to book page and vice-versa",
+			"details"			: ""
+		},
+		{
+			"name"				: "Insanity Jam",
+			"thumbnail"		: "images/thumbnails/insanity-jam.jpg",
+			"type"				: "Website",
+			"startDate"		: "March 1, 2014",
+			"endDate"			: "November 10, 2014",
+			"link"				: "http://insanityjam.com",
+			"snippet"			: "Designed and built with HTML5, PHP, and Bootstrap for giving information about self-hosted game jam",
+			"details"			: ""
+		}
+	];
+
 	$scope.informationTitle = "About Me";
 	$scope.information = [
 		{
@@ -154,25 +219,6 @@ app.controller("Content", function($scope) {
 		{
 			"heading"	: "My Interests",
 			"text"		: "Blah blah blah."
-		}
-	];
-	$scope.projectsTitle = "Portfolio";
-	$scope.projects = [
-		{
-			"name"				: "This AngularJS Website",
-			"thumbnail"		: "images/thumbnails/angular.png",
-			"startDate"		: "March 20, 2016",
-			"endDate"			: "March 21, 2016",
-			"snippet"			: "blah blah blah",
-			"details"			: "blah blah blah blah blah blah"
-		},
-		{
-			"name"				: "This AngularJS Website",
-			"thumbnail"		: "images/thumbnails/angular.png",
-			"startDate"		: "March 20, 2016",
-			"endDate"			: "March 21, 2016",
-			"snippet"			: "blah blah blah",
-			"details"			: "blah blah blah blah blah blah"
 		}
 	];
 });

@@ -25,7 +25,8 @@
     <!-- Sass compiled stylesheet with Bootstrap -->
     <link rel="stylesheet" href="css/main.css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.5.8/angular-sanitize.min.js"></script>
 
     <!-- HTML5 shim for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -48,8 +49,8 @@
             <links class="collapse" id="navbar-collapse">
                 <ul>
                     <li><a href="#top">{{summaryTitle}}</a></li>
-                    <li><a href="#about">{{informationTitle}}</a></li>
                     <li><a href="#projects">{{projectsTitle}}</a></li>
+                    <li><a href="#about">{{informationTitle}}</a></li>
                 </ul>
             </links>
         </header>
@@ -57,67 +58,65 @@
 </nav>
 
 <container id="content" class="center-block">
-    <section id="summary">
-        <a name="top" class="anchor"></a>
-        <h2>{{summaryTitle}}</h2>
 
-        <section id="traits-container">
-            <div class="trait card-container" ng-repeat="trait in traits" ontouchstart="this.classList.toggle('hover');" style="z-index: {{1000 + traits.length - $index}}">
-                <div class="card-flipper">
-                    <div class="card-front">
-                        <img src="{{trait.icon}}" alt="{{trait.name}}" />
-                    </div>
-                    <div class="card-back">
-                        <h3>{{trait.name}}</h3>
-                        <p class="details">{{trait.details}}</p>
-                    </div>
+    <a name="top" class="anchor"></a>
+    <h2>{{summaryTitle}}</h2>
+
+    <section id="traits-container">
+        <div class="trait card-container" ng-repeat="trait in traits" ontouchstart="this.classList.toggle('hover');" style="z-index: {{1000 + traits.length - $index}}">
+            <div class="card-flipper">
+                <div class="card-front">
+                    <img src="{{trait.icon}}" alt="{{trait.name}}" />
+                </div>
+                <div class="card-back">
+                    <h3>{{trait.name}}</h3>
+                    <p class="details">{{trait.details}}</p>
                 </div>
             </div>
-        </section>
-
-        <section id="skills-container">
-            <h3>{{skillsTitle}}</h3>
-            <div class="skill card-container" ng-repeat="skill in skills" ontouchstart="this.classList.toggle('hover');" style="z-index: {{1000 + traits.length - $index}}">
-                <div class="card-flipper">
-                    <div class="card-front">
-                        <img src="{{skill.icon}}" alt="{{skill.name}}" />
-                    </div>
-                    <div class="card-back">
-                        <h4>{{skill.name}}</h4>
-                        <p class="details">
-                            {{(currentYear - skill.yearBegan) <= 1 ? '1' : (currentYear - skill.yearBegan)}}+ years of experience
-                        </p>
-                        <span class="link" ng-repeat="link in skill.links">
-                            <a href="{{link}}" target="_blank"><b>{{$index + 1}}</b></a>&nbsp;
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="info-container">
-            <a name="about" class="anchor"></a>
-            <h2>{{informationTitle}}</h2>
-
-            <article class="info" ng-repeat="section in information">
-                <div class="panel-heading">{{section.heading}}</div class="panel-heading">
-                <p class="details">{{section.text}}</p>
-            </article>
-        </section>
-
+        </div>
     </section>
 
+    <section id="skills-container">
+        <h3>{{skillsTitle}}</h3>
+        <div class="skill card-container" ng-repeat="skill in skills" ontouchstart="this.classList.toggle('hover');" style="z-index: {{1000 + traits.length - $index}}">
+            <div class="card-flipper">
+                <div class="card-front">
+                    <img src="{{skill.icon}}" alt="{{skill.name}}" />
+                </div>
+                <div class="card-back">
+                    <h4>{{skill.name}}</h4>
+                    <p class="details">
+                        {{(currentYear - skill.yearBegan) <= 1 ? '1' : (currentYear - skill.yearBegan)}}+ years of experience
+                    </p>
+                    <span class="link" ng-repeat="link in skill.links">
+                        <a href="{{link}}" target="_blank"><b>{{$index + 1}}</b></a>&nbsp;
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section id="projects-container">
         <a name="projects" class="anchor"></a>
         <h2>{{projectsTitle}}</h2>
 
-        <div class="project" ng-repeat="project in projects">
-            <img src="{{project.thumbnail}}" alt="{{project.name}}" />
-            <h3>{{project.name}}</h3>
+        <article class="project" ng-repeat="project in projects">
+            <img class="icon" src="images/icons/{{project.type.toLowerCase()}}.png" alt="{{project.type}}" />
+            <a href="{{project.link}}" target="_blank"><img class="thumbnail" src="{{project.thumbnail}}" alt="{{project.name}}" />
+            <h3>{{project.name}}</h3></a>
             <span>{{project.startDate}} &ndash; {{project.endDate}}</span>
-            <p>{{project.snippet}}</p>
-        </div>
+            <p ng-bind-html="project.snippet"></p>
+        </article>
+    </section>
+
+    <section id="info-container">
+        <a name="about" class="anchor"></a>
+        <h2>{{informationTitle}}</h2>
+
+        <article class="info" ng-repeat="section in information">
+            <div class="panel-heading">{{section.heading}}</div class="panel-heading">
+            <p class="details">{{section.text}}</p>
+        </article>
     </section>
 
 </container>

@@ -55,6 +55,11 @@ nav {
   visibility: hidden;
 }
 
+h2,
+h3 {
+  @extend .text-center;
+}
+
 section {
   @include make-row();
   margin-left: 0;
@@ -64,7 +69,7 @@ section {
   .trait,
   .skill,
   .project {
-    margin: 0 0 20px;
+    margin: 0 0 30px;
   }
 
   .info,
@@ -118,6 +123,7 @@ section {
     @extend .panel;
     @extend .panel-default;
     transform: rotateY(180deg);
+    padding: 0 0 10px;
   }
 }
 
@@ -147,11 +153,31 @@ section {
   }
 }
 
+.project {
+  @include make-md-column(6);
+
+  .icon {
+    float: right;
+    margin: 5px;
+  }
+
+  .thumbnail {
+    width: 90%;
+    min-width: 200px;
+  }
+
+  h2,
+  h3 {
+    @extend .text-left;
+  }
+
+  p {
+    padding: 10px 0;
+  }
+}
+
 .info {
-  @include make-sm-column-offset(1);
-  @include make-sm-column(10);
-  @include make-lg-column-offset(2);
-  @include make-lg-column(8);
+  @include make-md-column(12);
   padding-left: 0;
   padding-right: 0;
 
@@ -162,8 +188,4 @@ section {
   p {
     @extend .panel-body;
   }
-}
-
-.project {
-  @include make-md-column(6);
 }
