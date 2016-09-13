@@ -1,7 +1,7 @@
 @import "customVariables";
 @import "../bootstrap-sass-3.3.7/assets/stylesheets/bootstrap";
 
-$navbar-padding: 70px;
+$navbar-padding: 80px;
 $trait-height: 128px;
 $skill-height: 64px;
 
@@ -60,14 +60,14 @@ section {
   margin-left: 0;
   margin-right: 0;
 
-  article,
+  .info,
   .trait,
   .skill,
   .project {
     margin: 0 0 20px;
   }
 
-  article,
+  .info,
   .project {
     @extend .panel;
     @extend .panel-default;
@@ -122,7 +122,8 @@ section {
 }
 
 .trait {
-  @include make-md-column(3);
+  @include make-xs-column(12);
+  @include make-sm-column(4);
   height: $trait-height;
 
   img {
@@ -131,7 +132,10 @@ section {
 }
 
 .skill {
+  @include make-xs-column(4);
+  @include make-sm-column(2);
   @include make-md-column(2);
+  @include make-lg-column(3);
   height: $skill-height;
 
   img {
@@ -143,8 +147,11 @@ section {
   }
 }
 
-article {
-  @include make-md-column(8);
+.info {
+  @include make-sm-column-offset(1);
+  @include make-sm-column(10);
+  @include make-lg-column-offset(2);
+  @include make-lg-column(8);
   padding-left: 0;
   padding-right: 0;
 
