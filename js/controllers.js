@@ -180,7 +180,7 @@ app.controller("Content", function($scope) {
 		},
 		{
 			"name"				: "Trade Winds",
-			"thumbnail"		: "images/thumbnails/radio-silence.jpg",
+			"thumbnail"		: "images/thumbnails/trade-winds.jpg",
 			"type"				: "Game",
 			"startDate"		: "April 1, 2016",
 			"endDate"			: "May 18, 2016",
