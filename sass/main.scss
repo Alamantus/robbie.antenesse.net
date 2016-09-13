@@ -2,6 +2,8 @@
 @import "../bootstrap-sass-3.3.7/assets/stylesheets/bootstrap";
 
 $navbar-padding: 70px;
+$trait-height: 128px;
+$skill-height: 64px;
 
 body {
   padding-top: $navbar-padding;
@@ -62,6 +64,11 @@ section {
   .trait,
   .skill,
   .project {
+    margin: 0 0 20px;
+  }
+
+  article,
+  .project {
     @extend .panel;
     @extend .panel-default;
   }
@@ -72,6 +79,7 @@ section {
 // entire container, keeps perspective
 .card-container {
   perspective: 1000px;
+  // z-index is set inline for each card, decreasing
 
   // flip the pane when hovered
   &:hover, .hover {
@@ -107,18 +115,32 @@ section {
 
   // back, initially hidden pane
   .card-back {
+    @extend .panel;
+    @extend .panel-default;
     transform: rotateY(180deg);
   }
 }
 
 .trait {
   @include make-md-column(3);
-  height: 200px;
+  height: $trait-height;
+
+  img {
+    max-height: $trait-height;
+  }
 }
 
 .skill {
   @include make-md-column(2);
-  height: 80px;
+  height: $skill-height;
+
+  img {
+    max-height: $skill-height;
+  }
+
+  .link {
+    display: inline;
+  }
 }
 
 article {
