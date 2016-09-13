@@ -5,6 +5,10 @@ $navbar-padding: 80px;
 $trait-height: 128px;
 $skill-height: 64px;
 
+.ng-cloak {
+  display: none !important;
+}
+
 body {
   padding-top: $navbar-padding;
 }
