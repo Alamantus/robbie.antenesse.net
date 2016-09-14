@@ -110,14 +110,14 @@
 
             <p ng-bind-html="project.snippet"></p>
 
-            <div class="project-details" ng-If="project.details.role != '' && project.details.skills != ''">
+            <div class="project-details" ng-If="showMoreInfo(project)">
                 <!-- Button trigger modal -->
-                <button type="button" class="project-details-button" data-toggle="modal" data-target="#project{{$inded}}-details-modal">
+                <button type="button" class="project-details-button" data-toggle="modal" data-target="#project{{$index}}-details-modal">
                     {{projectsMoreInfo}}
                 </button>
 
                 <!-- Modal -->
-                <div class="modal fade" id="project{{$inded}}-details-modal" tabindex="-1" role="dialog" aria-labelledby="project{{$index}}-details">
+                <div class="modal fade" id="project{{$index}}-details-modal" tabindex="-1" role="dialog" aria-labelledby="project{{$index}}-details">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -132,11 +132,11 @@
                                 <p>{{project.details.skills}}</p>
                                 <div ng-If="project.details.process != ''">
                                     <h4>Development Process</h4>
-                                    <p>{{project.details.process}}</p>
+                                    <p ng-bind-html="project.details.process"></p>
                                 </div>
                                 <div ng-If="project.details.lessons != ''">
                                     <h4>Lessons Learned</h4>
-                                    <p>{{project.details.lessons}}</p>
+                                    <p ng-bind-html="project.details.lessons"></p>
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -160,10 +160,40 @@
                     <span>{{project.startDate}} &ndash; {{project.endDate}}</span>
                     <p ng-bind-html="project.snippet"></p>
 
-                    <div class="project-details" ng-If="project.details != ''">
-                        <button type="button" data-toggle="collapse" data-target="#more-project{{$index}}-collapse">{{projectsMoreInfo}}</button>
-                        <div id="more-project{{$index}}-collapse" class="panel-body collapse">
-                            <p>{{project.details}}</p>
+                    <div class="project-details" ng-If="showMoreInfo(project)">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="project-details-button" data-toggle="modal" data-target="#hidden-project{{$index}}-details-modal">
+                            {{projectsMoreInfo}}
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="hidden-project{{$index}}-details-modal" tabindex="-1" role="dialog" aria-labelledby="hidden-project{{$index}}-details">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h3 class="modal-title" id="hidden-project{{$index}}-details">{{project.name}}</h3>
+                                        <span>{{project.startDate}} &ndash; {{project.endDate}}</span>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h4>Project Roles</h4>
+                                        <p>{{project.details.role}}</p>
+                                        <h4>Skills Used</h4>
+                                        <p>{{project.details.skills}}</p>
+                                        <div ng-If="project.details.process != ''">
+                                            <h4>Development Process</h4>
+                                            <p ng-bind-html="project.details.process"></p>
+                                        </div>
+                                        <div ng-If="project.details.lessons != ''">
+                                            <h4>Lessons Learned</h4>
+                                            <p ng-bind-html="project.details.lessons"></p>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </article>

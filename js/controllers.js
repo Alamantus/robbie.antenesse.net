@@ -149,6 +149,9 @@ app.controller("Content", function($scope) {
 	$scope.projectsMoreInfo = "More about this...";
 	$scope.numProjectsBeforeHide = 6;
 	$scope.moreProjectsTitle = "More Projects";
+	$scope.showMoreInfo = function (project) {
+		return project.details.role != '' && project.details.skills != '';
+	};
 	$scope.projects = [
 		{
 			"name"				: "This Portfolio Site",
@@ -160,8 +163,8 @@ app.controller("Content", function($scope) {
 			"snippet"			: "Designed and built website with AngularJS, Bootstrap, and Sass",
 			"details"			: {
 												"role"			: "All",
-												"skills"		: "",
-												"process"		: "",
+												"skills"		: "AngularJS, Bootstrap, Sass, Github",
+												"process"		: "Designed it and figured out how everything fits together.",
 												"lessons"		: ""
 											}
 		},
