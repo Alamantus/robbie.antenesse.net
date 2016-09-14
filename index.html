@@ -89,7 +89,7 @@
                         {{(currentYear - skill.yearBegan) <= 1 ? '1' : (currentYear - skill.yearBegan)}}+ years of experience
                     </p>
                     <span class="link" ng-repeat="link in skill.links">
-                        <a href="{{link}}" target="_blank"><b>{{$index + 1}}</b></a>&nbsp;
+                        <button type="button" class="pop">{{$index + 1}}<span class="pop-content"><a href="{{link}}" target="_blank">{{link}}</a></span></button>&nbsp;
                     </span>
                 </div>
             </div>
