@@ -1,4 +1,3 @@
-var app = angular.module("Portfolio", ["ngSanitize"]);
 var currentDate = new Date();
 
 app.controller("Content", function($scope) {
