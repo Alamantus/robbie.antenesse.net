@@ -2,8 +2,9 @@
 @import "../bootstrap-sass-3.3.7/assets/stylesheets/bootstrap";
 
 $navbar-padding: 80px;
-$trait-height: 128px;
+$trait-height: 200px;
 $skill-height: 64px;
+$standard-margin: 10px;
 
 .ng-cloak {
   display: none !important;
@@ -77,7 +78,8 @@ section {
   }
 
   .info,
-  .project {
+  .project,
+  .project-hider {
     @extend .panel;
     @extend .panel-default;
   }
@@ -127,7 +129,7 @@ section {
     @extend .panel;
     @extend .panel-default;
     transform: rotateY(180deg);
-    padding: 0 0 10px;
+    padding: 0 0 $standard-margin;
   }
 }
 
@@ -166,8 +168,7 @@ section {
   }
 
   .thumbnail {
-    width: 90%;
-    min-width: 200px;
+    width: 80%;
   }
 
   h2,
@@ -175,8 +176,39 @@ section {
     @extend .text-left;
   }
 
+  span {
+    color: $gray;
+    font-style: italic;
+  }
+
   p {
-    padding: 10px 0;
+    padding: $standard-margin;
+  }
+
+  .project-details {
+    margin: $standard-margin 0;
+
+    .project-details-button {
+      @extend .btn;
+      @extend .btn-xs;
+    }
+  }
+
+}
+
+.project-hider {
+  @include make-md-column(12);
+  margin-top: $standard-margin;
+  padding-left: 0;
+  padding-right: 0;
+
+  .panel-heading {
+    height: 60px;
+    cursor: pointer;
+
+    h3 {
+      margin-top: 5px;
+    }
   }
 }
 

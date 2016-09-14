@@ -146,6 +146,9 @@ app.controller("Content", function($scope) {
 	knuthShuffle($scope.skills);
 
 	$scope.projectsTitle = "Portfolio";
+	$scope.projectsMoreInfo = "More about this...";
+	$scope.numProjectsBeforeHide = 6;
+	$scope.moreProjectsTitle = "More Projects";
 	$scope.projects = [
 		{
 			"name"				: "This Portfolio Site",
@@ -155,7 +158,12 @@ app.controller("Content", function($scope) {
 			"endDate"			: "March 21, 2016",
 			"link"				: "https://alamantus.github.io",
 			"snippet"			: "Designed and built website with AngularJS, Bootstrap, and Sass",
-			"details"			: ""
+			"details"			: {
+												"role"			: "All",
+												"skills"		: "",
+												"process"		: "",
+												"lessons"		: ""
+											}
 		},
 		{
 			"name"				: "Radio Silence",
@@ -165,7 +173,12 @@ app.controller("Content", function($scope) {
 			"endDate"			: "September 11, 2016",
 			"link"				: "https://alamantus.itch.io/radio-silence",
 			"snippet"			: "Built with C# in Unity 3D in 10 days for the <a href='https://itch.io/jam/fermi-paradox-jam' target='_blank'>Fermi Paradox Jam</a>",
-			"details"			: ""
+			"details"			: {
+												"role"			: "Code, Development, Design, Art (models, GUIs)",
+												"skills"		: "C#, Unity 3D, PHP, MySQL, GiMP, Blender",
+												"process"		: "",
+												"lessons"		: ""
+											}
 		},
 		{
 			"name"				: "Public Pinboard",
@@ -175,7 +188,12 @@ app.controller("Content", function($scope) {
 			"endDate"			: "June 2, 2016",
 			"link"				: "http://alamantus.github.io/Public-Pinboard",
 			"snippet"			: "Built with PHP for posting small post-it note-like messages to a public space that allows anyone to also remove the messages.",
-			"details"			: ""
+			"details"			: {
+												"role"			: "All",
+												"skills"		: "",
+												"process"		: "",
+												"lessons"		: ""
+											}
 		},
 		{
 			"name"				: "Trade Winds",
@@ -185,7 +203,12 @@ app.controller("Content", function($scope) {
 			"endDate"			: "May 18, 2016",
 			"link"				: "https://alamantus.itch.io/trade-winds",
 			"snippet"			: "Designed and built with JavaScript and HTML5 Canvas in 14 days for the <a href='https://itch.io/jam/lowrezjam2016' target='_blank'>2016 LOWREZJAM</a> and updated incrementally",
-			"details"			: ""
+			"details"			: {
+												"role"			: "All",
+												"skills"		: "",
+												"process"		: "",
+												"lessons"		: ""
+											}
 		},
 		{
 			"name"				: "Time-to-Page Calculator",
@@ -195,7 +218,12 @@ app.controller("Content", function($scope) {
 			"endDate"			: "June 19, 2015",
 			"link"				: "https://alamantus.itch.io/time-to-page",
 			"snippet"			: "Built with JavaScript to convert audiobook time to book page and vice-versa",
-			"details"			: ""
+			"details"			: {
+												"role"			: "All",
+												"skills"		: "",
+												"process"		: "",
+												"lessons"		: ""
+											}
 		},
 		{
 			"name"				: "Insanity Jam",
@@ -205,7 +233,27 @@ app.controller("Content", function($scope) {
 			"endDate"			: "November 10, 2014",
 			"link"				: "http://insanityjam.com",
 			"snippet"			: "Designed and built with HTML5, PHP, and Bootstrap for giving information about self-hosted game jam",
-			"details"			: ""
+			"details"			: {
+												"role"			: "All",
+												"skills"		: "",
+												"process"		: "",
+												"lessons"		: ""
+											}
+		},
+		{
+			"name"				: "DataFall",
+			"thumbnail"		: "images/thumbnails/DataFall.jpg",
+			"type"				: "Game",
+			"startDate"		: "March 1, 2014",
+			"endDate"			: "March 10, 2014",
+			"link"				: "https://alamantus.itch.io/datafall",
+			"snippet"			: "Designed and built with C# in Unity 3D for the 2014 Cyberpunk Jam (requires browser plugin to play)",
+			"details"			: {
+												"role"			: "All",
+												"skills"		: "",
+												"process"		: "",
+												"lessons"		: ""
+											}
 		}
 	];
 

@@ -63,7 +63,7 @@
     <h2>{{summaryTitle}}</h2>
 
     <section id="traits-container">
-        <div class="trait card-container" ng-repeat="trait in traits" ontouchstart="this.classList.toggle('hover');" style="z-index: {{1000 + traits.length - $index}}">
+        <div class="trait card-container" ng-repeat="trait in traits | limitTo: 3" ontouchstart="this.classList.toggle('hover');" style="z-index: {{1000 + traits.length - $index}}">
             <div class="card-flipper">
                 <div class="card-front">
                     <img src="{{trait.icon}}" alt="{{trait.name}}" />
@@ -78,7 +78,7 @@
 
     <section id="skills-container">
         <h3>{{skillsTitle}}</h3>
-        <div class="skill card-container" ng-repeat="skill in skills" ontouchstart="this.classList.toggle('hover');" style="z-index: {{1000 + traits.length - $index}}">
+        <div class="skill card-container" ng-repeat="skill in skills | limitTo: 12" ontouchstart="this.classList.toggle('hover');" style="z-index: {{1000 + traits.length - $index}}">
             <div class="card-flipper">
                 <div class="card-front">
                     <img src="{{skill.icon}}" alt="{{skill.name}}" />
@@ -100,13 +100,75 @@
         <a name="projects" class="anchor"></a>
         <h2>{{projectsTitle}}</h2>
 
-        <article class="project" ng-repeat="project in projects">
+        <article class="project" ng-repeat="project in projects | limitTo: numProjectsBeforeHide">
             <img class="icon" src="images/icons/{{project.type.toLowerCase()}}.png" alt="{{project.type}}" />
+
             <a href="{{project.link}}" target="_blank"><img class="thumbnail" src="{{project.thumbnail}}" alt="{{project.name}}" />
             <h3>{{project.name}}</h3></a>
+
             <span>{{project.startDate}} &ndash; {{project.endDate}}</span>
+
             <p ng-bind-html="project.snippet"></p>
+
+            <div class="project-details" ng-If="project.details.role != '' && project.details.skills != ''">
+                <!-- Button trigger modal -->
+                <button type="button" class="project-details-button" data-toggle="modal" data-target="#project{{$inded}}-details-modal">
+                    {{projectsMoreInfo}}
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="project{{$inded}}-details-modal" tabindex="-1" role="dialog" aria-labelledby="project{{$index}}-details">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h3 class="modal-title" id="project{{$index}}-details">{{project.name}}</h3>
+                                <span>{{project.startDate}} &ndash; {{project.endDate}}</span>
+                            </div>
+                            <div class="modal-body">
+                                <h4>Project Roles</h4>
+                                <p>{{project.details.role}}</p>
+                                <h4>Skills Used</h4>
+                                <p>{{project.details.skills}}</p>
+                                <div ng-If="project.details.process != ''">
+                                    <h4>Development Process</h4>
+                                    <p>{{project.details.process}}</p>
+                                </div>
+                                <div ng-If="project.details.lessons != ''">
+                                    <h4>Lessons Learned</h4>
+                                    <p>{{project.details.lessons}}</p>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </article>
+
+        <div id="hidden-projects" class="project-hider">
+            <div class="panel-heading" data-toggle="collapse" data-target="#projects-collapse">
+                <h3>{{moreProjectsTitle}}</h3>
+            </div>
+            <div id="projects-collapse" class="panel-body collapse">
+                <article class="project" ng-repeat="project in projects | startFrom: numProjectsBeforeHide">
+                    <img class="icon" src="images/icons/{{project.type.toLowerCase()}}.png" alt="{{project.type}}" />
+                    <a href="{{project.link}}" target="_blank"><img class="thumbnail" src="{{project.thumbnail}}" alt="{{project.name}}" />
+                    <h3>{{project.name}}</h3></a>
+                    <span>{{project.startDate}} &ndash; {{project.endDate}}</span>
+                    <p ng-bind-html="project.snippet"></p>
+
+                    <div class="project-details" ng-If="project.details != ''">
+                        <button type="button" data-toggle="collapse" data-target="#more-project{{$index}}-collapse">{{projectsMoreInfo}}</button>
+                        <div id="more-project{{$index}}-collapse" class="panel-body collapse">
+                            <p>{{project.details}}</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
     </section>
 
     <section id="info-container">
@@ -114,7 +176,7 @@
         <h2>{{informationTitle}}</h2>
 
         <article class="info" ng-repeat="section in information">
-            <div class="panel-heading">{{section.heading}}</div class="panel-heading">
+            <div class="panel-heading">{{section.heading}}</div>
             <p class="details">{{section.text}}</p>
         </article>
     </section>
