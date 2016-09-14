@@ -274,16 +274,16 @@ $pop-width: 200px;
   &:focus {
       .pop-content {
         display: block;
-        animation: pop-fade-in .3s linear 1, pop-move-up .3s linear 1;
+        // animation: pop-fade-in .3s linear 1, pop-move-up .3s linear 1;
       }
     }
 }
 
-@keyframes pop-fade-in {
-  from   { opacity: 0; }
-  to { opacity: 1; }
-}
-@keyframes pop-move-up {
-  from   { bottom: $pop-height - 12px; }
-  to { bottom: $pop-height; }
-}
+// @keyframes pop-fade-in {
+//   from   { opacity: 0; }
+//   to { opacity: 1; }
+// }
+// @keyframes pop-move-up {
+//   from   { bottom: $pop-height - 12px; }
+//   to { bottom: $pop-height; }
+// }
