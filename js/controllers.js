@@ -253,7 +253,7 @@ app.controller("Content", function($scope) {
 			"snippet"			: "Designed and built with C# in Unity 3D for the 2014 Cyberpunk Jam (requires browser plugin to play)",
 			"details"			: {
 												"role"			: "All",
-												"skills"		: "",
+												"skills"		: "C#, Unity 3D, etc.",
 												"process"		: "",
 												"lessons"		: ""
 											}
