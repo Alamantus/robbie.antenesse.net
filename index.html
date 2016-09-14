@@ -140,7 +140,7 @@
 <!-- Workaround learned here: http://stackoverflow.com/a/14420730 -->
 <script type="text/ng-template" id="projectTemplate">
     <img class="icon" src="images/icons/{{project.type.toLowerCase()}}.png" alt="{{project.type}}" />
-    <a href="{{project.link}}" target="_blank"><img class="thumbnail" src="{{project.thumbnail}}" alt="{{project.name}} Screenshot" />
+    <a href="{{project.link}}" target="_blank"><img ng-if="project.thumbnail != ''" class="thumbnail" src="{{project.thumbnail}}" alt="{{project.name}} Screenshot" />
     <h3>{{project.name}}</h3></a>
     <span>{{project.startDate}} &ndash; {{project.endDate}}</span>
     <p ng-bind-html="project.snippet"></p>
