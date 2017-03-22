@@ -1,27 +1,19 @@
 ---
 layout: project
-title:  Radio Silence
-date: 2016-09-01 15:08:10 -0700
-endDate: 2016-09-11 15:08:10 -0700
-img: images/thumbnails/radio-silence.jpg
-link: https://alamantus.itch.io/radio-silence
+title:  Lexiconga
+date: 2015-10-25 20:41:00 -0700
+img: images/thumbnails/lexiconga.jpg
+link: http://lexicon.ga
 roles:
-- Code
-- Development
-- Design
-- Art (models, GUIs)
+- Everything
 technologies:
-- csharp
-- unity
 - php
-- mysql
-- gimp
-- blender
+- javascript
+- html5
 modalID: modalRadioSilence
 category: Game
 ---
-An interactive scene that encourages communication across impossible distances featuring
-a radio with nice, ethereal music.
+A tool intended to help you build constructed language (conlang) dictionaries/lexicons.
 
 ### Process
 

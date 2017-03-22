@@ -25,7 +25,12 @@
                                 <strong>Started:</strong> {{ project.date | date: "%B %Y" }}
                             </li>
                             <li>
-                                <strong>Finished:</strong> {{ project.endDate | date: "%B %Y" }}
+                                <strong>Finished:</strong>&nbsp;
+                                {% if project.endDate %}
+                                    {{ project.endDate | date: "%B %Y" }}
+                                {% else %}
+                                    Ongoing
+                                {% endif %}
                             </li>
                         </ul>
                         <ul class="list-inline item-details">

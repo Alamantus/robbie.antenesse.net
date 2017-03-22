@@ -14,10 +14,10 @@ technologies:
 modalID: modalPublicPinboard
 category: Web App
 ---
-Built with PHP for posting small post-it note-like messages to a public space that
+A digital corkboard for leaving small post-it note-like messages in a public space that
 allows anyone to also remove the messages.
 
-## Process
+### Process
 
 I thought about how some local spaces have a corkboard where anyone can add or remove
 things, and I thought it would be fun to have the same kind of thing in a digital space.
@@ -30,6 +30,6 @@ I mainly just whipped up a simple grid using Bootstrap, made PHP read from a dir
 in order of created date, and made PHP write files to that same directory when someone
 posts a flyer! I restricted the length of the flyer using HTML5, and it's as simple as that!
 
-## Lessons
+### Lessons
 
 PHP File I/O processing.
