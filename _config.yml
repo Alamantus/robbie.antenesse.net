@@ -29,5 +29,8 @@ address_city: Denver
 address_state: CO
 #address_zip: 90201
 
+collections:
+- projects
+
 # Build settings
 markdown: kramdown
