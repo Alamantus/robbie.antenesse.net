@@ -1,5 +1,5 @@
-{% for post in site.posts %}
-<div class="portfolio-modal modal fade" id="{{ post.modalID }}" tabindex="-1" role="dialog" aria-hidden="true">
+{% for project in site.projects %}
+<div class="portfolio-modal modal fade" id="{{ project.modalID }}" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-content">
         <div class="close-modal" data-dismiss="modal">
             <div class="lr">
@@ -11,20 +11,41 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
                     <div class="modal-body">
-                        <h2>{{ post.title }}</h2>
+                        <a href="{{ project.link }}" target="_blank">
+                            <h2>{{ project.title }}</h2>
+                        </a>
                         <hr class="star-primary">
-                        <img src="{{ site.baseurl }}/{{ post.img }}" class="img-responsive img-centered" alt="">
-                        {{ post.content }}
+                        <img src="{{ site.baseurl }}/{{ project.img }}" class="img-responsive img-centered" alt="">
                         <ul class="list-inline item-details">
-                            <li>Category:
-                                <strong>{{ post.category }}
-                                    </strong>
+                            <li>
+                                <strong>Type:</strong> {{ project.category }}
                             </li>
-                            <li>Date:
-                                <strong>{{ post.date | date: "%B %Y" }}
-                                    </strong>
+                            <li>
+                                <strong>Started:</strong> {{ project.date | date: "%B %Y" }}
+                            </li>
+                            <li>
+                                <strong>Finished:</strong> {{ project.endDate | date: "%B %Y" }}
+                            </li>
+                            <li>
+                                <strong>Roles:</strong>
+                                <ul>
+                                    {% for role in project.roles %}
+                                    <li>
+                                        {{ role }}
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </li>
+                            <li>
+                                <strong>Technologies Used:</strong><br />
+                                {% for technology in project.technologies %}
+                                <img src="{{ site.baseurl }}/images/icons/{{ technology }}.png" alt="{{ technology }}" />
+                                {% endfor %}
                             </li>
                         </ul>
+
+                        {{ project.content }}
+
                         <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                     </div>
                 </div>
