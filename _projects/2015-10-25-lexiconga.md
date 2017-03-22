@@ -9,7 +9,9 @@ roles:
 technologies:
 - php
 - javascript
-- html5
+- html
+- css
+- mysql
 modalID: modalRadioSilence
 category: Game
 ---

@@ -8,7 +8,7 @@ link: http://alamantus.github.io/Public-Pinboard
 roles:
 - Everything
 technologies:
-- html5
+- html
 - php
 - bootstrap
 modalID: modalPublicPinboard

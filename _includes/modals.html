@@ -33,25 +33,19 @@
                                 {% endif %}
                             </li>
                         </ul>
-                        <ul class="list-inline item-details">
-                            <li>
-                                <strong>Roles:</strong>
-                                <ul>
-                                    {% for role in project.roles %}
-                                    <li>
-                                        {{ role }}
-                                    </li>
-                                    {% endfor %}
-                                </ul>
-                            </li>
-                            <li>
-                                <strong>Technologies Used:</strong><br />
-                                {% for technology in project.technologies %}
-                                <img src="{{ site.baseurl }}/images/icons/{{ technology }}.png"
-                                    alt="{{ technology }}" style="width: 50px; margin: 2px" />
-                                {% endfor %}
-                            </li>
-                        </ul>
+                        <div class="item-details">
+                            <strong>Roles:</strong><br>
+                            {% for role in project.roles %}
+                                {{ role }}<br>
+                            {% endfor %}
+                        </div>
+                        <div class="item-details">
+                            <strong>Technologies Used:</strong><br />
+                            {% for technology in project.technologies %}
+                            <img src="{{ site.baseurl }}/images/icons/{{ technology }}.png"
+                                alt="{{ technology }}" style="max-width: 32px; max-height: 32px; margin: 2px" />
+                            {% endfor %}
+                        </div>
 
                         {{ project.content }}
 
