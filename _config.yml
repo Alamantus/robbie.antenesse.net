@@ -25,8 +25,8 @@ github_username:  Alamantus
 
 # Address information
 #address_street: 3034 Melrose Place
-#address_city: Beverly Hills
-#address_state: CA
+address_city: Denver
+address_state: CO
 #address_zip: 90201
 
 # Build settings
