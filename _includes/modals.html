@@ -11,8 +11,9 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
                     <div class="modal-body">
-                        <a href="{{ project.link }}" target="_blank">
-                            <h2>{{ project.title }}</h2>
+                        <h2>{{ project.title }}</h2>
+                        <a class="btn btn-primary" href="{{ project.link }}" target="_blank">
+                            Check it out <i class="fa fa-arrow-right"></i>
                         </a>
                         <hr class="star-primary">
                         <img src="{{ site.baseurl }}/{{ project.img }}" class="img-responsive img-centered" alt="">
@@ -26,6 +27,8 @@
                             <li>
                                 <strong>Finished:</strong> {{ project.endDate | date: "%B %Y" }}
                             </li>
+                        </ul>
+                        <ul class="list-inline item-details">
                             <li>
                                 <strong>Roles:</strong>
                                 <ul>
@@ -39,7 +42,8 @@
                             <li>
                                 <strong>Technologies Used:</strong><br />
                                 {% for technology in project.technologies %}
-                                <img src="{{ site.baseurl }}/images/icons/{{ technology }}.png" alt="{{ technology }}" />
+                                <img src="{{ site.baseurl }}/images/icons/{{ technology }}.png"
+                                    alt="{{ technology }}" style="width: 50px; margin: 2px" />
                                 {% endfor %}
                             </li>
                         </ul>
