@@ -11,12 +11,12 @@ roles:
 - Design
 - Art (models, GUIs)
 technologies:
-- csharp
-- unity
-- php
-- mysql
-- gimp
-- blender
+- CSharp
+- Unity
+- PHP
+- MySQL
+- GiMP
+- Blender
 modalID: modalRadioSilence
 category: Game
 ---

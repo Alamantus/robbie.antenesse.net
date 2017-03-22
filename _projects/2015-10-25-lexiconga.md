@@ -7,11 +7,11 @@ link: http://lexicon.ga
 roles:
 - Everything
 technologies:
-- php
-- javascript
-- html
-- css
-- mysql
+- PHP
+- JavaScript
+- HTML
+- CSS
+- MySQL
 modalID: modalRadioSilence
 category: Game
 ---

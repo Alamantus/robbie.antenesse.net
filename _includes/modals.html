@@ -34,16 +34,17 @@
                             </li>
                         </ul>
                         <div class="item-details">
-                            <strong>Roles:</strong><br>
+                            <strong>Roles:</strong>
                             {% for role in project.roles %}
-                                {{ role }}<br>
+                                <br>{{ role }}
                             {% endfor %}
                         </div>
                         <div class="item-details">
                             <strong>Technologies Used:</strong><br />
                             {% for technology in project.technologies %}
-                            <img src="{{ site.baseurl }}/images/icons/{{ technology }}.png"
-                                alt="{{ technology }}" style="max-width: 32px; max-height: 32px; margin: 2px" />
+                            <img src="{{ site.baseurl }}/images/icons/{{ technology | downcase }}.png"
+                                alt="{{ technology }}" title="{{ technology }}"
+                                style="max-width: 32px; max-height: 32px; margin: 2px" />
                             {% endfor %}
                         </div>
 
