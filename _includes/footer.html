@@ -5,8 +5,7 @@
             <div class="row">
                 <div class="footer-col col-md-4">
                     <h3>Location</h3>
-                    <p>{{ site.address_street }}
-                        <br>{{ site.address_city }}, {{ site.address_state }} {{ site.address_zip }}</p>
+                    <p>{{ site.address_city }}, {{ site.address_state }}</p>
                 </div>
                 <div class="footer-col col-md-4">
                     <h3>Around the Web</h3>
@@ -55,7 +54,7 @@
                 </div>
                 <div class="footer-col col-md-4">
                     <h3>About {{ site.title }}</h3>
-                    <p><a href="http://startbootstrap.com">Start Bootstrap</a> is an open source library of Bootstrap themes and templates.</p>
+                    <p>Robbie is a web developer who prides himself on writing clean, readable code and making dreams a reality.</p>
                 </div>
             </div>
         </div>
@@ -64,7 +63,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    Copyright &copy; Your Website {{ site.time | date: "%Y" }}
+                    Copyright &copy; {{ site.title }} {{ site.time | date: "%Y" }}
                 </div>
             </div>
         </div>

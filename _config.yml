@@ -9,7 +9,7 @@
 title: Robbie Antenesse
 email: dev@alamantus.com
 description: > # this means to ignore newlines until "baseurl:"
-  Web Developer - Hobby Game Developer - Fun Haver
+  Web Developer - Game Developer - Fun Haver
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://alamantus.github.io" # the base hostname & protocol for your site
 
@@ -21,13 +21,11 @@ github_username:  Alamantus
 #stackoverflow_url: https://
 #googleplus_username: BobMarley
 #skype_username: echo123
-#linkedin_url: https://
+linkedin_url: https://www.linkedin.com/in/robbie-antenesse-68816371
 
 # Address information
-#address_street: 3034 Melrose Place
 address_city: Denver
 address_state: CO
-#address_zip: 90201
 
 collections:
 - projects
