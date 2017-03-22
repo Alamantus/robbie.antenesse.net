@@ -6,6 +6,10 @@ layout: default
 <!-- Portfolio Grid Section -->
 <section class="post">
     <div class="container">
+        <h2>
+            {{ page.title }}
+        </h2>
+        <span class="post-meta">{{ page.date | date: "%b %-d, %Y" }}</span>
 
         {{ content }}
 
