@@ -12,7 +12,7 @@ technologies:
 - HTML
 - CSS
 - MySQL
-modalID: modalRadioSilence
+modalID: modalLexiconga
 category: Game
 ---
 A tool intended to help you build constructed language (conlang) dictionaries/lexicons.
