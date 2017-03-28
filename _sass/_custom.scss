@@ -1,0 +1,34 @@
+@import 'variables';
+
+.tech-icon {
+    max-width: 32px;
+    max-height: 32px;
+    margin: 2px;
+}
+
+.project-details {
+    text-align: left;
+}
+
+.contact-form-container {
+    background-color: white;
+    border-radius: $sectionBorderRadius;
+}
+
+.post {
+    .container {
+        margin-top: $marginSize;
+    }
+
+    .heading {
+        margin: 0 0 $marginSize;
+
+        .meta {
+            margin-left: $marginSize;
+        }
+    }
+
+    .content {
+        padding: 0 5px;
+    }
+}

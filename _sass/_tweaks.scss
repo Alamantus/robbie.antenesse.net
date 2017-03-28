@@ -1,0 +1,135 @@
+@import 'variables';
+
+// Start Bootstrap Freelancer overrides
+header {
+    background: $green;
+
+    .container {
+        padding-top: 150px;
+        padding-bottom: 50px;
+    }
+}
+
+section {
+    &.success {
+        background: $green;
+    }
+}
+
+hr {
+    &.star-light,
+    &.star-primary {
+        &:after {
+            content: '\f121';
+            font-weight: bold;
+        }
+    }
+
+    &.star-primary {
+        border-color: $darkestGreen;
+
+        &:after {
+            color: $darkestGreen;
+        }
+    }
+
+    &.star-light {
+        &:after {
+            background-color: $green;
+            color: white;
+        }
+    }
+}
+
+a {
+    &,
+    &.active,
+    &:active,
+    &:focus,
+    &:hover {
+        color: $green;
+    }
+}
+
+p {
+    margin: 0 0 15px;
+}
+
+form {
+    .row {
+        &:first-child {
+            .floating-label-form-group {
+                border: none;
+            }
+        }
+    }
+}
+
+footer {
+    .footer-above {
+        background-color: $darkGreen
+    }
+
+    .footer-below {
+        background-color: $darkestGreen;
+    }
+}
+
+.navbar-custom {
+    background: $darkGreen;
+
+    .navbar-nav {
+        li {
+            &.active,
+            a,
+            a:active,
+            a:focus,
+            a:hover {
+                background: $darkGreen;
+            }
+
+            a:hover {
+                color: $green;
+            }
+
+            &.active {
+                a,
+                a:active,
+                a:focus,
+                a:hover {
+                    background: $green;
+                }
+            }
+        }
+    }
+}
+
+#portfolio {
+    .portfolio-item {
+        .portfolio-link {
+            .caption {
+                background: $green;
+            }
+        }
+    }
+}
+
+.btn-primary {
+    background-color: $darkGreen;
+    border-color: $darkGreen;
+}
+
+.btn-outline {
+    &.active,
+    &:active,
+    &:focus,
+    &:hover {
+        color: $darkGreen;
+    }
+}
+
+// Bootstrap overrides
+.btn-success {
+    background-color: $green;
+    border-color: $green;
+}

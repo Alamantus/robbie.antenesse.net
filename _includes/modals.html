@@ -44,11 +44,13 @@
                             {% for technology in project.technologies %}
                             <img src="{{ site.baseurl }}/images/icons/{{ technology | downcase }}.png"
                                 alt="{{ technology }}" title="{{ technology }}"
-                                style="max-width: 32px; max-height: 32px; margin: 2px" />
+                                class="tech-icon" />
                             {% endfor %}
                         </div>
 
-                        {{ project.content }}
+                        <div class="project-details">
+                            {{ project.content }}
+                        </div>
 
                         <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                     </div>
