@@ -11,6 +11,8 @@ header {
 }
 
 section {
+    padding: 50px 0;
+
     &.success {
         background: $green;
     }
@@ -114,9 +116,19 @@ footer {
     }
 }
 
+// Bootstrap overrides
+.h1, .h2, .h3, h1, h2, h3 {
+    margin-top: 30px;
+}
+
 .btn-primary {
     background-color: $darkGreen;
     border-color: $darkGreen;
+
+    &:hover {
+        background-color: $green;
+        border-color: $green;
+    }
 }
 
 .btn-outline {
@@ -128,8 +140,20 @@ footer {
     }
 }
 
-// Bootstrap overrides
 .btn-success {
     background-color: $green;
     border-color: $green;
+
+    &.active,
+    &:active,
+    &:focus,
+    &:hover {
+        background-color: $darkGreen;
+        border-color: $darkGreen;
+    }
+}
+
+.open .dropdown-toggle.btn-success {
+    background-color: $darkGreen;
+    border-color: $darkGreen;
 }
