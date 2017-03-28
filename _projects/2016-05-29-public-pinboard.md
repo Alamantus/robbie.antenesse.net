@@ -32,4 +32,6 @@ posts a flyer! I restricted the length of the flyer using HTML5, and it's as sim
 
 ### Lessons
 
-PHP File I/O processing.
+I learned about PHP File I/O processing and how to parse and sanitize user-entered text so
+that it would cause as few problems as possible if someone tried to enter something
+malicious.

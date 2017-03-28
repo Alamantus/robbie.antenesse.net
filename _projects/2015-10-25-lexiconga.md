@@ -13,37 +13,31 @@ technologies:
 - CSS
 - MySQL
 modalID: modalLexiconga
-category: Game
+category: Web App
 ---
 A tool intended to help you build constructed language (conlang) dictionaries/lexicons.
 
+This is one of my few ongoing projects that I occasionally make improvements to when I find
+time.
+
 ### Process
 
-A friend of mine approached me with the idea to create a scene featuring a radio
-and some stars in order to participate in the [Fermi Paradox Jam](https://itch.io/jam/fermi-paradox-jam).
-I liked the idea and expanded the game concept from there. What if players were trying
-to receive messages from space and in the end unknowingly were communicating with
-each other?
+Toward the end of 2015, I started getting really interested in linguistics and constructed
+languages. I wanted a simple and easy way to not only keep track of a dictionary for the
+language I was working on, but also a stylish way to share it with others so I could get
+feedback. The solutions I found were either not what I needed or were too slow, so I decided
+to build my own out of pure JavaScript.
 
-I started working on the game at the start of the jam by creating the 3D models with
-Blender for the game and then extrapolating the UI from how the models ended up
-looking. Then I moved to coding with C# and made the stars viewed through the
-periscope generate in a grid with random offsets and sizes. I ran into trouble
-getting the knobs in the radio UI to turn, but was able to figure it out by
-manipulating the sprite's angle directly and using the angle value to set desired
-radio stations.
-
-I was also able to layer multiple text UI elements to give the
-effect of translating coded messages letter by letter. It took a good deal of trouble
-to get it working properly, but eventually I just forced it to work by simplifying
-some code I had previously overthought.
+Initially, Lexiconga _only_ used the user's browser to store their data, but this can be
+dangerous because if the user ever clears their browser cache, they would permanently lose
+their dictionary! So I started building a PHP backend to provide users with accounts that
+allowed them to store multiple dictionaries in a safe place that could be accessed from
+any computer! I kept it simple, but worked to make private dictionaries as secure as possible,
+making only dictionaries that were explicitly marked "public" available to be seen.
 
 ### Lessons
 
-This project gave me more experience with the Unity 3D engine and its UI elements.
-It also provided me with the opportunity to collaborate more closely with a friend
-to make sure that the final result followed the design specifications correctly.
-
-I also gained more experience with building simple APIs to insert and access data
-from a MySQL database using PHP, as well as more experience manipulating strings
-using .NET's `System.Text` namespace and methods in C#.
+I learned how to make sure that data entered by users, no matter what the text is, can be
+displayed the way it is supposed to be displayed using [Markdown](https://daringfireball.net/projects/markdown/).
+I also learned a lot about mobile-friendly styling, because in my first iteration of the
+design, I built everything from scratch, including the styles.
