@@ -6,11 +6,10 @@ endDate: 2016-05-18 15:08:10 -0700
 img: images/thumbnails/trade-winds.jpg
 link: https://alamantus.itch.io/trade-winds
 roles:
-- Everything
+- Everything except Music
 technologies:
 - JavaScript
 - GiMP
-- Blender
 modalID: modalTradeWinds
 category: Game
 ---
