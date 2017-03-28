@@ -7,7 +7,7 @@ tags:
 - github pages
 - web
 ---
-A [good friend of mine](https://github.com/descartez) and I are working on setting up [a blog](https://descartez.github.io/wth_is)
+A [good friend of mine](http://dezdoes.tech) and I are working on setting up [a blog](https://descartez.github.io/wth_is)
 using [Jekyll](http://jekyllrb.com/) + [Github Pages](https://pages.github.com/), and it has been a thoroughly wonderful
 experience for me. Jekyll is a site generator that takes a particular file structure, some markdown files, and a bit of
 cleverness, chews it all up, and spits out a website full of HTML files! And Github Pages allows you to serve those files
