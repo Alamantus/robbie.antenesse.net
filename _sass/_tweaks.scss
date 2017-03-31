@@ -138,10 +138,14 @@ footer {
     &:focus,
     &:hover {
         color: $darkGreen;
+
+        svg g {
+            fill: $darkGreen;
+        }
     }
 
-    svg:hover g {
-        fill: $green;
+    svg {
+        vertical-align: middle;
     }
 }
 
