@@ -131,12 +131,17 @@ footer {
     }
 }
 
-.btn-outline {
+.btn-outline,
+.btn-social {
     &.active,
     &:active,
     &:focus,
     &:hover {
         color: $darkGreen;
+    }
+
+    svg:hover g {
+        fill: $green;
     }
 }
 
