@@ -17,17 +17,22 @@
                         {% endif %}
                         {% if site.github_username %}
                         <li>
-                            <a href="https://github.com/{{ site.github_username }}" class="btn-social btn-outline"><i class="fa fa-fw fa-github"></i></a>
+                            <a href="https://github.com/{{ site.github_username }}" title="{{ site.github_username }}" class="btn-social btn-outline"><i class="fa fa-fw fa-github"></i></a>
                         </li>
                         {% endif %}
                         {% if site.itchio_username %}
                         <li>
-                            <a href="https://{{ site.itchio_username }}.itch.io" class="btn-social btn-outline">{% include itchio-icon.svg %}</a>
+                            <a href="https://{{ site.itchio_username }}.itch.io" title="{{ site.itchio_username }}.itch.io" class="btn-social btn-outline">{% include itchio-icon.svg %}</a>
+                        </li>
+                        {% endif %}
+                        {% if site.mastodon_username and site.mastodon_node %}
+                        <li>
+                            <a href="{{ site.mastodon_protocol | default: 'http://' }}{{ site.mastodon_node }}/@{{ site.mastodon_username }}" title="@{{ site.mastodon_username }}@{{ site.mastodon_node }}" class="btn-social btn-outline">{% include mastodon-icon.svg %}</a>
                         </li>
                         {% endif %}
                         {% if site.twitter_username %}
                         <li>
-                            <a href="https://twitter.com/{{ site.twitter_username }}" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                            <a href="https://twitter.com/{{ site.twitter_username }}" title="@{{ site.twitter_username }}" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
                         </li>
                         {% endif %}
                         {% if site.instagram_username %}
