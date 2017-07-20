@@ -2,6 +2,7 @@
 layout: post
 title: Mastodon and Federated Networking
 date: 2017-04-20 20:43:00 -0700
+comments: true
 tags:
 - mastodon
 - gnu social

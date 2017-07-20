@@ -2,6 +2,7 @@
 layout: post
 title: Can't Trust Every Lib
 date: 2017-04-27 22:25:00 -0700
+comments: true
 tags:
 - node
 - nodejs

@@ -2,6 +2,7 @@
 layout: post
 title: Moving Day
 date: 2017-07-01 13:00:00 -0700
+comments: true
 tags:
 - moving
 - house

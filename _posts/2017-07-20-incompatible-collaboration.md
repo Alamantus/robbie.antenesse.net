@@ -2,6 +2,7 @@
 layout: post
 title: Incompatible Collaboration
 date: 2017-07-20 10:48:00 -0700
+comments: true
 tags:
 - agile
 - api

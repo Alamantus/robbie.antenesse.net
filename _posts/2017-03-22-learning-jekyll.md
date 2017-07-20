@@ -2,6 +2,7 @@
 layout: post
 title:  Learning Jekyll
 date:   2017-03-22 15:03:10 -0700
+comments: true
 tags:
 - jekyll
 - github pages
