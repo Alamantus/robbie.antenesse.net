@@ -11,7 +11,7 @@ email: dev@alamantus.com
 description: > # this means to ignore newlines until "baseurl:"
   Web Developer - Game Developer - Fun Haver
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://alamantus.github.io" # the base hostname & protocol for your site
+url: "http://robbie.antenesse.net" # the base hostname & protocol for your site
 
 # Social media profiles - feel free to add more here
 twitter_username: Alamantus
