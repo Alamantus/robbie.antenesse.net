@@ -1,0 +1,55 @@
+==================================================================
+https://keybase.io/alamantus
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://robbie.antenesse.net
+  * I am alamantus (https://keybase.io/alamantus) on keybase.
+  * I have a public key ASDQWESUPRzVLLJsF3ImAQi9nvxKACV1frKNoyMRYT1-3Ao
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120d05844943d1cd52cb26c1772260108bd9efc4a0025757eb28da32311613d7edc0a",
+      "host": "keybase.io",
+      "kid": "0120d05844943d1cd52cb26c1772260108bd9efc4a0025757eb28da32311613d7edc0a",
+      "uid": "34234c9a7780f3b4f13bc68076b8a719",
+      "username": "alamantus"
+    },
+    "merkle_root": {
+      "ctime": 1521995939,
+      "hash": "853bb2c3754f3220069ca7c55e85bb6377bb7624dfaa3bcb18bf2d1659fc2cf016892e6e2ec4554c72ffbc1eb7cdbd80c6df71d3846ce445189ed85adfa7de30",
+      "hash_meta": "4240d74181ef3beb2400f3dc0fa0d04fab9977a4ecc30c35ca98a6abfe1f34ce",
+      "seqno": 2286444
+    },
+    "service": {
+      "hostname": "robbie.antenesse.net",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.45"
+  },
+  "ctime": 1521995981,
+  "expire_in": 504576000,
+  "prev": "9799ea499afda01d9865b4dce28b39f7dea08b38222d3c0e793a73ef041a5f6e",
+  "seqno": 8,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg0FhElD0c1SyybBdyJgEIvZ78SgAldX6yjaMjEWE9ftwKp3BheWxvYWTFA017ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwZDA1ODQ0OTQzZDFjZDUyY2IyNmMxNzcyMjYwMTA4YmQ5ZWZjNGEwMDI1NzU3ZWIyOGRhMzIzMTE2MTNkN2VkYzBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwZDA1ODQ0OTQzZDFjZDUyY2IyNmMxNzcyMjYwMTA4YmQ5ZWZjNGEwMDI1NzU3ZWIyOGRhMzIzMTE2MTNkN2VkYzBhIiwidWlkIjoiMzQyMzRjOWE3NzgwZjNiNGYxM2JjNjgwNzZiOGE3MTkiLCJ1c2VybmFtZSI6ImFsYW1hbnR1cyJ9LCJtZXJrbGVfcm9vdCI6eyJjdGltZSI6MTUyMTk5NTkzOSwiaGFzaCI6Ijg1M2JiMmMzNzU0ZjMyMjAwNjljYTdjNTVlODViYjYzNzdiYjc2MjRkZmFhM2JjYjE4YmYyZDE2NTlmYzJjZjAxNjg5MmU2ZTJlYzQ1NTRjNzJmZmJjMWViN2NkYmQ4MGM2ZGY3MWQzODQ2Y2U0NDUxODllZDg1YWRmYTdkZTMwIiwiaGFzaF9tZXRhIjoiNDI0MGQ3NDE4MWVmM2JlYjI0MDBmM2RjMGZhMGQwNGZhYjk5NzdhNGVjYzMwYzM1Y2E5OGE2YWJmZTFmMzRjZSIsInNlcW5vIjoyMjg2NDQ0fSwic2VydmljZSI6eyJob3N0bmFtZSI6InJvYmJpZS5hbnRlbmVzc2UubmV0IiwicHJvdG9jb2wiOiJodHRwczoifSwidHlwZSI6IndlYl9zZXJ2aWNlX2JpbmRpbmciLCJ2ZXJzaW9uIjoxfSwiY2xpZW50Ijp7Im5hbWUiOiJrZXliYXNlLmlvIGdvIGNsaWVudCIsInZlcnNpb24iOiIxLjAuNDUifSwiY3RpbWUiOjE1MjE5OTU5ODEsImV4cGlyZV9pbiI6NTA0NTc2MDAwLCJwcmV2IjoiOTc5OWVhNDk5YWZkYTAxZDk4NjViNGRjZTI4YjM5ZjdkZWEwOGIzODIyMmQzYzBlNzkzYTczZWYwNDFhNWY2ZSIsInNlcW5vIjo4LCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQM8faxDPEF4npen2pH1xJb0tVKUUDbzr5+8sMwrcSxi1NUfHDS2US7zxDbbCWJ+2BzCbBFhjSIXzZfdMc+ss4weoc2lnX3R5cGUgpGhhc2iCpHR5cGUIpXZhbHVlxCCJof1CAmnfS+xcX6ri/fU7CmM2DiVL+KEE4+4c1RDhL6N0YWfNAgKndmVyc2lvbgE=
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/alamantus
+
+==================================================================
