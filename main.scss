@@ -4,17 +4,8 @@
 @charset "utf-8";
 
 // Base styles to build on
-@import url('//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
-@import url('//cdnjs.cloudflare.com/ajax/libs/startbootstrap-freelancer/3.3.7/css/freelancer.min.css');
+@import 'variables';
 
-// Fonts
-@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css');
-@import url('//fonts.googleapis.com/css?family=Montserrat:400,700');
-@import url('//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic');
+@import 'bulma_0.7.0/bulma';
 
-@import
-    'tweaks'
-,   'custom'
-;
-
-
+@import 'custom';
