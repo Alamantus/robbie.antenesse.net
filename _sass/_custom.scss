@@ -32,3 +32,15 @@
         padding: 0 5px;
     }
 }
+
+.footer {
+    background: $darkGreen !important;
+
+    &.is-dark-green {
+        background: $darkestGreen !important;
+    }
+}
+
+.navbar {
+    background: $darkGreen !important;
+}
