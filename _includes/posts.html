@@ -8,18 +8,18 @@
             </div>
         </div>
         <div class="columns">
-            <div class="box column is-10 is-offset-1" style="max-height: 200px; overflow-y: auto;">
-                <ul style="list-style:none">
-                    {% for post in site.posts %}
-                        <li class="post-list-title">
-                            <a href="{{ post.url | prepend: site.baseurl }}" class="post-link">
-                                <h3>{{ post.title }}</h3>
-                            </a>
-                            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-                            <hr>
-                        </li>
-                    {% endfor %}
-                </ul>
+            <div class="box column is-10 is-offset-1" style="max-height: 350px; overflow-y: auto;">
+                {% for post in site.posts %}
+                <div class="columns">
+                    <div class="column">
+                        <a href="{{ post.url | prepend: site.baseurl }}" class="post-link">
+                            <h3 class="title">{{ post.title }}</h3>
+                        </a>
+                        <span class="subtitle">{{ post.date | date: "%b %-d, %Y" }}</span>
+                        <hr>
+                    </div>
+                </div>
+                {% endfor %}
             </div>
         </div>
     </div>

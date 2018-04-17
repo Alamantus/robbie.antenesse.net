@@ -1,62 +1,84 @@
 {% for project in site.projects %}
-<div class="portfolio-modal modal fade" id="{{ project.modalID }}" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="portfolio-modal modal" id="{{ project.modalID }}" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-background"></div>
     <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-                <div class="rl">
+        <div class="box">
+            <h2 class="title has-text-centered">{{ project.title }}</h2>
+            <hr>
+
+            <div class="columns">
+                <div class="column is-10 is-offset-1">
+                    <figure class="image is-3-by-4">
+                        <img src="{{ site.baseurl }}/{{ project.img }}" class="img-responsive img-centered" alt="">
+                    </figure>
                 </div>
             </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <div class="modal-body">
-                        <h2>{{ project.title }}</h2>
-                        <hr class="star-primary">
-                        <img src="{{ site.baseurl }}/{{ project.img }}" class="img-responsive img-centered" alt="">
-                        <a class="btn btn-primary" href="{{ project.link }}" target="_blank">
-                            Check it out <i class="fa fa-arrow-right"></i>
-                        </a>
-                        <ul class="list-inline item-details">
-                            <li>
-                                <strong>Type:</strong> {{ project.category }}
-                            </li>
-                            <li>
-                                <strong>Started:</strong> {{ project.date | date: "%B %Y" }}
-                            </li>
-                            <li>
-                                <strong>Finished:</strong>&nbsp;
-                                {% if project.endDate %}
-                                    {{ project.endDate | date: "%B %Y" }}
-                                {% else %}
-                                    Ongoing
-                                {% endif %}
-                            </li>
-                        </ul>
-                        <div class="item-details">
-                            <strong>Roles:</strong>
-                            {% for role in project.roles %}
-                                <br>{{ role }}
-                            {% endfor %}
-                        </div>
-                        <div class="item-details">
-                            <strong>Technologies Used:</strong><br />
-                            {% for technology in project.technologies %}
-                            <img src="{{ site.baseurl }}/images/icons/{{ technology | downcase }}.png"
-                                alt="{{ technology }}" title="{{ technology }}"
-                                class="tech-icon" />
-                            {% endfor %}
-                        </div>
 
-                        <div class="project-details">
-                            {{ project.content }}
-                        </div>
+            <div class="columns">
+                <div class="column has-text-centered">
+                    <a class="button is-primary" href="{{ project.link }}" target="_blank">
+                        <span>Check it out</span>
+                        <span class="icon">
+                            <i class="fa fa-arrow-right"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
 
-                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+            <div class="field is-grouped is-grouped-centered">
+                <div class="control">
+                    <strong>Type:</strong> {{ project.category }}
+                </div>
+                <div class="control">
+                    <strong>Started:</strong> {{ project.date | date: "%B %Y" }}
+                </div>
+                <div class="control">
+                    <strong>Finished:</strong>&nbsp;
+                    {% if project.endDate %}
+                        {{ project.endDate | date: "%B %Y" }}
+                    {% else %}
+                        Ongoing
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="columns">
+                <div class="column is-5 is-offset-1 item-details has-text-centered">
+                    <strong>Roles:</strong>
+                    {% for role in project.roles %}
+                        <br>{{ role }}
+                    {% endfor %}
+                </div>
+                <div class="column is-5 item-details has-text-centered">
+                    <strong>Technologies Used:</strong><br />
+                    {% for technology in project.technologies %}
+                    <img src="{{ site.baseurl }}/images/icons/{{ technology | downcase }}.png"
+                        alt="{{ technology }}" title="{{ technology }}"
+                        class="tech-icon" />
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="columns">
+                <div class="column is-10 is-offset-1">
+                    <div class="content">
+                        {{ project.content }}
                     </div>
+                </div>
+            </div>
+
+            <div class="columns">
+                <div class="column has-text-centered">
+                    <a type="button" class="button has-text-centered" data-dismiss="modal">
+                        <span class="icon">
+                            <i class="fa fa-times"></i>
+                        </span>
+                        <span>Close</span>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
+    <button class="modal-close is-large" aria-label="close"></button>
 </div>
 {% endfor %}

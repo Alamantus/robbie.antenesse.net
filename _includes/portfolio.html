@@ -11,12 +11,7 @@
             {% assign projects = (site.projects | sort: 'date') | reverse %}
             {% for project in projects %}
                 <div class="column is-one-third portfolio-item">
-                    <a href="#{{ project.modalID }}" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
+                    <a class="portfolio-link" data-modal="{{ project.modalID }}">
                         <figure class="image is-3-by-4">
                             <img src="{{ site.baseurl }}/{{ project.img }}" alt="{{ project.title }}">
                         </figure>
