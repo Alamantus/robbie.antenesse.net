@@ -27,6 +27,15 @@
                         </a>
                     </div>
                     {% endif %}
+                    {% if site.goodreads_username %}
+                    <div class="control has-text-centered">
+                        <a href="https://www.goodreads.com/user/show/{{ site.goodreads_username }}" title="Goodreads">
+                            <span class="icon">
+                                <i class="fab fa-goodreads"></i>
+                            </span>
+                        </a>
+                    </div>
+                    {% endif %}
                     {% if site.itchio_username %}
                     <div class="control has-text-centered">
                         <a href="https://{{ site.itchio_username }}.itch.io" title="{{ site.itchio_username }}.itch.io">
@@ -52,7 +61,7 @@
                     {% endif %}
                     {% if site.instagram_username %}
                     <div class="control has-text-centered">
-                        <a href="https://www.instagram.com/{{ site.instagram_username }}">
+                        <a href="https://www.instagram.com/{{ site.instagram_username }}" title="@{{ site.instagram_username }}">
                             <span class="icon">
                                 <i class="fab fa-instagram"></i>
                             </span>
@@ -88,7 +97,7 @@
                     {% endif %}
                     {% if site.linkedin_url %}
                     <div class="control has-text-centered">
-						<a href="{{ site.linkedin_url }}">
+						<a href="{{ site.linkedin_url }}" title="LinkedIn">
                             <span class="icon">
                                 <i class="fab fa-linkedin"></i>
                             </span>
