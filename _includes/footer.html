@@ -1,87 +1,125 @@
 <!-- Footer -->
-<footer class="text-center">
-    <div class="footer-above">
-        <div class="container">
-            <div class="row">
-                <div class="footer-col col-md-4">
-                    <h3>Location</h3>
-                    <p>{{ site.address_city }}, {{ site.address_state }}</p>
-                </div>
-                <div class="footer-col col-md-4">
-                    <h3>Around the Web</h3>
-                    <ul class="list-inline">
-                        {% if site.facebook_username %}
-                        <li>
-                            <a href="https://www.facebook.com/{{ site.facebook_username }}" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
-                        </li>
-                        {% endif %}
-                        {% if site.github_username %}
-                        <li>
-                            <a href="https://github.com/{{ site.github_username }}" title="{{ site.github_username }}" class="btn-social btn-outline"><i class="fa fa-fw fa-github"></i></a>
-                        </li>
-                        {% endif %}
-                        {% if site.itchio_username %}
-                        <li>
-                            <a href="https://{{ site.itchio_username }}.itch.io" title="{{ site.itchio_username }}.itch.io" class="btn-social btn-outline">{% include itchio-icon.svg %}</a>
-                        </li>
-                        {% endif %}
-                        {% if site.mastodon_username and site.mastodon_node %}
-                        <li>
-                            <a href="{{ site.mastodon_protocol | default: 'http://' }}{{ site.mastodon_node }}/@{{ site.mastodon_username }}" title="@{{ site.mastodon_username }}@{{ site.mastodon_node }}" class="btn-social btn-outline">{% include mastodon-icon.svg %}</a>
-                        </li>
-                        {% endif %}
-                        {% if site.twitter_username %}
-                        <li>
-                            <a href="https://twitter.com/{{ site.twitter_username }}" title="@{{ site.twitter_username }}" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
-                        </li>
-                        {% endif %}
-                        {% if site.instagram_username %}
-                        <li>
-                            <a href="https://www.instagram.com/{{ site.instagram_username }}" class="btn-social btn-outline"><i class="fa fa-fw fa-instagram"></i></a>
-                        </li>
-                        {% endif %}
-                        {% if site.stackoverflow_url %}
-                        <li>
-							<a href="{{ site.stackoverflow_url }}" class="btn-social btn-outline"><i class="fa fa-fw fa-stack-overflow"></i></a>
-                        </li>
-                        {% endif %}
-                        {% if site.googleplus_username %}
-                        <li>
-							<a href="https://plus.google.com/+{{ site.googleplus_username }}" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
-                        </li>
-                        {% endif %}
-                        {% if site.skype_username %}
-                        <li>
-							<a href="skype:{{ site.skype_username }}?call" class="btn-social btn-outline"><i class="fa fa-fw fa-skype"></i></a>
-                        </li>
-                        {% endif %}
-                        {% if site.linkedin_url %}
-                        <li>
-							<a href="{{ site.linkedin_url }}" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
-                        </li>
-                        {% endif %}
-                    </ul>
-                </div>
-                <div class="footer-col col-md-4">
-                    <h3>About {{ site.title }}</h3>
-                    <p>Robbie is a web developer who prides himself on writing clean, readable code and making dreams a reality.</p>
+<footer class="footer notification is-success is-radiusless" style="margin:0;">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-one-third has-text-centered">
+                <h3 class="title">Location</h3>
+                <div class="is-size-5">{{ site.address_city }}, {{ site.address_state }}</div>
+            </div>
+            <div class="column is-one-third has-text-centered">
+                <h3 class="title">Around the Web</h3>
+                <div class="field is-grouped is-grouped-centered is-mobile">
+                    {% if site.facebook_username %}
+                    <div class="control has-text-centered">
+                        <a href="https://www.facebook.com/{{ site.facebook_username }}">
+                            <span class="icon">
+                                <i class="fab fa-facebook"></i>
+                            </span>
+                        </a>
+                    </div>
+                    {% endif %}
+                    {% if site.github_username %}
+                    <div class="control has-text-centered">
+                        <a href="https://github.com/{{ site.github_username }}" title="{{ site.github_username }}">
+                            <span class="icon">
+                                <i class="fab fa-github"></i>
+                            </span>
+                        </a>
+                    </div>
+                    {% endif %}
+                    {% if site.goodreads_username %}
+                    <div class="control has-text-centered">
+                        <a href="https://www.goodreads.com/user/show/{{ site.goodreads_username }}" title="Goodreads">
+                            <span class="icon">
+                                <i class="fab fa-goodreads"></i>
+                            </span>
+                        </a>
+                    </div>
+                    {% endif %}
+                    {% if site.itchio_username %}
+                    <div class="control has-text-centered">
+                        <a href="https://{{ site.itchio_username }}.itch.io" title="{{ site.itchio_username }}.itch.io">
+                            {% include itchio-icon.svg %}
+                        </a>
+                    </div>
+                    {% endif %}
+                    {% if site.mastodon_username and site.mastodon_node %}
+                    <div class="control has-text-centered">
+                        <a href="{{ site.mastodon_protocol | default: 'http://' }}{{ site.mastodon_node }}/@{{ site.mastodon_username }}" title="@{{ site.mastodon_username }}@{{ site.mastodon_node }}">
+                            {% include mastodon-icon.svg %}
+                        </a>
+                    </div>
+                    {% endif %}
+                    {% if site.twitter_username %}
+                    <div class="control has-text-centered">
+                        <a href="https://twitter.com/{{ site.twitter_username }}" title="@{{ site.twitter_username }}">
+                            <span class="icon">
+                                <i class="fab fa-twitter"></i>
+                            </span>
+                        </a>
+                    </div>
+                    {% endif %}
+                    {% if site.instagram_username %}
+                    <div class="control has-text-centered">
+                        <a href="https://www.instagram.com/{{ site.instagram_username }}" title="@{{ site.instagram_username }}">
+                            <span class="icon">
+                                <i class="fab fa-instagram"></i>
+                            </span>
+                        </a>
+                    </div>
+                    {% endif %}
+                    {% if site.stackoverflow_url %}
+                    <div class="control has-text-centered">
+						<a href="{{ site.stackoverflow_url }}">
+                            <span class="icon">
+                                <i class="fab fa-stack-overflow"></i>
+                            </span>
+                        </a>
+                    </div>
+                    {% endif %}
+                    {% if site.googleplus_username %}
+                    <div class="control has-text-centered">
+						<a href="https://plus.google.com/+{{ site.googleplus_username }}">
+                            <span class="icon">
+                                <i class="fab fa-google-plus"></i>
+                            </span>
+                        </a>
+                    </div>
+                    {% endif %}
+                    {% if site.skype_username %}
+                    <div class="control has-text-centered">
+						<a href="skype:{{ site.skype_username }}?call">
+                            <span class="icon">
+                                <i class="fab fa-skype"></i>
+                            </span>
+                        </a>
+                    </div>
+                    {% endif %}
+                    {% if site.linkedin_url %}
+                    <div class="control has-text-centered">
+						<a href="{{ site.linkedin_url }}" title="LinkedIn">
+                            <span class="icon">
+                                <i class="fab fa-linkedin"></i>
+                            </span>
+                        </a>
+                    </div>
+                    {% endif %}
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="footer-below">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    Copyright &copy; {{ site.title }} {{ site.time | date: "%Y" }}
-                </div>
+            <div class="column is-one-third has-text-centered">
+                <h3 class="title">In A Nutshell</h3>
+                <div class="is-size-5">Robbie is a professional web developer, hobby game developer, linguistics enthusiast, conlang builder, casual gamer, and maker of highly specific niche software.</div>
             </div>
         </div>
     </div>
 </footer>
-<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-<div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
-    <a class="btn btn-primary" href="#page-top">
-        <i class="fa fa-chevron-up"></i>
-    </a>
-</div>
+
+<footer class="footer notification is-success is-dark-green is-radiusless" style="margin:0;">
+    <div class="container">
+        <div class="columns">
+            <div class="column has-text-centered">
+                Copyright &copy; {{ site.title }} {{ site.time | date: "%Y" }}
+            </div>
+        </div>
+    </div>
+</footer>
