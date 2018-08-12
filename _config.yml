@@ -33,8 +33,10 @@ address_city: Denver
 address_state: CO
 
 collections:
-- projects
-- ideas
+  projects:
+    output: false
+  ideas:
+    output: true
 
 # Build settings
 markdown: kramdown
