@@ -1,26 +1,26 @@
 <!-- Ideas List Section -->
-    <section id="posts">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Ideas</h2>
-                    <hr class="star-primary">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1" style="max-height: 200px; overflow-y: auto;">
-                    <ul style="list-style:none">
-                        {% for idea in site.ideas %}
-                            <li class="post-list-title">
-                                <a href="{{ idea.url | prepend: site.baseurl }}" class="post-link">
-                                    <h3>{{ idea.title }}</h3>
-                                </a>
-                                <span class="post-meta">{{ idea.category }}</span>
-                                <hr>
-                            </li>
-                        {% endfor %}
-                    </ul>
-                </div>
+<section class="section" id="ideas">
+    <div class="container">
+        <div class="columns">
+            <div class="column has-text-centered">
+                <h2 class="title">Ideas</h2>
+                <hr>
             </div>
         </div>
-    </section>
+        <div class="columns">
+            <div class="box column is-10 is-offset-1" style="max-height: 350px; overflow-y: auto;">
+                {% for idea in site.ideas %}
+                <div class="columns">
+                    <div class="column">
+                        <a href="{{ idea.url | prepend: site.baseurl }}" class="post-link">
+                            <h3 class="title">{{ idea.title }}</h3>
+                        </a>
+                        <span class="subtitle">{{ idea.category }}</span>
+                        <hr>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
