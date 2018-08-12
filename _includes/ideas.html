@@ -1,21 +1,21 @@
-<!-- Posts List Section -->
+<!-- Ideas List Section -->
     <section id="posts">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Posts</h2>
+                    <h2>Ideas</h2>
                     <hr class="star-primary">
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1" style="max-height: 200px; overflow-y: auto;">
                     <ul style="list-style:none">
-                        {% for post in site.posts %}
+                        {% for idea in site.ideas %}
                             <li class="post-list-title">
-                                <a href="{{ post.url | prepend: site.baseurl }}" class="post-link">
-                                    <h3>{{ post.title }}</h3>
+                                <a href="{{ idea.url | prepend: site.baseurl }}" class="post-link">
+                                    <h3>{{ idea.title }}</h3>
                                 </a>
-                                <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+                                <span class="post-meta">{{ idea.category }}</span>
                                 <hr>
                             </li>
                         {% endfor %}

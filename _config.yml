@@ -33,6 +33,7 @@ address_state: CO
 
 collections:
 - projects
+- ideas
 
 # Build settings
 markdown: kramdown
