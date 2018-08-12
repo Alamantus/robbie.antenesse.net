@@ -37,7 +37,6 @@ collections:
     output: false
   ideas:
     output: true
-    permalink: /#ideas
 
 # Build settings
 markdown: kramdown
