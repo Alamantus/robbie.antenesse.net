@@ -10,6 +10,7 @@
         <div class="columns is-multiline">
             {% assign projects = (site.projects | sort: 'date') | reverse %}
             {% for project in projects %}
+                {% if project.draft != true %}
                 <div class="column is-one-third portfolio-item">
                     <a class="portfolio-link" data-modal="{{ project.modalID }}">
                         <figure class="image is-3-by-4">
@@ -17,6 +18,7 @@
                         </figure>
                     </a>
                 </div>
+                {% endif %}
             {% endfor %}
         </div>
     </div>
