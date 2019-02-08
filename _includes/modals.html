@@ -1,4 +1,5 @@
 {% for project in site.projects %}
+{% if project.draft != true %}
 <div class="portfolio-modal modal" id="{{ project.modalID }}" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-background"></div>
     <div class="modal-content">
@@ -70,4 +71,5 @@
     </div>
     <button class="modal-close is-large" aria-label="close"></button>
 </div>
+{% endif %}
 {% endfor %}

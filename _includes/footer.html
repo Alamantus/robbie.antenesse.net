@@ -11,7 +11,7 @@
                 <div class="field is-grouped is-grouped-centered is-mobile">
                     {% if site.facebook_username %}
                     <div class="control has-text-centered">
-                        <a href="https://www.facebook.com/{{ site.facebook_username }}">
+                        <a href="https://www.facebook.com/{{ site.facebook_username }}" rel="me">
                             <span class="icon">
                                 <i class="fab fa-facebook"></i>
                             </span>
@@ -20,7 +20,7 @@
                     {% endif %}
                     {% if site.github_username %}
                     <div class="control has-text-centered">
-                        <a href="https://github.com/{{ site.github_username }}" title="{{ site.github_username }}">
+                        <a href="https://github.com/{{ site.github_username }}" title="{{ site.github_username }}" rel="me">
                             <span class="icon">
                                 <i class="fab fa-github"></i>
                             </span>
@@ -29,7 +29,7 @@
                     {% endif %}
                     {% if site.goodreads_username %}
                     <div class="control has-text-centered">
-                        <a href="https://www.goodreads.com/user/show/{{ site.goodreads_username }}" title="Goodreads">
+                        <a href="https://www.goodreads.com/user/show/{{ site.goodreads_username }}" title="Goodreads" rel="me">
                             <span class="icon">
                                 <i class="fab fa-goodreads"></i>
                             </span>
@@ -38,21 +38,21 @@
                     {% endif %}
                     {% if site.itchio_username %}
                     <div class="control has-text-centered">
-                        <a href="https://{{ site.itchio_username }}.itch.io" title="{{ site.itchio_username }}.itch.io">
+                        <a href="https://{{ site.itchio_username }}.itch.io" title="{{ site.itchio_username }}.itch.io" rel="me">
                             {% include itchio-icon.svg %}
                         </a>
                     </div>
                     {% endif %}
                     {% if site.mastodon_username and site.mastodon_node %}
                     <div class="control has-text-centered">
-                        <a href="{{ site.mastodon_protocol | default: 'http://' }}{{ site.mastodon_node }}/@{{ site.mastodon_username }}" title="@{{ site.mastodon_username }}@{{ site.mastodon_node }}">
+                        <a href="{{ site.mastodon_protocol | default: 'http://' }}{{ site.mastodon_node }}/@{{ site.mastodon_username }}" title="@{{ site.mastodon_username }}@{{ site.mastodon_node }}" rel="me">
                             {% include mastodon-icon.svg %}
                         </a>
                     </div>
                     {% endif %}
                     {% if site.twitter_username %}
                     <div class="control has-text-centered">
-                        <a href="https://twitter.com/{{ site.twitter_username }}" title="@{{ site.twitter_username }}">
+                        <a href="https://twitter.com/{{ site.twitter_username }}" title="@{{ site.twitter_username }}" rel="me">
                             <span class="icon">
                                 <i class="fab fa-twitter"></i>
                             </span>
@@ -61,7 +61,7 @@
                     {% endif %}
                     {% if site.instagram_username %}
                     <div class="control has-text-centered">
-                        <a href="https://www.instagram.com/{{ site.instagram_username }}" title="@{{ site.instagram_username }}">
+                        <a href="https://www.instagram.com/{{ site.instagram_username }}" title="@{{ site.instagram_username }}" rel="me">
                             <span class="icon">
                                 <i class="fab fa-instagram"></i>
                             </span>
@@ -70,7 +70,7 @@
                     {% endif %}
                     {% if site.stackoverflow_url %}
                     <div class="control has-text-centered">
-						<a href="{{ site.stackoverflow_url }}">
+						<a href="{{ site.stackoverflow_url }}" rel="me">
                             <span class="icon">
                                 <i class="fab fa-stack-overflow"></i>
                             </span>
@@ -79,7 +79,7 @@
                     {% endif %}
                     {% if site.googleplus_username %}
                     <div class="control has-text-centered">
-						<a href="https://plus.google.com/+{{ site.googleplus_username }}">
+						<a href="https://plus.google.com/+{{ site.googleplus_username }}" rel="me">
                             <span class="icon">
                                 <i class="fab fa-google-plus"></i>
                             </span>
@@ -97,7 +97,7 @@
                     {% endif %}
                     {% if site.linkedin_url %}
                     <div class="control has-text-centered">
-						<a href="{{ site.linkedin_url }}" title="LinkedIn">
+						<a href="{{ site.linkedin_url }}" title="LinkedIn" rel="me">
                             <span class="icon">
                                 <i class="fab fa-linkedin"></i>
                             </span>
