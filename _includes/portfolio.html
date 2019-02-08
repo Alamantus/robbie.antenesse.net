@@ -19,5 +19,17 @@
                 </div>
             {% endfor %}
         </div>
+        {% if site.buymeacoffee_link %}
+        <div class="columns">
+            <div class="column has-text-centered">
+                <a class="button is-primary" target="_blank" href="https://{{ site.buymeacoffee_link }}">
+                    <span class="icon">
+                        <img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy Me A Coffee logo" />
+                    </span>
+                    <span>Support My Projects</span>
+                </a>
+            </div>
+        </div>
+        {% endif %}
     </div>
 </section>

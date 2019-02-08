@@ -105,10 +105,22 @@
                     </div>
                     {% endif %}
                 </div>
+                {% if site.buymeacoffee_link %}
+                <div>
+                    <a class="button" target="_blank" href="https://{{ site.buymeacoffee_link }}">
+                        <span class="icon">
+                            <img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a coffee" />
+                        </span>
+                        <span>Buy me a coffee</span>
+                    </a>
+                </div>
+                {% endif %}
             </div>
             <div class="column is-one-third has-text-centered">
                 <h3 class="title">In A Nutshell</h3>
-                <div class="is-size-5">Robbie is a professional web developer, hobby game developer, linguistics enthusiast, conlang builder, casual gamer, and maker of highly specific niche software.</div>
+                <div class="is-size-5">
+                    Robbie is a professional web developer, hobby game designer, and conlang builder who makes tools, apps, and games that cater to under-served niches.
+                </div>
             </div>
         </div>
     </div>

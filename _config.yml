@@ -14,6 +14,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://robbie.antenesse.net" # the base hostname & protocol for your site
 
 # Social media profiles - feel free to add more here
+buymeacoffee_link: buymeacoff.ee/robbieantenesse
 twitter_username: Alamantus
 github_username:  Alamantus
 goodreads_username:  32802488-robbie-antenesse
