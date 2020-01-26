@@ -72,6 +72,48 @@ button, .button {
       background-color: lighten($picnic-info, 10);
     }
   }
+
+  &.outline {
+    background-color: transparent;
+    color: $picnic-primary;
+    border: 1px solid $picnic-primary;
+
+    &:hover {
+      background-color: $picnic-primary;
+      color: $white;
+      border: 1px solid $white;
+    }
+
+    &.info {
+      color: $picnic-info;
+      border: 1px solid $picnic-info;
+
+      &:hover {
+        background-color: $picnic-info;
+        color: $white;
+        border: 1px solid $white;
+      }
+    }
+  }
+}
+
+.background-green {
+  background-color: $green;
+
+  * {
+    color: $white;
+  }
+
+  &.outline {
+    color: $white;
+    border: 1px solid $white;
+
+    &:hover {
+      background-color: $white;
+      color: $picnic-primary;
+      border: 1px solid $picnic-primary;
+    }
+  }
 }
 
 // Utilities
