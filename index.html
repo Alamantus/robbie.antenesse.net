@@ -63,8 +63,8 @@
     <div class="flex two four-600">
       <article>
         <label for="modal_lexiconga">
-          <div class="card">
-            <img src="src/images/profile.jpg" alt="Lexiconga">
+          <div class="card pseudo button">
+            <img src="src/images/thumbnails/lexiconga.jpg" alt="Lexiconga">
             <footer class="text-center">
               <h3>Lexiconga</h3>
             </footer>
@@ -76,17 +76,20 @@
           <article>
             <header>
               <h3>Lexiconga</h3>
-              <span class="label">Dev Time: Ongoing</span>
+              <span class="label">Dev Time: 2015&ndash;Ongoing</span>
               <label for="modal_lexiconga" class="close" aria-label="Close">&times;</label>
             </header>
             <section class="content">
-              <img src="src/images/profile.jpg" alt="Image of Lexiconga" />
+              <img src="src/images/screenshots/lexiconga.jpg" alt="Image of Lexiconga" />
               <article class="markdown">
               Lexiconga is a free tool that makes it fast and easy go build dictionaries for constructed
               languages. It takes an offline-first approach to handling dictionary data, storing it
               exclusively in the user's browser and only calling the server when they log in with an account.
               All functionality is available without an account, and without an account, all
-              functionality is available offline using [UpUp](https://www.talater.com/upup/).
+              functionality is available offline using [UpUp](https://www.talater.com/upup/).\\\\
+
+              It is built with vanilla JavaScript, Sass styling, a straight PHP backend and a MySQL server,
+              and it is [open source on GitHub](https://github.com/Alamantus/Lexiconga).
               </article>
             </section>
             <footer>
@@ -94,6 +97,49 @@
                 Check it out
               </a>
               <label for="modal_lexiconga" class="button dangerous">
+                Close
+              </label>
+            </footer>
+          </article>
+        </section>
+      </article>
+
+      <article>
+        <label for="modal_redflag">
+          <div class="card pseudo button">
+            <img src="src/images/thumbnails/redflag.jpg" alt="RedFlag">
+            <footer class="text-center">
+              <h3>RedFlag</h3>
+            </footer>
+          </div>
+        </label>
+        <section class="modal">
+          <input id="modal_redflag" type="checkbox" />
+          <label for="modal_redflag" class="overlay" aria-hidden="true"></label>
+          <article>
+            <header>
+              <h3>RedFlag</h3>
+              <span class="label">Dev Time: 2015&ndash;Ongoing</span>
+              <label for="modal_redflag" class="close" aria-label="Close">&times;</label>
+            </header>
+            <section class="content">
+              <img src="src/images/screenshots/redflag.jpg" alt="Image of RedFlag" />
+              <article class="markdown">
+              RedFlag is a free tool that allows users to mark any link with up to three different
+              content warnings and provides a link to use in the original link's place that displays
+              the selected warnings so viewers can choose whether they want to see the content or not.
+              It also provides a way to add your own warnings if the one you are looking for is not
+              on the included list, but it only sticks around if more than one person uses the same
+              warning in a set period of time.\\\\
+
+              It is built with PHP, jQuery, and SQLite, and it is [open source on GitHub](https://github.com/Alamantus/FedFlag).
+              </article>
+            </section>
+            <footer>
+              <a class="info button" href="https://redflag.ga" target="_blank">
+                Check it out
+              </a>
+              <label for="modal_redflag" class="button dangerous">
                 Close
               </label>
             </footer>
