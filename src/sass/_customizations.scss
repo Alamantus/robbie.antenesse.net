@@ -1,0 +1,93 @@
+// Picnic Overrides
+body {  // Make the default font nice
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+a {
+  color: $picnic-info;
+
+  &:not(.button) {
+    &:hover,
+    &:active,
+    &:focus {
+      color: darken($picnic-info, 10);
+    }
+  }
+}
+
+nav {
+  position: relative;
+}
+
+// For some reason, hidden is not important by default!
+[hidden] {
+  display: none !important;
+}
+
+.modal {
+  position: absolute; // Prevent modal partial from interrupting content flow.
+}
+
+h1 {
+  font-size: 2em;
+  line-height: 2.25em;
+}
+h2 {
+  font-size: 1.75em;
+  line-height: 2em;
+}
+h3 {
+  font-size: 1.5em;
+  line-height: 1.75em;
+}
+h4 {
+  font-size: 1.25em;
+  line-height: 1.5em;
+}
+
+// New styles
+.container {
+  position: relative;
+  display: block;
+  width: 95%;
+  margin: 0 auto;
+}
+
+* > img {
+  max-width: 100%;
+}
+
+figure.profile {
+  margin: 0;
+
+  img {
+    border-radius: 0 50% 50% 0;
+  }
+}
+
+button, .button {
+  &.info {
+    background-color: $picnic-info;
+    &:hover {
+      background-color: lighten($picnic-info, 10);
+    }
+  }
+}
+
+// Utilities
+.text-center {
+  text-align: center;
+}
+
+.gargantuan {
+  @extend h1;
+}
+.gigantic {
+  @extend h2;
+}
+.huge {
+  @extend h3;
+}
+.big {
+  @extend h4;
+}

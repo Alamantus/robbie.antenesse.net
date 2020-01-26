@@ -1,3 +1,142 @@
----
-layout: frontpage
----
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Robbie Antenesse</title>
+  <meta name="description" content="Web Developer - Game Developer - Fun Haver">
+  <meta name="author" content="Robbie Antenesse">
+
+  <link rel="stylesheet" href="src/sass/main.scss">
+
+</head>
+
+<body>
+<header>
+  <nav>
+    <a href="/" class="brand">
+      <img class="logo" src="src/images/logo.png" alt="RA Logo" title="Robbie Antenesse" />
+      <span>Robbie Antenesse</span>
+    </a>
+  
+    <!-- responsive-->
+    <input id="mainMenu" type="checkbox" class="show">
+    <label for="mainMenu" class="burger pseudo button">Menu</label>
+  
+    <div class="menu">
+      <a href="#projects" class="pseudo button">Projects</a>
+      <a href="#about" class="pseudo button">About</a>
+      <a href="#thoughts" class="pseudo button">Thoughts</a>
+    </div>
+  </nav>
+
+  <section>
+    <article class="flex one two-600">
+      <section class="full fourth-600">
+        <figure class="profile">
+          <img src="src/images/profile.jpg" alt="Profile Picture of Robbie Antenesse" />
+        </figure>
+      </section>
+      <section class="full three-fourth-600">
+        <article class="container text-center">
+          <h1>Hi, I'm Robbie Antenesse!</h1>
+          <p>
+            I'm a professional web developer, hobby game developer, conlang enthusiast,
+            and maker of highly specific niche software.
+          </p>
+          <p>
+            <a href="#projects" class="button">Things I've Made</a>
+            <a href="#about" class="info button">More About Me</a>
+          </p>
+        </article>
+      </section>
+    </article>
+  </section>
+</header>
+
+<main>
+  <section id="projects" class="container">
+    <header class="text-center">
+      <h2>Projects</h2>
+    </header>
+    <div class="flex two four-600">
+      <article>
+        <label for="modal_lexiconga">
+          <div class="card">
+            <img src="src/images/profile.jpg" alt="Lexiconga">
+            <footer class="text-center">
+              <h3>Lexiconga</h3>
+            </footer>
+          </div>
+        </label>
+        <section class="modal">
+          <input id="modal_lexiconga" type="checkbox" />
+          <label for="modal_lexiconga" class="overlay" aria-hidden="true"></label>
+          <article>
+            <header>
+              <h3>Lexiconga</h3>
+              <label for="modal_lexiconga" class="close" aria-label="Close">&times;</label>
+            </header>
+            <section class="content">
+              <img src="src/images/profile.jpg" alt="Image of Lexiconga" />
+              <article class="markdown">
+              Lexiconga is a dictionary builder.\n\n
+
+              Your dreams will come true with Lexiconga.\n\n
+
+              Build your **your own _language_**!
+              </article>
+            </section>
+            <footer>
+              <a class="info button" href="https://lexicon.ga" target="_blank">
+                Check it out
+              </a>
+              <label for="modal_lexiconga" class="button dangerous">
+                Close
+              </label>
+            </footer>
+          </article>
+        </section>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <section class="flex one two-600">
+    <article>
+      <header class="text-center">
+        <h2 class="huge">Location</h2>
+      </header>
+      <footer>
+        <p class="big text-center">Denver, CO</p>
+      </footer>
+    </article>
+    <article>
+      <header class="text-center">
+        <h2 class="huge">Around the Web</h2>
+      </header>
+      <footer>
+        <p class="text-center">
+          <a class="pseudo button" href="https://github.com/Alamantus" target="_blank" rel="me" title="GitHub">
+            GitHub
+          </a>
+          <a class="pseudo button" href="https://alamantus.itch.io" target="_blank" rel="me" title="Itch.io">
+            Itch
+          </a>
+          <a class="pseudo button" href="https://cybre.space/@Alamantus" target="_blank" rel="me" title="Mastodon">
+            Mastodon
+          </a>
+          <a class="pseudo button" href="https://wheretofind.me/Robbie" target="_blank" rel="me" title="WhereToFind.me">
+            Elsewhere
+          </a>
+        </p>
+      </footer>
+    </article>
+  </section>
+</footer>
+
+<script src="src/js/index.js"></script>
+</body>
+</html>
