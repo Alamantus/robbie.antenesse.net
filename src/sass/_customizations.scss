@@ -101,9 +101,8 @@ button, .button {
   }
 }
 
-.background-green {
-  background-color: $green;
-
+.background-green,
+.background-dark-green {
   * {
     color: $white;
   }
@@ -118,6 +117,13 @@ button, .button {
       border: 1px solid $picnic-primary;
     }
   }
+}
+
+.background-green {
+  background-color: $green;
+}
+.background-dark-green {
+  background-color: darken($green, 10);
 }
 
 // Utilities
