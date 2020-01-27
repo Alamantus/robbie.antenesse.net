@@ -185,7 +185,7 @@ button, .button {
 // Sections
 #posts, #ideas {
   footer {
-    min-height: 500px;
+    max-height: 400px;
     overflow-y: auto;
   }
 }

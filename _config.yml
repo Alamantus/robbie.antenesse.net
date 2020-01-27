@@ -9,4 +9,4 @@ collections:
   projects:
     output: false
   ideas:
-    output: true
+    output: false
