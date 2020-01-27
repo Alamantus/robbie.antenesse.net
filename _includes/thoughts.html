@@ -26,10 +26,10 @@
         </header>
         <footer>
           {% for idea in site.ideas %}
-          <button href="{{ idea.url }}" class="block pseudo">
+          <a href="{{ idea.url }}" class="block pseudo button">
             <h4>{{ idea.title }}</h4>
             <span>{{ idea.category }}</span>
-          </button>
+          </a>
           {% endfor %}
         </footer>
       </div>
@@ -37,4 +37,5 @@
   </article>
 
   <div class="fancy-accent top left" role="presentation" aria-hidden="true"><div></div></div>
+  <div class="fancy-accent bottom right" role="presentation" aria-hidden="true"><div></div></div>
 </section>

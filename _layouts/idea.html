@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<section>
+  <header class="container">
+    <a href="{{ '/' | prepend: site.baseurl }}#ideas" class="pseudo button">&larr; Back</a>
+    <h1>
+      {{ page.title }}
+      <span class="label">{{ page.category }} Idea</span>
+    </h1>
+  </header>
+
+  <article class="container" style="padding-bottom:5%;">
+    {{ content }}
+  </article>
+
+  <div class="fancy-accent top right" role="presentation" aria-hidden="true"><div></div></div>
+  <div class="fancy-accent bottom left" role="presentation" aria-hidden="true"><div></div></div>
+</section>
