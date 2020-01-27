@@ -14,37 +14,13 @@
             {{ about.short }}
           </p>
           <p>
-            <label for="modal_about" id="moreAboutButton" class="outline button" role="button">
+            <a href="{{ '/about.html' | prepend: site.baseurl }}" class="outline button">
               More About Me
-            </label>
+            </a>
           </p>
         </section>
 
       </article>
     </section>
-  </article>
-</section>
-<section class="modal" role="dialog" aria-labelledby="moreAboutButton" aria-describedby="aboutTitle">
-  <input id="modal_about" type="checkbox" aria-hidden="true" />
-  <label for="modal_about" class="overlay" role="presentation" aria-hidden="true"></label>
-  <article>
-    <header>
-      <h2 id="aboutTitle">More About Robbie</h2>
-      <button class="close pseudo" onclick="this.children[0].click()" aria-label="Close Modal">
-        <label for="modal_about" role="button">&times;</label>
-      </button>
-    </header>
-    <section class="content">
-      <article id="aboutContent">
-        {{ about.long | markdownify }}
-      </article>
-    </section>
-    <footer>
-      <button onclick="this.children[0].click()" aria-label="Close Modal">
-        <label for="modal_about">
-          Nice to meet you!
-        </label>
-      </button>
-    </footer>
   </article>
 </section>
