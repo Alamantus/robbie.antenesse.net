@@ -3,281 +3,50 @@
     <h2>Projects</h2>
   </header>
   <div class="flex one two-500 three-800">
+    {% assign projects = site.projects | sort: 'order' %}
+    {% for project in projects %}
     <article>
-      <label for="modal_lexiconga">
-        <div class="card pseudo button">
+      <label for="modal_{{ project.slug }}">
+        <button class="card pseudo" onclick="this.parentNode.click()">
           <!-- Change to 500px wide -->
-          <img src="{{ site.baseurl }}/images/thumbnails/lexiconga.jpg" alt="Lexiconga">
+          <img src="{{ site.baseurl }}/images/thumbnails/{{ project.slug }}.jpg" alt="{{ project.name }}">
           <footer class="text-center">
-            <h3>Lexiconga</h3>
+            <h3>{{ project.name }}</h3>
           </footer>
-        </div>
+        </button>
       </label>
       <section class="modal">
-        <input id="modal_lexiconga" type="checkbox" />
-        <label for="modal_lexiconga" class="overlay" aria-hidden="true"></label>
+        <input id="modal_{{ project.slug }}" type="checkbox" aria-hidden="true" />
+        <label for="modal_{{ project.slug }}" class="overlay" role="presentation" aria-hidden="true"></label>
         <article>
           <header>
-            <h3>Lexiconga</h3>
-            <span class="label">Dev Time: 2015&ndash;Ongoing</span>
-            <label for="modal_lexiconga" class="close" aria-label="Close">&times;</label>
+            <h3>{{ project.name }}</h3>
+            <span class="label">Dev Time: {{ project.time }}</span>
+            <button class="close pseudo" onclick="this.children[0].click()" aria-label="Close Modal">
+              <label for="modal_{{ project.slug }}">&times;</label>
+            </button>
           </header>
           <section class="content">
             <!-- Change to 850px wide -->
-            <img src="{{ site.baseurl }}/images/screenshots/lexiconga.jpg" alt="Image of Lexiconga" />
-            <article class="markdown">
-              Lexiconga is a free tool that makes it fast and easy go build dictionaries for constructed
-              languages. It takes an offline-first approach to handling dictionary data, storing it
-              exclusively in the user's browser and only calling the server when they log in with an account.
-              All functionality is available without an account, and without an account, all
-              functionality is available offline using [UpUp](https://www.talater.com/upup/).\\\\
-
-              It is built with vanilla JavaScript, Sass styling, a straight PHP backend and a MySQL server,
-              and it is [open source on GitHub](https://github.com/Alamantus/Lexiconga).
+            <img src="{{ site.baseurl }}/images/screenshots/{{ project.slug }}.jpg" alt="Image of {{ project.name }}" />
+            <article>
+              {{ project.output }}
             </article>
           </section>
           <footer>
-            <a class="info button" href="https://lexicon.ga" target="_blank">
+            <a class="info button" href="{{ project.link }}" target="_blank">
               Check it out
             </a>
-            <label for="modal_lexiconga" class="button dangerous">
-              Close
-            </label>
+            <button class="dangerous" onclick="this.children[0].click()">
+              <label for="modal_{{ project.slug }}">
+                Close
+              </label>
+            </button>
           </footer>
         </article>
       </section>
     </article>
-
-    <article>
-      <label for="modal_time-to-page">
-        <div class="card pseudo button">
-          <img src="{{ site.baseurl }}/images/thumbnails/time-to-page.jpg" alt="Time-to-Page">
-          <footer class="text-center">
-            <h3>Time-to-Page</h3>
-          </footer>
-        </div>
-      </label>
-      <section class="modal">
-        <input id="modal_time-to-page" type="checkbox" />
-        <label for="modal_time-to-page" class="overlay" aria-hidden="true"></label>
-        <article>
-          <header>
-            <h3>Time-to-Page</h3>
-            <span class="label">Dev Time: 2014, 2020</span>
-            <label for="modal_time-to-page" class="close" aria-label="Close">&times;</label>
-          </header>
-          <section class="content">
-            <img src="{{ site.baseurl }}/images/screenshots/time-to-page.jpg" alt="Image of Time-to-Page" />
-            <article class="markdown">
-              Time-to-Page is a calculator that converts listened audiobook time to the equivalent
-              page in the physical book and vice-versa. It was originally built very simply and barebones,
-              but I re-wrote it in React, Redux, and Bootstrap to show my skills in those technologies while
-              also adding some extra features to make it a little bit nicer to use like saving book settings
-              and measuring by percent completion in addition to time and page number.\\\\
-
-              This app is second most used that I have made with at least 2 visitors per day without fail
-              since it has been online, and it is mostly accessed via Google searches! It turns out that
-              this is a tool that people have needed, and in at least one case, it has been used as the
-              main tool for calculating page number in a reading challenge on GoodReads!\\\\
-
-              It is built with React, Redux, and Bootstrap, and it is [open source on
-              GitHub](https://github.com/Alamantus/time-to-page).
-            </article>
-          </section>
-          <footer>
-            <a class="info button" href="https://alamantus.itch.io/time-to-page" target="_blank">
-              Check it out
-            </a>
-            <label for="modal_time-to-page" class="button dangerous">
-              Close
-            </label>
-          </footer>
-        </article>
-      </section>
-    </article>
-
-    <article>
-      <label for="modal_little-library">
-        <div class="card pseudo button">
-          <img src="{{ site.baseurl }}/images/thumbnails/little-library.jpg" alt="Little Library">
-          <footer class="text-center">
-            <h3>Little Library</h3>
-          </footer>
-        </div>
-      </label>
-      <section class="modal">
-        <input id="modal_little-library" type="checkbox" />
-        <label for="modal_little-library" class="overlay" aria-hidden="true"></label>
-        <article>
-          <header>
-            <h3>Little Library</h3>
-            <span class="label">Dev Time: 2019</span>
-            <label for="modal_little-library" class="close" aria-label="Close">&times;</label>
-          </header>
-          <section class="content">
-            <img src="{{ site.baseurl }}/images/screenshots/little-library.jpg" alt="Image of Little Library" />
-            <article class="markdown">
-              Little Library is a web service that aims to create the experience of a [Little Free
-              Library](https://littlefreelibrary.org/)
-              in a digital space. It allows users to upload ebooks that they want to share with others with a
-              reason why they want to share the book, and when another viewer claims the file, it is permanently
-              deleted from the server, emulating the act of taking the book from a Little Free Library shelf. In
-              this way, it is essentially the same as sharing the book with a friend because it works with just one
-              copy at a time. It also displays a history of previously downloaded books to preserve what the original
-              uploader wrote about the book!\\\\
-
-              It is built with Node on an Express server, served from a Google Cloud virtual machine, and it is
-              [open source on GitHub](https://github.com/Alamantus/little-library).
-            </article>
-          </section>
-          <footer>
-            <a class="info button" href="https://library.quietplace.tk" target="_blank">
-              Check it out
-            </a>
-            <label for="modal_little-library" class="button dangerous">
-              Close
-            </label>
-          </footer>
-        </article>
-      </section>
-    </article>
-
-    <article>
-      <label for="modal_redflag">
-        <div class="card pseudo button">
-          <img src="{{ site.baseurl }}/images/thumbnails/redflag.jpg" alt="RedFlag">
-          <footer class="text-center">
-            <h3>RedFlag</h3>
-          </footer>
-        </div>
-      </label>
-      <section class="modal">
-        <input id="modal_redflag" type="checkbox" />
-        <label for="modal_redflag" class="overlay" aria-hidden="true"></label>
-        <article>
-          <header>
-            <h3>RedFlag</h3>
-            <span class="label">Dev Time: 2017</span>
-            <label for="modal_redflag" class="close" aria-label="Close">&times;</label>
-          </header>
-          <section class="content">
-            <img src="{{ site.baseurl }}/images/screenshots/redflag.jpg" alt="Image of RedFlag" />
-            <article class="markdown">
-              RedFlag is a free tool that allows users to mark any link with up to three different
-              content warnings and provides a link to use in the original link's place that displays
-              the selected warnings so viewers can choose whether they want to see the content or not.
-              It also provides a way to add your own warnings if the one you are looking for is not
-              on the included list, but it only sticks around if more than one person uses the same
-              warning in a set period of time.\\\\
-
-              It is built with PHP, jQuery, and SQLite, and it is [open source on
-              GitHub](https://github.com/Alamantus/RedFlag).
-            </article>
-          </section>
-          <footer>
-            <a class="info button" href="https://redflag.ga" target="_blank">
-              Check it out
-            </a>
-            <label for="modal_redflag" class="button dangerous">
-              Close
-            </label>
-          </footer>
-        </article>
-      </section>
-    </article>
-
-    <article>
-      <label for="modal_guts-plus">
-        <div class="card pseudo button">
-          <img src="{{ site.baseurl }}/images/thumbnails/guts-plus.jpg" alt="The GUTS Plus System">
-          <footer class="text-center">
-            <h3>The GUTS+ System</h3>
-          </footer>
-        </div>
-      </label>
-      <section class="modal">
-        <input id="modal_guts-plus" type="checkbox" />
-        <label for="modal_guts-plus" class="overlay" aria-hidden="true"></label>
-        <article>
-          <header>
-            <h3>The GUTS+ System</h3>
-            <span class="label">Dev Time: 2018&ndash;Ongoing</span>
-            <label for="modal_guts-plus" class="close" aria-label="Close">&times;</label>
-          </header>
-          <section class="content">
-            <img src="{{ site.baseurl }}/images/screenshots/guts-plus.jpg" alt="Image of The GUTS Plus System Website" />
-            <article class="markdown">
-              The GUTS+ System is a role-playing game system that provides rules for playing in any setting
-              you want with characters that aren't necessarily super powerful. GUTS+ aims to have easy to
-              remember rules, an emphasis on role play, and a unique character quality system that highlights
-              your characters' individual strengths rather than a collection of generic stats. The rules are
-              available for free online, but you can also buy a nicely formatted PDF version of the rules from
-              [Itch.io](https://alamantus.itch.io/guts-plus) and [DriveThru
-              RPG](https://www.drivethrurpg.com/product/273132/The-GUTS-System-Core-Rule-Book).\\\\
-
-              The website that hosts the rules and all the information about the system is built to be as light
-              on bandwidth as possible while still implementing an attractive style framework. All told, the
-              website serves less than 70kb of bandwidth per page, and it also stores an offline version of
-              the rules in the user's browser just in case they ever visit without internet access. It also
-              implements an instance of Fathom analytics, which tracks pageviews and leaves user data private.\\\\
-
-              It is hosted on GitLab pages and is built using the Hugo templating engine.
-            </article>
-          </section>
-          <footer>
-            <a class="info button" href="https://guts.plus" target="_blank">
-              Check it out
-            </a>
-            <label for="modal_guts-plus" class="button dangerous">
-              Close
-            </label>
-          </footer>
-        </article>
-      </section>
-    </article>
-
-    <article>
-      <label for="modal_radio-silence">
-        <div class="card pseudo button">
-          <img src="{{ site.baseurl }}/images/thumbnails/radio-silence.jpg" alt="Radio Silence">
-          <footer class="text-center">
-            <h3>Radio Silence</h3>
-          </footer>
-        </div>
-      </label>
-      <section class="modal">
-        <input id="modal_radio-silence" type="checkbox" />
-        <label for="modal_radio-silence" class="overlay" aria-hidden="true"></label>
-        <article>
-          <header>
-            <h3>Radio Silence</h3>
-            <span class="label">Dev Time: 2016</span>
-            <label for="modal_radio-silence" class="close" aria-label="Close">&times;</label>
-          </header>
-          <section class="content">
-            <img src="{{ site.baseurl }}/images/screenshots/radio-silence.jpg" alt="Image of Radio Silence" />
-            <article class="markdown">
-              Radio Silence is an interactive experience created in collaboration with [Paws Menu](http://pawsmenu.net)
-              created for the 2016 Fermi Paradox Jam. In this game, you gaze through a telescope and
-              send messages to the stars in hopes that you might receive a reply. While stargazing,
-              you can also scan the radio for some ethereal music and even a radio show voiced by myself
-              and some other voice actors credited in the game.\\\\
-
-              It was built using Unity 3D, Blender, and Heroku, which hosts the API and database that
-              stores messages sent to stars and retrieves them if they are ever scanned.
-            </article>
-          </section>
-          <footer>
-            <a class="info button" href="https://alamantus.itch.io/radio-silence" target="_blank">
-              Check it out
-            </a>
-            <label for="modal_radio-silence" class="button dangerous">
-              Close
-            </label>
-          </footer>
-        </article>
-      </section>
-    </article>
+    {% endfor %}
   </div>
   <footer class="text-center">
     <h3 class="marginless paddingless">And More!</h3>
