@@ -9,10 +9,10 @@
           <h3>Posts</h3>
         </header>
         <footer>
-          {% for post in posts %}
+          {% for post in site.posts %}
           <a href="{{ post.url }}" class="block pseudo button">
             <h4>{{ post.title }}</h4>
-            <time>{{ post.date }}</time>
+            <time>{{ post.date | date: "%b %-d, %Y" }}</time>
           </a>
           {% endfor %}
         </footer>
@@ -25,11 +25,11 @@
           <h3>Ideas</h3>
         </header>
         <footer>
-          {% for idea in ideas %}
-          <a href="{{ idea.url }}" class="block pseudo button">
+          {% for idea in site.ideas %}
+          <button href="{{ idea.url }}" class="block pseudo">
             <h4>{{ idea.title }}</h4>
-            <time>{{ idea.date }}</time>
-          </a>
+            <span>{{ idea.category }}</span>
+          </button>
           {% endfor %}
         </footer>
       </div>
