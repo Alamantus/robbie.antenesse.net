@@ -1,0 +1,43 @@
+<section id="contact">
+  <header class="text-center">
+    <h2>Contact Me</h2>
+  </header>
+  <article class="container" style="padding-bottom:5%;">
+    <form action="https://formspree.io/dev@alamantus.com" method="post" name="sentMessage" id="contactForm">
+      <fieldset class="flex one two-900">
+        <label aria-label="Name">
+          <input type="text" placeholder="Name" name="name" id="name" required
+            data-validation-required-message="Please enter your name.">
+        </label>
+        <div class="help is-error"></div>
+
+        <label aria-label="Email Address">
+          <input type="email" placeholder="Email Address" name="email" id="email" required
+            data-validation-required-message="Please enter your email address.">
+        </label>
+        <div class="help is-error"></div>
+        <input type="text" name="_gotcha" style="display:none" />
+
+        <label aria-label="Phone Number">
+          <input type="tel" placeholder="Phone Number" name="phone" id="phone" required
+            data-validation-required-message="Please enter your phone number.">
+        </label>
+        <div class="help is-error"></div>
+      </fieldset>
+      
+      <label aria-label="Message">
+        <textarea rows="5" class="textarea is-large" placeholder="Message" name="message" id="message" required
+          data-validation-required-message="Please enter a message."></textarea>
+      </label>
+      <div class="help is-danger"></div>
+
+      <div id="success"></div>
+      <input type="hidden" name="_subject" value="Contact message from portfolio!" />
+      <input type="hidden" name="_next" value="{{ site.url }}/#contact" />
+      <button type="submit" class="block button">Send</button>
+    </form>
+  </article>
+
+  <div class="fancy-accent top right" role="presentation" aria-hidden="true"><div></div></div>
+  <div class="fancy-accent bottom left" role="presentation" aria-hidden="true"><div></div></div>
+</section>
