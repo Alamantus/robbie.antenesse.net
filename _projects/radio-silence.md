@@ -1,5 +1,6 @@
 ---
-name: Radio Silence
+layout: project
+title: Radio Silence
 time: 2016
 slug: radio-silence
 link: https://alamantus.itch.io/radio-silence

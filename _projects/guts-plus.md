@@ -1,5 +1,6 @@
 ---
-name: The GUTS+ System
+layout: project
+title: The GUTS+ System
 time: 2018–Ongoing
 slug: guts-plus
 link: https://guts.plus

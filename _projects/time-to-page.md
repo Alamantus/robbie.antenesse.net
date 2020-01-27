@@ -1,5 +1,6 @@
 ---
-name: Time-to-Page Calculator
+layout: project
+title: Time-to-Page Calculator
 time: 2014, 2020
 slug: time-to-page
 link: https://alamantus.itch.io/time-to-page
@@ -17,4 +18,4 @@ since it has been online, and it is mostly accessed via Google searches! It turn
 this is a tool that people have needed, and in at least one case, it has been used as the
 main tool for calculating page number in a reading challenge on GoodReads!
 
-It is built with React, Redux, and Bootstrap, and it is [open source on GitHub](https://github.com/Alamantus/time-to-page.
+It is built with React, Redux, and Bootstrap, and it is [open source on GitHub](https://github.com/Alamantus/time-to-page).

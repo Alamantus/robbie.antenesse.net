@@ -1,5 +1,6 @@
 ---
-name: RedFlag
+layout: project
+title: RedFlag
 time: 2017
 slug: redflag
 link: https://redflag.ga

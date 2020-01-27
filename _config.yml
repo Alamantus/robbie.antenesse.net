@@ -7,6 +7,6 @@ url: "https://robbie.antenesse.net" # the base hostname & protocol for your site
 
 collections:
   projects:
-    output: false
+    output: true
   ideas:
     output: true

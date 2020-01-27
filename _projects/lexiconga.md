@@ -1,5 +1,6 @@
 ---
-name: Lexiconga
+layout: project
+title: Lexiconga
 time: 2015–Ongoing
 slug: lexiconga
 link: https://lexicon.ga

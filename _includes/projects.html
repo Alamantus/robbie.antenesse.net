@@ -6,45 +6,13 @@
     {% assign projects = site.projects | sort: 'order' %}
     {% for project in projects %}
     <article>
-      <label for="modal_{{ project.slug }}">
-        <button class="card pseudo" onclick="this.parentNode.click()">
-          <!-- Change to 500px wide -->
-          <img src="{{ site.baseurl }}/images/thumbnails/{{ project.slug }}.jpg" alt="{{ project.name }}">
-          <footer class="text-center">
-            <h3>{{ project.name }}</h3>
-          </footer>
-        </button>
-      </label>
-      <section class="modal">
-        <input id="modal_{{ project.slug }}" type="checkbox" aria-hidden="true" />
-        <label for="modal_{{ project.slug }}" class="overlay" role="presentation" aria-hidden="true"></label>
-        <article>
-          <header>
-            <h3>{{ project.name }}</h3>
-            <span class="label">Dev Time: {{ project.time }}</span>
-            <button class="close pseudo" onclick="this.children[0].click()" aria-label="Close Modal">
-              <label for="modal_{{ project.slug }}">&times;</label>
-            </button>
-          </header>
-          <section class="content">
-            <!-- Change to 850px wide -->
-            <img src="{{ site.baseurl }}/images/screenshots/{{ project.slug }}.jpg" alt="Image of {{ project.name }}" />
-            <article>
-              {{ project.output }}
-            </article>
-          </section>
-          <footer>
-            <a class="info button" href="{{ project.link }}" target="_blank">
-              Check it out
-            </a>
-            <button class="dangerous" onclick="this.children[0].click()">
-              <label for="modal_{{ project.slug }}">
-                Close
-              </label>
-            </button>
-          </footer>
-        </article>
-      </section>
+      <a href="{{ project.url }}" class="card pseudo button">
+        <!-- Change to 500px wide -->
+        <img src="{{ site.baseurl }}/images/thumbnails/{{ project.slug }}.jpg" alt="{{ project.title }}">
+        <footer class="text-center">
+          <h3>{{ project.title }}</h3>
+        </footer>
+      </a>
     </article>
     {% endfor %}
   </div>

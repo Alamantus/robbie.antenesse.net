@@ -1,5 +1,6 @@
 ---
-name: Little Library
+layout: project
+title: Little Library
 time: 2019
 slug: little-library
 link: https://library.quietplace.tk
