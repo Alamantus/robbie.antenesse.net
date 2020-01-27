@@ -1,8 +1,8 @@
-<section id="projects" class="container">
+<section id="projects">
   <header class="text-center">
     <h2>Projects</h2>
   </header>
-  <div class="flex one two-500 three-800">
+  <div class="container flex one two-500 three-800">
     {% assign projects = site.projects | sort: 'order' %}
     {% for project in projects %}
     <article>
@@ -57,4 +57,5 @@
       </p>
     </article>
   </footer>
+  <div class="fancy-accent top right" role="presentation" aria-hidden="true"><div></div></div>
 </section>
