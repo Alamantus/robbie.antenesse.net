@@ -28,6 +28,11 @@ nav {
   position: absolute; // Prevent modal partial from interrupting content flow.
 }
 
+@media (min-width: 700px) {
+  .large {
+    font-size: 1.25em;
+  }
+}
 @media (max-width: 700px) {
   h1 {
     font-size: 1.7em !important;
@@ -200,17 +205,4 @@ button, .button {
 }
 .marginless {
   margin: 0 !important;
-}
-
-.gargantuan {
-  @extend h1;
-}
-.gigantic {
-  @extend h2;
-}
-.huge {
-  @extend h3;
-}
-.big {
-  @extend h4;
 }
