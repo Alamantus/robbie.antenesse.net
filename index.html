@@ -60,10 +60,11 @@
     <header class="text-center">
       <h2>Projects</h2>
     </header>
-    <div class="flex two four-600">
+    <div class="flex one two-500 three-800">
       <article>
         <label for="modal_lexiconga">
           <div class="card pseudo button">
+            <!-- Change to 500px wide -->
             <img src="src/images/thumbnails/lexiconga.jpg" alt="Lexiconga">
             <footer class="text-center">
               <h3>Lexiconga</h3>
@@ -80,6 +81,7 @@
               <label for="modal_lexiconga" class="close" aria-label="Close">&times;</label>
             </header>
             <section class="content">
+              <!-- Change to 850px wide -->
               <img src="src/images/screenshots/lexiconga.jpg" alt="Image of Lexiconga" />
               <article class="markdown">
               Lexiconga is a free tool that makes it fast and easy go build dictionaries for constructed
@@ -97,91 +99,6 @@
                 Check it out
               </a>
               <label for="modal_lexiconga" class="button dangerous">
-                Close
-              </label>
-            </footer>
-          </article>
-        </section>
-      </article>
-
-      <article>
-        <label for="modal_redflag">
-          <div class="card pseudo button">
-            <img src="src/images/thumbnails/redflag.jpg" alt="RedFlag">
-            <footer class="text-center">
-              <h3>RedFlag</h3>
-            </footer>
-          </div>
-        </label>
-        <section class="modal">
-          <input id="modal_redflag" type="checkbox" />
-          <label for="modal_redflag" class="overlay" aria-hidden="true"></label>
-          <article>
-            <header>
-              <h3>RedFlag</h3>
-              <span class="label">Dev Time: 2017</span>
-              <label for="modal_redflag" class="close" aria-label="Close">&times;</label>
-            </header>
-            <section class="content">
-              <img src="src/images/screenshots/redflag.jpg" alt="Image of RedFlag" />
-              <article class="markdown">
-              RedFlag is a free tool that allows users to mark any link with up to three different
-              content warnings and provides a link to use in the original link's place that displays
-              the selected warnings so viewers can choose whether they want to see the content or not.
-              It also provides a way to add your own warnings if the one you are looking for is not
-              on the included list, but it only sticks around if more than one person uses the same
-              warning in a set period of time.\\\\
-
-              It is built with PHP, jQuery, and SQLite, and it is [open source on GitHub](https://github.com/Alamantus/FedFlag).
-              </article>
-            </section>
-            <footer>
-              <a class="info button" href="https://redflag.ga" target="_blank">
-                Check it out
-              </a>
-              <label for="modal_redflag" class="button dangerous">
-                Close
-              </label>
-            </footer>
-          </article>
-        </section>
-      </article>
-
-      <article>
-        <label for="modal_game-idea-generator">
-          <div class="card pseudo button">
-            <img src="src/images/thumbnails/game-idea-generator.jpg" alt="Game Idea Generator">
-            <footer class="text-center">
-              <h3>Game Idea Generator</h3>
-            </footer>
-          </div>
-        </label>
-        <section class="modal">
-          <input id="modal_game-idea-generator" type="checkbox" />
-          <label for="modal_game-idea-generator" class="overlay" aria-hidden="true"></label>
-          <article>
-            <header>
-              <h3>Game Idea Generator</h3>
-              <span class="label">Dev Time: 2014, 2018</span>
-              <label for="modal_game-idea-generator" class="close" aria-label="Close">&times;</label>
-            </header>
-            <section class="content">
-              <img src="src/images/screenshots/game-idea-generator.jpg" alt="Image of Game Idea Generator" />
-              <article class="markdown">
-              Game Idea Generator is a fun web app that randomly generates a complicated video game idea by using
-              a large collection of words, phrases, and ideas that I have since separately released as its own
-              package called `fun-word-list` available on [NPM](https://www.npmjs.com/package/fun-word-list).
-              The generator was originally used for a game development jam I hosted from 2014–2016 called the
-              Insanity Jam, but it now stands alone as a fun little memory from another time.\\\\
-
-              It is built with jQuery and Bootstrap, and it is [open source on GitHub](https://github.com/Alamantus/GameIdeaGenerator).
-              </article>
-            </section>
-            <footer>
-              <a class="info button" href="https://alamantus.github.io/GameIdeaGenerator/" target="_blank">
-                Check it out
-              </a>
-              <label for="modal_game-idea-generator" class="button dangerous">
                 Close
               </label>
             </footer>
@@ -229,6 +146,94 @@
                 Check it out
               </a>
               <label for="modal_time-to-page" class="button dangerous">
+                Close
+              </label>
+            </footer>
+          </article>
+        </section>
+      </article>
+
+      <article>
+        <label for="modal_little-library">
+          <div class="card pseudo button">
+            <img src="src/images/thumbnails/little-library.jpg" alt="Little Library">
+            <footer class="text-center">
+              <h3>Little Library</h3>
+            </footer>
+          </div>
+        </label>
+        <section class="modal">
+          <input id="modal_little-library" type="checkbox" />
+          <label for="modal_little-library" class="overlay" aria-hidden="true"></label>
+          <article>
+            <header>
+              <h3>Little Library</h3>
+              <span class="label">Dev Time: 2019</span>
+              <label for="modal_little-library" class="close" aria-label="Close">&times;</label>
+            </header>
+            <section class="content">
+              <img src="src/images/screenshots/little-library.jpg" alt="Image of Little Library" />
+              <article class="markdown">
+              Little Library is a web service that aims to create the experience of a [Little Free Library](https://littlefreelibrary.org/)
+              in a digital space. It allows users to upload ebooks that they want to share with others with a
+              reason why they want to share the book, and when another viewer claims the file, it is permanently
+              deleted from the server, emulating the act of taking the book from a Little Free Library shelf. In
+              this way, it is essentially the same as sharing the book with a friend because it works with just one
+              copy at a time. It also displays a history of previously downloaded books to preserve what the original
+              uploader wrote about the book!\\\\
+
+              It is built with Node on an Express server, served from a Google Cloud virtual machine, and it is
+              [open source on GitHub](https://github.com/Alamantus/little-library).
+              </article>
+            </section>
+            <footer>
+              <a class="info button" href="https://library.quietplace.tk" target="_blank">
+                Check it out
+              </a>
+              <label for="modal_little-library" class="button dangerous">
+                Close
+              </label>
+            </footer>
+          </article>
+        </section>
+      </article>
+
+      <article>
+        <label for="modal_redflag">
+          <div class="card pseudo button">
+            <img src="src/images/thumbnails/redflag.jpg" alt="RedFlag">
+            <footer class="text-center">
+              <h3>RedFlag</h3>
+            </footer>
+          </div>
+        </label>
+        <section class="modal">
+          <input id="modal_redflag" type="checkbox" />
+          <label for="modal_redflag" class="overlay" aria-hidden="true"></label>
+          <article>
+            <header>
+              <h3>RedFlag</h3>
+              <span class="label">Dev Time: 2017</span>
+              <label for="modal_redflag" class="close" aria-label="Close">&times;</label>
+            </header>
+            <section class="content">
+              <img src="src/images/screenshots/redflag.jpg" alt="Image of RedFlag" />
+              <article class="markdown">
+              RedFlag is a free tool that allows users to mark any link with up to three different
+              content warnings and provides a link to use in the original link's place that displays
+              the selected warnings so viewers can choose whether they want to see the content or not.
+              It also provides a way to add your own warnings if the one you are looking for is not
+              on the included list, but it only sticks around if more than one person uses the same
+              warning in a set period of time.\\\\
+
+              It is built with PHP, jQuery, and SQLite, and it is [open source on GitHub](https://github.com/Alamantus/RedFlag).
+              </article>
+            </section>
+            <footer>
+              <a class="info button" href="https://redflag.ga" target="_blank">
+                Check it out
+              </a>
+              <label for="modal_redflag" class="button dangerous">
                 Close
               </label>
             </footer>
@@ -300,7 +305,7 @@
           <article>
             <header>
               <h3>Radio Silence</h3>
-              <span class="label">Dev Time: 2018&ndash;Ongoing</span>
+              <span class="label">Dev Time: 2016</span>
               <label for="modal_radio-silence" class="close" aria-label="Close">&times;</label>
             </header>
             <section class="content">
@@ -332,7 +337,7 @@
 </main>
 
 <footer class="background-dark-green">
-  <section class="flex one two-600">
+  <section class="flex one two-500">
     <article>
       <header class="text-center">
         <h2 class="huge">Location</h2>

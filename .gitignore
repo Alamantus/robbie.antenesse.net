@@ -2,3 +2,5 @@ node_modules/
 old/
 .cache/
 dist/
+
+.DS_Store
