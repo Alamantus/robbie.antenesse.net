@@ -80,6 +80,11 @@ figure.profile {
 }
 
 button, .button {
+  &.block {
+    display: block;
+    width: 100%;
+  }
+
   &.info {
     background-color: $picnic-info;
     &:hover {
@@ -168,14 +173,21 @@ button, .button {
     
     &.left *:first-child {
       float: right;
-      border-radius: 0 0 50% 0;
+      border-radius: 0 0 0 50%;
     }
     &.right *:last-child {
       float: left;
-      border-radius: 0 0 0 50%;
+      border-radius: 0 0 50% 0;
     }
   }
+}
 
+// Sections
+#posts, #ideas {
+  footer {
+    min-height: 500px;
+    overflow-y: auto;
+  }
 }
 
 // Utilities

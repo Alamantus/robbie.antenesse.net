@@ -1,0 +1,40 @@
+<section id="thoughts">
+  <header class="text-center">
+    <h2>Thoughts</h2>
+  </header>
+  <article class="container flex one two-1000">
+    <section>
+      <div id="posts" class="card">
+        <header class="text-center">
+          <h3>Posts</h3>
+        </header>
+        <footer>
+          {% for post in posts %}
+          <a href="{{ post.url }}" class="block pseudo button">
+            <h4>{{ post.title }}</h4>
+            <time>{{ post.date }}</time>
+          </a>
+          {% endfor %}
+        </footer>
+      </div>
+    </section>
+
+    <section>
+      <div id="ideas" class="card">
+        <header class="text-center">
+          <h3>Ideas</h3>
+        </header>
+        <footer>
+          {% for idea in ideas %}
+          <a href="{{ idea.url }}" class="block pseudo button">
+            <h4>{{ idea.title }}</h4>
+            <time>{{ idea.date }}</time>
+          </a>
+          {% endfor %}
+        </footer>
+      </div>
+    </section>
+  </article>
+
+  <div class="fancy-accent top left" role="presentation" aria-hidden="true"><div></div></div>
+</section>
