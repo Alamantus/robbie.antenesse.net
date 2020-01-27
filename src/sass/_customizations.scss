@@ -47,6 +47,13 @@ nav {
   }
 }
 
+main > hr {
+  border: none;
+  background-color: $picnic-primary;
+  width: 200px;
+  height: 1px;
+}
+
 // New styles
 .container {
   position: relative;
