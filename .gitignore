@@ -1,6 +1,5 @@
 node_modules/
 old/
-.cache/
-dist/
+.sass-cache/
 
 .DS_Store
