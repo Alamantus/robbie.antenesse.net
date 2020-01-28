@@ -8,10 +8,10 @@ order: 6
 ---
 
 Radio Silence is an interactive experience created in collaboration with [Paws Menu](http://pawsmenu.net)
-created for the 2016 Fermi Paradox Jam. In this game, you gaze through a telescope and
-send messages to the stars in hopes that you might receive a reply. While stargazing,
-you can also scan the radio for some ethereal music and even a radio show voiced by myself
-and some other voice actors credited in the game.
+created for the 2016 Fermi Paradox Jam. In this game, you gaze through a telescope and send messages to
+the stars from your computer terminal in hopes that you might receive a reply. While stargazing, you can
+also scan the radio for some ethereal music and even a radio show voiced by myself and some other voice
+actors credited in the game.
 
-It was built using Unity 3D, Blender, and Heroku, which hosts the API and database that
+It was built using C# in Unity 3D, Blender, and Heroku, which hosts the API and database that
 stores messages sent to stars and retrieves them if they are ever scanned.
