@@ -14,8 +14,8 @@
   <meta name="author" content="{{ site.title }}">
 
   <script>
-    if (window.location.protocol !== "https:") {
-      window.location.replace(window.location.href.replace("http:", "https:"));
+    if (!/^http:\/\/localhost/.test(window.location.href) && window.location.protocol !== "https:") {
+     window.location.replace(window.location.href.replace("http:", "https:"));
     }
   </script>
 
