@@ -1,8 +1,8 @@
 node_modules/
 old/
 .sass-cache/
-_site/
 .jekyll-cache/
-.sass-cache/
+_site/
 
 .DS_Store
+*.log

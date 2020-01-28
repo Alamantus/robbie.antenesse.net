@@ -37,4 +37,6 @@ If you search the web for either "Robbie Antenesse" or my preferred user handle 
 likely be related to me in some way! My primary Mastodon account is [@Alamantus@cybre.space](https://cybre.space/@Alamantus);
 I'm on GitHub as [Alamantus](https://github.com/Alamantus), Reddit as [Alamantus](https://reddit.com/user/alamantus),
 and even Keybase as [alamantus](https://keybase.io/alamantus); and I'm pretty sure that I'm the only
-"Robbie Antenesse" alive on earth. If you see me around the internet, feel free to say hello!
+"Robbie Antenesse" alive on earth.
+
+If you see me around the internet, feel free to say hello!
