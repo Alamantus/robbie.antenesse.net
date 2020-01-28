@@ -126,6 +126,9 @@ button, .button {
   * {
     color: $white;
   }
+  .burger {
+    color: $white !important;
+  }
 
   .button.outline {
     color: $white;
@@ -144,6 +147,12 @@ button, .button {
 }
 .background-dark-green {
   background-color: darken($green, 10);
+}
+
+@media (max-width: $picnic-breakpoint) {
+  .background-dark-green .menu {
+    color: $black;
+  }
 }
 
 .fancy-accent {
