@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+{% capture page_slug %}{{ page.date | date: "%Y-%m-%d" }}-{{ page.slug }}{% endcapture %}
 
 <section>
   <header class="container">
@@ -17,4 +18,46 @@ layout: default
 
   <div class="fancy-accent top left" role="presentation" aria-hidden="true"><div></div></div>
   <div class="fancy-accent bottom right" role="presentation" aria-hidden="true"><div></div></div>
+</section>
+
+<section class="background-green">
+  {% for p in site.data.comments %}
+  {% if p[0] == page_slug %}
+      <header class="container">
+        <h2>Comments</h2>
+        {% comment %}
+        <form method="POST" action="https://api.staticman.net/v2/entry/Alamantus/robbie.antenesse.net/master/"></form>
+          <fieldset class="flex one two-700">
+            <label>Name<br />
+              <input name="fields[name]" />
+            </label>
+            <label>Email<br />
+              <input type="email" name="fields[email]" />
+            </label>
+            <label class="full">Comment<br />
+              <textarea name="fields[message]"></textarea>
+            </label>
+          </fieldset>
+          <input name="options[slug]" type="hidden" value="{{ page_slug }}">
+          <input name="options[redirect]" type="hidden" value="{{ site.url }}{{ page.url }}">
+          <button style="background:white;color:black;" type="submit">Post!</button>
+        </form>
+        {% endcomment %}
+        <hr />
+      </header>
+      {% assign comments = p[1] %}
+      {% for c in comments %}
+        {% assign comment = c[1] %}
+        <article class="container card">
+          <header>
+            <span style="font-weight:normal;">{{ comment.date | date: "On %b %-d, %Y at %I:%M %p" }},</span>
+            <span>{{ comment.name }} said:</span>
+          </header>
+          <footer>
+            {{ comment.message | markdownify }}
+          </footer>
+        </article>
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
 </section>
