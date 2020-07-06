@@ -18,6 +18,6 @@ The website that hosts the rules and all the information about the system is bui
 on bandwidth as possible while still implementing an attractive style framework. All told, the
 website serves less than 70kb of bandwidth per page, and it also stores an offline version of
 the rules in the user's browser just in case they ever visit without internet access. It also
-implements an instance of Fathom analytics, which tracks pageviews and leaves user data private.
+implements an instance of Matomo analytics, which tracks pageviews and leaves user data anonymous.
 
 It is hosted on GitLab pages and is built using the Hugo templating engine.
