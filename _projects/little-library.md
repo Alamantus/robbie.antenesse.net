@@ -3,7 +3,7 @@ layout: project
 title: Little Library
 time: 2019
 slug: little-library
-link: https://library.quietplace.tk
+link: https://library.alamantus.com
 order: 3
 ---
 
@@ -15,5 +15,5 @@ this way, it is essentially the same as sharing the book with a friend because i
 copy at a time! It also displays a history of previously downloaded books to preserve what the original
 uploader wrote about the book.
 
-It is built with Node on an Express server and served from a Google Cloud virtual machine, and it is
+It is built with Node on an Express server and served from a server I built on an old laptop, and it is
 [open source on GitHub](https://github.com/Alamantus/little-library).
