@@ -6,11 +6,11 @@
 
   <!-- responsive-->
   <input id="mainMenu" type="checkbox" class="show">
-  <label for="mainMenu">
-    <button class="burger pseudo" onclick="this.children[0].click()">
-      Menu
-    </button>
-  </label>
+  <button class="burger pseudo" onclick="this.children[0].click()">
+    <label for="mainMenu">
+      <span onclick="this.parentNode.click()">Menu</span>
+    </label>
+  </button>
 
   <div class="menu" role="navigation">
     <a href="{{ site.baseurl }}/#about" class="pseudo button" onclick="document.getElementById('mainMenu').checked=false;">
