@@ -31,6 +31,9 @@ p {
 p img {
   border: 1px solid #d0d0d0;
 }
+figure {
+  margin: 1em auto;
+}
 .container {
   max-width: 850px;
 }
@@ -116,7 +119,7 @@ For most people, this download process will be long and tedious. Just stick with
 
 ## Extracting Your Export
 
-Now that you've got all of your export files, you get to begin the "fun" process of extracting and merging them all into a single folder! This process is different for MacOS than it is for Windows, so to make things easier, I recommend you use the most recent version of [7-Zip for Windows](https://www.7-zip.org/) (or [p7Zip for Linux](https://sourceforge.net/projects/p7zip/files/)) or [Keka for MacOS](https://www.keka.io/en/) to manage your `.zip` files so the process is at least somewhat similar to explain! (Both of these programs are free, and they can handle an outrageously wide variety of different compression formats!)
+Now that you've got all of your export files, you get to begin the "fun" process of extracting and merging them all into a single folder! This process is different for MacOS than it is for Windows, but I've got you covered. You don't need any extra software if you're using `.zip` files on MacOS or Windows, but I do recommend you use the most recent version of [7-Zip](https://www.7-zip.org/) on Windows (or [p7Zip for Linux](https://sourceforge.net/projects/p7zip/files/))! 7-Zip is free (and safe!), and it can handle an outrageously wide variety of different compression formats!
 
 Like I mentioned before, it is important that you have all of the files from Google and that the downloads are all complete, because you need to extract the contents of these files and merge them together. Your operating system should handle the merging process for you, but this guide will show you _how_ to do that.
 
@@ -150,7 +153,64 @@ The process on a GUI Linux using p7Zip will be nearly identical, with the main d
 
 ### On MacOS
 
-I think the process is pretty similar, too, just with a different program. Let me check how folders merge in MacOS first...
+The process is a bit different in MacOS because of how MacOS opens extracts things from `.zip` files: instead of opening in a new window where you can preview the contents first, it just extracts the files _immediately_ into the same folder! So after you download your export files, I recommend you create a new, empty folder and move all of the `.zip` files into that new folder.
+
+Once you navigate to the folder with all your `.zip` files inside, simply double-click each file, and its contents will be extracted for you! It may take a while to extract the large exported files from Google, but just be patient and let the computer do its thing.
+
+<figure class="src-replace">
+  <img src="/images/exporting-google-photos/macos-unzipping-files_still.jpg" data-src-replace="/images/exporting-google-photos/macos-unzipping-files.gif" alt="A MacOS window extracting several ZIP files" />
+  <figcaption class="primary button" title="Click to Load GIF">Click to Load Animation (1.5 MB)</figcaption>
+</figure>
+
+Next, you're going to merge each of the "Google Photos" folders into the first "Takeout" folder. Pay attention, because merging folders in MacOS is not as simple as Windows (I know, that sounds impossible)!
+
+To enable the option for merging folders, you need to hold down the `alt option` key _as you click and drag_ your folders into the target merge folder! (It's the button next to the `⌘ command` key on your Apple keyboard, in case you've never noticed it.)
+
+So expand the "Takeout 2" folder so you can see the files in one window, highlight the "Google Photos" folder within, hold down the `alt option` key on your keyboard, and click and drag the "Google Photos" up until it highlights the first "Takeout" folder. Then just release your click! The computer will prompt you whether you want to cancel, replace, or merge the folders—choose "Merge" and the computer will handle the rest!
+
+<figure class="src-replace">
+  <img src="/images/exporting-google-photos/macos-merge-folders_still.jpg" data-src-replace="/images/exporting-google-photos/macos-merge-folders.gif" alt="A MacOS window merging folders with the same name" />
+  <figcaption class="primary button" title="Click to Load GIF">Click to Load Animation (1 MB)</figcaption>
+  <span class="info label" style="position:absolute;bottom:0;left:0;margin-left:0;font-size:11pt;font-style:italic;">Hold the `alt option` key while clicking and dragging</span>
+</figure>
+
+Repeat this merge process with each extracted Takeout folder, remembering always to hold down the `alt option` key while clicking and dragging! If you _ever_ get a prompt from your computer that does _not_ include a "Merge" option, cancel and try again! If you're sure you're doing it right, you may have already merged that folder in. Feel free to cancel or replace if you don't trust that the merge happened.
+
+To help you remember which folders you've already merged (and to help manage your computer's storage space), go ahead and delete the Takeout folder you just merged from after the merge is complete!
+
+> I can't stress enough the importance of getting your aim right when doing this. Make sure you are dragging the "Google Photos" folder from each Takeout folder into the first "Takeout" folder! The Takeout folder will highlight when you are hovering over it correctly. If you accidentally drop the folder into the wrong place, it will create a _copy_ of the folder in that other folder!
+
+Another note, the view I'm using in the example is "as List". If you're not seeing the files in your folder on individual lines like in the screenshots, make sure the Finder window with your files is selected, click "View" in the top bar, and choose "as List" from the menu.
+
+<style>
+figure.src-replace, figure.src-replace img {
+  position: relative;
+}
+figure.src-replace figcaption {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  transform: translate(-50%);
+  z-index: 1;
+}
+</style>
+<script>
+(function() {
+  const srcReplace = document.querySelectorAll('figure.src-replace');
+  for (let i = 0; i < srcReplace.length; i++) {
+    const figure = srcReplace[i];
+    const figcaption = figure.querySelector('figcaption');
+    figcaption.addEventListener('click', () => {
+      figcaption.parentNode.removeChild(figcaption);
+      const img = figure.querySelector('img');
+      const replacement = img.getAttribute('data-src-replace');
+      img.src = replacement;
+      console.log(replacement);
+      img.removeAttribute('data-src-replace');
+    });
+  }
+})();
+</script>
 
 ## Processing Your Export
 
