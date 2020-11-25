@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Exactly How to Leave Google Photos
-date: 2020-11-13 10:30:00 -0700
+title: How to Leave Google Photos
+date: 2020-11-25 14:10:00 -0700
 comments: true
 tags:
 - Google Photos
@@ -15,13 +15,14 @@ tags:
 - Linux
 - MacOS
 - OSX
-draft: true
 ---
 <style>
 h2 {
   font-size: 1.7em;
 }
-p, details summary {
+p,
+details summary,
+aside {
   font-size: 1.2em;
 }
 p {
@@ -30,6 +31,10 @@ p {
 }
 p img {
   border: 1px solid #d0d0d0;
+}
+aside {
+  background-color: lavender;
+  padding: 1.2em 2em;
 }
 figure {
   margin: 1em auto;
@@ -57,13 +62,13 @@ Google is amazing, and they have provided many great services for many years. Go
 
 If you're like me, you've enjoyed Google's free photo upload system as a wildly convenient backup platform for all the photos on your phone, but with the free version getting cut and storage space shared with Google Drive, I suddenly find myself with a very small amount of storage space remaining! First, I do need to make it clear that Google's [pricing for storage](https://one.google.com/about#upgrade) is _very good_ at about $2 per month or $20 per year for 100 GB, and if you're able to pay the monthly or yearly fee, Google Photos is (in my experience) unmatched in its convenience and features! Just keep it in the back of your mind that Google may shut down this system at any time in the future as well. :)
 
-If you're not willing to pay Google and/or you're concerned about your [data privacy](https://en.wikipedia.org/wiki/Privacy_concerns_regarding_Google) (or maybe you just want to get your photos off Google to put on a different cloud hosting platform), read on! Do be warned, Google doesn't want you to switch platforms, so they make it as inconvenient as possible to accomplish your goal. It's annoying and it takes a long time, but you stick with it, you can do it!
+If you're not willing to pay Google and/or you're concerned about your [data privacy](https://en.wikipedia.org/wiki/Privacy_concerns_regarding_Google) (or maybe you just want to get your photos off Google to put on a different cloud hosting platform), read on! Do be warned, Google doesn't _want_ you to switch platforms, so they make it as inconvenient as possible to accomplish your goal. It's annoying and it takes a long time, but you stick with it, you can do it and this guide will help you!
 
-_I will also be packaging up my own Google Photos Export Reorganizer so you can get your photos into a more usable and easier to view format after you extract everything. That'll be covered further down in the guide._
+<aside>I also packaged up my own Google Photos export organizer so you can get your photos exported and sorted into a more usable and easier to view format. That'll be covered <a href="#processing-your-export">further down in the guide</a>.</aside>
 
 ## Getting Started
 
-<div class="card">
+<div class="card" style="background-color:lightyellow;">
 <p>Be aware, this guide is recommended for people who are comfortable using a computer and following instructions. There may be concepts here that are not fully explained and will require some of your own researching if you don't already know how to do it! If you're not comfortable with that, try to find someone who can do this for you instead.</p>
 </div>
 
@@ -121,7 +126,10 @@ For most people, this download process will be long and tedious. Just stick with
 
 Now that you've got all of your export files, you get to begin the "fun" process of extracting and merging them all into a single folder! This process is different for MacOS than it is for Windows, but I've got you covered. You don't need any extra software if you're using `.zip` files on MacOS or Windows, but I do recommend you use the most recent version of [7-Zip](https://www.7-zip.org/) on Windows (or [p7Zip for Linux](https://sourceforge.net/projects/p7zip/files/))! 7-Zip is free (and safe!), and it can handle an outrageously wide variety of different compression formats!
 
-Like I mentioned before, it is important that you have all of the files from Google and that the downloads are all complete, because you need to extract the contents of these files and merge them together. Your operating system should handle the merging process for you, but this guide will show you _how_ to do that.
+Like I mentioned before, it is important that you have _all_ of the files from Google and that the downloads are all complete, because you need to extract the contents of these files and merge them together. Your operating system should handle the merging process for you, but this guide will show you _how_ to do that.
+
+<aside>Alternatively, I wrote a <a href="#processing-your-export">handy program</a> that will do this step and all of the following steps <em>for you</em> with just a little bit of setup! Use that link for instructions on how to use it if you'd rather go the semi-automatic route.<br />
+Note that you do still need to have all of the <code>.zip</code> files from your Google Takeout export downloaded in one place for this method.</aside>
 
 ### On Windows
 
@@ -162,11 +170,32 @@ Once you navigate to the folder with all your `.zip` files inside, simply double
   <figcaption class="primary button" title="Click to Load GIF">Click to Load Animation (1.5 MB)</figcaption>
 </figure>
 
-Next, you're going to merge each of the "Google Photos" folders into the first "Takeout" folder. Pay attention, because merging folders in MacOS is not as simple as Windows (I know, that sounds impossible)!
+Next, you're going to merge each of the "Google Photos" folders into the first "Takeout" folder. Pay attention, because merging folders in MacOS is not as straightforward as in Windows!
 
-To enable the option for merging folders, you need to hold down the `alt option` key _as you click and drag_ your folders into the target merge folder! (It's the button next to the `⌘ command` key on your Apple keyboard, in case you've never noticed it.)
+To enable the option for merging folders, you need to perform a _Copy_ of the folder in question. You can do this in one of two ways:
 
-So expand the "Takeout 2" folder so you can see the files in one window, highlight the "Google Photos" folder within, hold down the `alt option` key on your keyboard, and click and drag the "Google Photos" up until it highlights the first "Takeout" folder. Then just release your click! The computer will prompt you whether you want to cancel, replace, or merge the folders—choose "Merge" and the computer will handle the rest!
+1. Select the folder, use the Copy function, and Paste it into the correct folder (more steps)
+1. Hold down the `alt option` key _as you click and drag_ your folders into the target folder (one step)
+
+#### Copy/Merge Method 1
+
+Method 1 (using Copy and Paste) might be more familiar to most people, but you have to make sure you're copying the right folder and pasting it into the correct place or else you'll just be duplicating many gigabytes of data onto your hard drive.
+
+There are at least 3 different ways to access the Copy and Paste function on MacOS:
+
+1. Select the folder you want to copy, click `Edit` at the top of the screen, choose the `Copy "Folder Name"` option, select the folder you want to paste into, click `Edit` at the top of the screen again, and choose the `Paste Item` option.
+1. Select the folder you want to copy, hold `⌘ command`, and then press `C` to copy, open the folder you want to paste into, hold `⌘ command`, and press `V` to paste.
+1. Right click the folder you want to copy, choose the `Copy "Folder Name"` option, then right click the folder you want to paste into and choose the `Paste Item` option.
+
+To use this method, open the "Takeout 2" folder, copy the "Google Photos" folder, navigate to the first "Takeout" folder, and paste into that folder. The computer will prompt you whether you want to cancel, replace, or merge the folders—choose "Merge" and the computer will handle the rest!
+
+> Just make sure you are copying and pasting into the correct folder and getting the "Merge" option. If you are pasting into the wrong place, you might accidentally use up a lot of space on your hard drive by accident! To help manage your computer's storage space (and to help you remember which folders you've already merged), go ahead and delete the Takeout folder you just merged from after the merge is complete!
+
+#### Copy/Merge Method 2
+
+Method 2 (using `alt option` with a click and drag) takes a little bit more precision, but in my opinion is a lot easier to do right if you're careful!
+
+So expand the "Takeout 2" folder so you can see the files in one window, highlight the "Google Photos" folder within, hold down the `alt option` key on your keyboard (it's the button next to the `⌘ command` key on your Apple keyboard, in case you've never noticed it), and click and drag the "Google Photos" up until it highlights the first "Takeout" folder. Then just release your click! The computer will prompt you whether you want to cancel, replace, or merge the folders—choose "Merge" and the computer will handle the rest!
 
 <figure class="src-replace">
   <img src="/images/exporting-google-photos/macos-merge-folders_still.jpg" data-src-replace="/images/exporting-google-photos/macos-merge-folders.gif" alt="A MacOS window merging folders with the same name" />
@@ -220,13 +249,17 @@ But if you actually want to be able to look through your pictures in any reasona
 
 Luckily, I made a script for myself during the process, and I've tweaked it and made it into a user-friendly little program for others partaking in this unfortunate journey after me!
 
-The program goes through your extracted Google Photos folder and moves every image and video it finds into nicely-organized folders based on the year and month the photo was taken (or created)!
+The program goes through your extracted Google Photos folder and moves every image and video it finds into nicely-organized folders based on the year and month the photo was taken (or created)! It can also extract _and_ merge the files for you to save you the effort of doing that manually!
 
-<a href="https://github.com/Alamantus/GooglePhotosExportOrganizer/releases" class="primary button umami--click--Google-Photos-Export-Organizer">
+<a href="https://alamantus.github.io/GooglePhotosExportOrganizer/" class="primary button umami--click--Google-Photos-Export-Organizer">
   Get the Google Photos Export Organizer
 </a>
 
-<<Make it an Electron app and write some instructions here.>>
+On the page linked in the button above, download the file labeled for your operating system (Window, MacOS, or Linux), extract the folder, and run the program inside to get started.
+
+It will take you through a series of 4 steps to help you get your Google Photos export taken care of. Step 1 points you back to this post for how to export and download your files, then Step 2 will extract your exported files for you! Just tell the program where you downloaded your `.zip` files and where you want to extract them, and it will do it for you! Step 3 will move the files from your extracted folders into new folders organized by year and month that the photo was created. Finally, Step 4 reminds you to delete the exported files to help you clean up.
+
+I think it's fairly straightforward and easy to follow, but if you run into issues or have any questions, please [submit an issue on GitHub](https://github.com/Alamantus/GooglePhotosExportOrganizer/issues) so I can work on fixing it as soon as possible! If any fixes need to be made, the program will alert you about any available updates to download when it loads.
 
 After running the program on your folder...
 
