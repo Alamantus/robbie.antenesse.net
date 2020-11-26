@@ -211,6 +211,42 @@ button, .button {
   }
 }
 
+#comments {
+  @extend .background-green;
+
+  padding-bottom: 1.2em;
+
+  header form {
+    box-shadow: $picnic-card-shadow;
+    border-radius: $picnic-card-radius;
+    border: $picnic-card-border;
+    padding: 1em;
+
+    button[type="submit"] {
+      background: white;
+      color: black;
+    }
+  }
+
+  .comment-container {
+    box-shadow: $picnic-card-shadow;
+    border-radius: $picnic-card-radius;
+    border: $picnic-card-border;
+    padding: 1em;
+    max-height: 500px;
+    overflow-y: auto;
+
+    article.comment {
+      // @extend .container;
+      @extend .card;
+  
+      &:not(:last-child) {
+        margin-bottom:1em;
+      }
+    }
+  }
+}
+
 // Utilities
 .text-center {
   text-align: center;
