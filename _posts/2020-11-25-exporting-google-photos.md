@@ -1,6 +1,7 @@
 ---
 layout: post
 title: How to Leave Google Photos
+summary: A comprehensive guide about how to export your Google Photos and make your export usable.
 date: 2020-11-25 14:10:00 -0700
 comments: true
 tags:

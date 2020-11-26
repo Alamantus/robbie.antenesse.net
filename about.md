@@ -1,6 +1,7 @@
 ---
 layout: page
 title: More About Robbie
+summary: Learn about all the things Robbie does!
 ---
 
 ### Professionally...

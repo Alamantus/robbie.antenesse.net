@@ -7,11 +7,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{{ site.title }}</title>
-  <meta name="description" content="{{ site.description }}">
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  {% capture page_description %}{% if page.summary %}{{ page.summary }}{% elsif page.path == "index.html" %}{{ site.description }}{% else page.content %}{{ page.content | strip_html | truncatewords: 15 }}{% endif %}{% endcapture %}
+  <meta name="description" content="{{ page_description }}">
+  <meta name="test" content="{{page.path}}">
   <meta name="keywords" content="{% if page.tags %}{{ page.tags | array_to_sentence_string: '' }}{% else %}{{ 'Antenesse, Alamantus, programmer, developer, dev, github, web, webdev, web developer, website, websites, webapp, webapps, javascript, js, es2015, es6, es2016, nodejs, Node, ReactJS, React, html, html5, css, css3, game, games, videogames, indie, itch, itch.io, itchio' }}{% endif %}">
 
-  <meta name="author" content="{{ site.title }}">
+  <meta name="author" content="Robbie Antenesse">
 
   <script>
     if (!/^http:\/\/localhost/.test(window.location.href) && window.location.protocol !== "https:") {
@@ -29,15 +31,17 @@
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="{{ page.url | replace: 'index.html', '' | prepend: site.baseurl | prepend: site.url }}">
-  <meta property="og:title" content="{{ site.title }}">
-  <meta property="og:description" content="{{ site.description }}">
+  <meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}">
+  {% capture page_description %}{% if page.summary %}{{ page.summary }}{% elsif page.content %}{{ page.content | strip_html | truncatewords: 12 }}{% else %}{{ site.description }}{% endif %}{% endcapture %}
+  <meta property="og:description" content="{{ page_description }}">
   <meta property="og:image" content="{{ site.url }}/images/profile.jpg">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://robbie.antenesse.net/">
-  <meta property="twitter:title" content="Hi, I'm Robbie Antenesse!">
-  <meta property="twitter:description" content="{{ site.description }}">
+  <meta property="twitter:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}">
+  {% capture page_description %}{% if page.summary %}{{ page.summary }}{% elsif page.content %}{{ page.content | strip_html | truncatewords: 12 }}{% else %}{{ site.description }}{% endif %}{% endcapture %}
+  <meta property="twitter:description" content="{{ page_description }}">
   <meta property="twitter:image" content="{{ site.url }}/images/profile.jpg">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->

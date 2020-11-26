@@ -1,6 +1,7 @@
 ---
 layout: post
 title: PHP PDO MySQL Connection for UTF-8
+summary: How I learned about the `charset` option in the PDO connection string.
 date: 2017-09-29 10:48:00 -0700
 comments: true
 tags:
