@@ -1,0 +1,5 @@
+_id: 706d9b20-308f-11eb-aec4-ade1d08d06f2
+name: Mihai
+email: ada8112e836c25612e6d934040ec2a9b
+message: "I found that if even the folder name is good the timestamps of the photos in it is not correct. I had to make a small script to change the timestamps of the photos from folders. I did that because when I uploaded to my nas the photos were shown in wrong timeline. \r\nhttps://github.com/ndegnpai/google-photos-date-changer\r\nThis is my first project on GitHub. Be nice."
+date: '2020-11-27T09:03:39.206Z'
