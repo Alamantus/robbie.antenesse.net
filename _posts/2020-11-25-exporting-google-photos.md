@@ -56,6 +56,7 @@ _[Skip to Guide](#getting-started)_
 - [Extracting Your Export](#extracting-your-export)
 - [Processing Your Export](#processing-your-export)
 - [You've done it!](#youve-done-it)
+- [Other Options and More](#other-options-and-more)
 
 ## Introduction
 
@@ -276,3 +277,9 @@ Don't forget to delete all those `.zip` files if you don't need them anymore! Th
 Just one last reminder: all of the files you just downloaded and processed _are_ still on Google's servers, so if you want to completely cut the Google cord, you'll have to delete them from there.
 
 Enjoy being disconnected from Google Photos!
+
+## Other Options and More
+
+Since posting this, I've seen a lot of great discussion and suggestions around this subject. I'll use this section to add more tips and options for exporting and organizing your Google Photos that might be more effective depending on your specific needs as I am able to compile them!
+
+In the meantime, check out the comments below and the comments where I [posted on Reddit](https://old.reddit.com/r/selfhosted/comments/k1i0bw/i_wrote_a_detailed_guide_to_help_people_get_their/) for some good discussions about alternative options to Google Photos and potential issues with using the Google Takeout system.
