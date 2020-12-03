@@ -16,36 +16,8 @@ tags:
 - Linux
 - MacOS
 - OSX
+featured: true
 ---
-<style>
-h2 {
-  font-size: 1.7em;
-}
-p,
-details summary,
-aside {
-  font-size: 1.2em;
-}
-p {
-  margin-block-start: 1.2em;
-  margin-block-end: 1.2em;
-}
-p img {
-  border: 1px solid #d0d0d0;
-}
-aside {
-  background-color: lavender;
-  padding: 1.2em 2em;
-}
-figure {
-  margin: 1em auto;
-}
-.container {
-  max-width: 850px;
-}
-.fancy-accent.top { bottom: 90%; }
-.fancy-accent.bottom { top: 90%; }
-</style>
 _[Skip to Guide](#getting-started)_
 
 ## Table of Contents

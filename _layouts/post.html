@@ -3,7 +3,7 @@ layout: default
 ---
 {% capture page_slug %}{{ page.date | date: "%Y-%m-%d" }}-{{ page.slug }}{% endcapture %}
 
-<section>
+<section{% if page.featured %} class="featured"{% endif %}>
   <header class="container">
     <a href="{{ '/' | prepend: site.baseurl }}#posts" class="pseudo button">&larr; Back</a>
     <h1>
@@ -20,7 +20,7 @@ layout: default
   <div class="fancy-accent bottom right" role="presentation" aria-hidden="true"><div></div></div>
 </section>
 
-<section id="comments">
+<section id="comments"{% if page.featured %} class="featured"{% endif %}>
   {% if page.comments == true %}
   <header class="container">
     <h2>Leave a Comment</h2>
