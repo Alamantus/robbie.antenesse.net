@@ -1,0 +1,78 @@
+// Picnic Overrides
+@media (prefers-color-scheme: dark) {
+  $green: darken($green, 10);
+
+  body, .card, input, textarea,
+  #comments .comment-container article.comment * {
+    background: $picnic-black;
+    color: $picnic-white;
+  }
+
+  code {
+    background: $picnic-dark;
+  }
+
+  a {
+    color: $picnic-white;
+
+    &:not(.button):not(.brand) {
+      text-decoration: underline;
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: $picnic-info;
+      }
+    }
+  }
+
+  .label, button, .button, [type="submit"] {
+    background: $green;
+  }
+
+  .fancy-accent {
+    background-color: $green;
+    
+    * {
+      background-color: $picnic-black;
+    }
+  }
+
+  img {
+    // opacity: .75;
+    filter: brightness(75%);
+    transition: filter .5s ease-in-out;
+  }
+  img:hover, .profile img {
+    // opacity: 1;
+    filter: brightness(100%);
+  }
+
+  .background-green {
+    background-color: $green;
+  }
+  .background-dark-green {
+    background-color: darken($green, 10);
+  }
+
+  @media (max-width: $picnic-breakpoint) {
+    .background-dark-green .menu,
+    nav .burger ~ .menu {
+      background: $picnic-black;
+      color: $picnic-white;
+    }
+  }
+
+  .featured {
+    p img {
+      border: 1px solid $gray;
+    }
+    aside {
+      background-color: $purple;
+    }
+  }
+
+  .callout {
+    background: $picnic-dark;
+  }
+}

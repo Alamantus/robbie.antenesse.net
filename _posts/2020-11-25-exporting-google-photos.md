@@ -42,7 +42,7 @@ If you're not willing to pay Google and/or you're concerned about your [data pri
 
 ## Getting Started
 
-<div class="card" style="background-color:lightyellow;">
+<div class="card callout">
 <p>Be aware, this guide is recommended for people who are comfortable using a computer and following instructions. There may be concepts here that are not fully explained and will require some of your own researching if you don't already know how to do it! If you're not comfortable with that, try to find someone who can do this for you instead.</p>
 </div>
 
@@ -74,7 +74,7 @@ Last in this section is the "File type & size" section. If you're not technicall
 
 The file size option is an interesting one with a very important and unstated consequence for choosing a size that's too small. If you're using Google Photos like me, then you probably have a lot of photos stored on there (or example, I had about 61 GB of photos and videos)! This option lets you choose how you want Google to package up your photos—your export will result in however many `.zip` (or `tgz`) files it takes to chunk up your photos into your selected file size. I originally chose the default 2 GB, so my 61 GB of files resulted in 30 `.zip` files that were 2 GB each and 1 file that was about 128 MB or something. This is an interesting choice because this means that you will need to _download that many files_ to your computer and manually unzip them all! The tradeoff here is faster download times versus longer processing time, where smaller `.zip` size will result in faster downloads but more processing and vice-versa!
 
-<div class="card" style="background-color:lightyellow;">
+<div class="card callout">
 <p>That being said, there <em>is one <strong>very important</strong> caveat</em>: large video files will be <em>silently excluded</em> from your export if the file size you choose is smaller than the size of the video!</p>
 <p>If you have any long videos or large files in your Google Photos account, be sure you choose an export size large enough for the video to fit inside or else it will not be exported at all, and you will <em>not be told if your files are excluded</em>! So be sure to choose a large enough file size to contain your videos if you know you have them stored there.</p>
 </div>
