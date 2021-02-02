@@ -4,6 +4,8 @@ description: Professional web developer, hobby game developer, conlang enthusias
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://robbie.antenesse.net" # the base hostname & protocol for your site
 
+enable_comments: false
+
 collections:
   projects:
     output: true
