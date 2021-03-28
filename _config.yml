@@ -11,3 +11,6 @@ collections:
     output: true
   ideas:
     output: true
+    
+plugins:
+  - jekyll-feed
