@@ -4,7 +4,7 @@ title: Feather Wiki
 time: 2022
 slug: feather-wiki
 link: https://feather.wiki
-order: 3
+order: 1
 ---
 
 Feather Wiki is a tiny app for creating self-contained wikis, notebooks, or other non-linear, iner-linked
