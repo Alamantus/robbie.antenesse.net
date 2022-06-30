@@ -9,7 +9,7 @@ summary: Learn about all the things Robbie does!
 I'm a web developer who specializes in JavaScript front end development and PHP + MySQL back end development with a
 growing interest in NodeJS back end apps.
 
-My experience with JavaScript includes a number of popular tools and frameworks like Webpack, React, Redux,
+My experience with JavaScript includes a number of popular tools and frameworks like Webpack, Vue, React, Redux,
 jQuery, and more and some less popular ones that I prefer like Parcel Bundler, Choo, and Inferno JS, among others.
 I pride myself in the fact that the depth of my JavaScript knowledge enables me to quickly learn any new frameworks
 or libraries that I might be required to learn in any given situation.
@@ -17,7 +17,7 @@ or libraries that I might be required to learn in any given situation.
 While I am primarily focused on front end development, most of my work requires a back end, so I have collected a
 lot of experience in that realm as well. My back end experience includes a variety of technologies like plain
 object-oriented PHP, NodeJS, Apache & NginX, custom databases & SQL, and more. These technologies have exposed me
-to tools like Wordpress, ModX, FlightPHP, MySQL, PostgreSQL, SQLite, Express JS, Certbot and much more.
+to tools like Laravel, Wordpress, ModX, FlightPHP, MySQL, PostgreSQL, SQLite, Express JS, Certbot and much more.
 
 ### Personally...
 

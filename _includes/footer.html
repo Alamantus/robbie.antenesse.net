@@ -1,6 +1,6 @@
 {% assign data = site.data.footer %}
 <footer class="background-dark-green">
-  <section class="flex one three-700">
+  <section class="flex one two-700">
     <article class="text-center">
       <h2>Location</h2>
       <p>{{ data.location }}</p>
@@ -20,24 +20,6 @@
       <a class="pseudo button" href="{{ data.wheretofindme }}" target="_blank" rel="me" title="WhereToFind.me">
         Elsewhere
       </a>
-    </article>
-
-    <article class="text-center">
-      <h2>Freelancing Rates</h2>
-      <table class="table" style="width: 100%;">
-        <thead>
-          <tr>
-            <th>Development</th>
-            <th>Consultation</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>{{ data.rates.development }}</td>
-            <td>{{ data.rates.consultation }}</td>
-          </tr>
-        </tbody>
-      </table>
     </article>
   </section>
 
