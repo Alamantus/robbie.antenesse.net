@@ -4,7 +4,7 @@ title: Lexiconga
 time: 2015–Ongoing
 slug: lexiconga
 link: https://lexicon.ga
-order: 1
+order: 2
 ---
 
 Lexiconga is a free tool that makes it fast and easy build dictionaries for constructed
