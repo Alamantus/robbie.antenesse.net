@@ -2,7 +2,7 @@
 // This represents a self-contained, replicable entity
 
 // Variables
-$picnic-card-shadow: 0 !default;
+$picnic-card-shadow: none !default;
 $picnic-card-border: $picnic-border !default;
 $picnic-card-radius: $picnic-radius !default;
 
@@ -56,13 +56,13 @@ $picnic-card-radius: $picnic-radius !default;
   hr {
     border: none;
     height: 1px;
-    background-color: #eee;
+    background-color: $picnic-dull;
   }
 
   header {
     font-weight: bold;
     position: relative;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid $picnic-dull;
 
     h1,
     h2,
@@ -87,7 +87,7 @@ $picnic-card-radius: $picnic-radius !default;
     }
 
   p {
-    margin: $picnic-separation / 2 0;
+    margin: math.div($picnic-separation, 2) 0;
 
     &:first-child {
       margin-top: 0;
