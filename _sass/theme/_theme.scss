@@ -25,8 +25,9 @@ $picnic-breakpoint: 60em;
 
 // Shapes
 $picnic-radius: .2em;
-$picnic-border: 1px solid #ccc;
-$picnic-shadow: 0 0 .2em rgba($picnic-black, $picnic-transparency);
+$picnic-border: 1px solid $picnic-dull;
+$picnic-shadow: 0 0 .2em rgba($picnic-dull, $picnic-transparency);
+$picnic-overlay: rgba($picnic-black, $picnic-transparency);
 
 // Transitions
 $picnic-transition: all .3s;
