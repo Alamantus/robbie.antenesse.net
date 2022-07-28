@@ -11,7 +11,7 @@
 	/* From https://github.com/Alamantus/lighter/blob/master/dist/lighter.css */
 	.c-white{color:#fff}.bg-primary{background-color:#409}.bg-accent{background-color:#f73}.m0{margin:0}.p0{padding:0}.tc{text-align:center}
 	/* Custom */
-	header,footer{margin:0}header>.c,footer>.c{padding:2em 0}a:is([target="_blank"]):after{font-size:70%;vertical-align:top;margin-left:3px;content:"\29C9"}nav ul{list-style:none;margin:.5em 0;padding:0}nav li{display:inline-block;margin:0 .5em}label{display:inline-block}dt{font-weight:bold;margin-bottom:0}dd{margin:0 0 1em 1em}dd>abbr{padding-right:1em;text-decoration:none;font-style:italic;cursor:help}dd>aside{margin:.2em 1em;padding:.5em;border:1px solid #ddd;font-size:12pt}
+	header,footer{margin:0}header>.c,footer>.c{padding-top:2em;padding-bottom:2em}a:is([target="_blank"]):after{font-size:70%;vertical-align:top;margin-left:3px;content:"\29C9"}nav ul{list-style:none;margin:.5em 0;padding:0}nav li{display:inline-block;margin:0 .5em}label{display:inline-block}dt{font-weight:bold;margin-bottom:0}dd{margin:0 0 1em 1em}dd abbr{padding-right:1em;text-decoration:none;font-style:italic;cursor:help}dd>aside{margin:.2em 1em;padding:.5em;border:1px solid #ddd;font-size:12pt}
 	</style>
 </head>
 <body>
@@ -34,107 +34,110 @@
 	<nav>
 		<h2>Jump to Letter</h2>
 		<ul>
-		</ul>
+		<li><a href="#letter-a">a</a></li><li><a href="#letter-e">e</a></li><li><a href="#letter-i">i</a></li><li><a href="#letter-j">j</a></li><li><a href="#letter-k">k</a></li><li><a href="#letter-l">l</a></li><li><a href="#letter-m">m</a></li><li><a href="#letter-n">n</a></li><li><a href="#letter-o">o</a></li><li><a href="#letter-p">p</a></li><li><a href="#letter-s">s</a></li><li><a href="#letter-t">t</a></li><li><a href="#letter-u">u</a></li><li><a href="#letter-w">w</a></li></ul>
 	</nav>
-	<!--<form id="search" onsubmit="search">
+	<h2>Full Word List</h2>
+	<form id="search" style="display:none" onsubmit="search(event)">
 		<fieldset id="what">
-			<label>Search <input name="query"></label>
+			<legend>Search</legend>
+			<label>for <input name="query"></label>
 			<label for="in">in</label>
-			<label><input name="in" type="radio" value="any" checked>anywhere</label>
-			<label><input name="in" type="radio" value="word">word</label>
-			<label><input name="in" type="radio" value="def">definition</label>
+			<label><input name="in" type="radio" value="word" onchange="search()" checked>word</label>
+			<label><input name="in" type="radio" value="def" onchange="search()">definition(s)</label>
+			<label><input name="in" type="radio" value="any" onchange="search()">anywhere</label>
 		</fieldset>
 		<fieldset id="pos">
-			<label for="filter">Filter Parts of Speech</label>
+			<legend>Filter Parts of Speech</legend>
 		</fieldset>
-	</form>-->
-	<h2>Full Word List</h2>
+	</form>
 	<dl>
+		<a name="letter-a"></a>
 		<dt id="a">a</dt>
 		<dd>
-			<abbr title="interjection">interj.</abbr> [emphasis, emotion or confirmation (i.e. ah, ha, eh, oh, ooh, aw)]
+			<p><abbr title="interjection">interj.</abbr> [emphasis, emotion or confirmation (i.e. ah, ha, eh, oh, ooh, aw)]</p>
 		</dd>
 
 		<dt id="akesi">akesi</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> reptile, amphibian<br>
-			<abbr title="noun">n.</abbr> <em>(old/removed)</em> "non-cute" animal
+			<p><abbr title="noun">n.</abbr> reptile, amphibian</p>
+			<p><abbr title="noun">n.</abbr> <em>(old/removed)</em> "non-cute" animal</p>
 		</dd>
 
 		<dt id="ala">ala</dt>
 		<dd>
-			<abbr title="adjective">adj.</abbr> no, not, none, empty<br>
-			<abbr title="noun">n.</abbr> nothing, negation, zero<br>
-			<abbr title="verb">v.</abbr> do nothing, nullify, annihilate<br>
-			<abbr title="interjection">interj.</abbr> no!
+			<p><abbr title="adjective">adj.</abbr> no, not, none, empty</p>
+			<p><abbr title="noun">n.</abbr> nothing, negation, zero</p>
+			<p><abbr title="verb">v.</abbr> do nothing, nullify, annihilate</p>
+			<p><abbr title="interjection">interj.</abbr> no!</p>
 		</dd>
 
 		<dt id="alasa">alasa</dt>
 		<dd>
-			<abbr title="verb">v.</abbr> hunt (violently <em>or</em> nonviolently), forage, gather, harvest, search
+			<p><abbr title="verb">v.</abbr> hunt (violently <em>or</em> nonviolently), forage, gather, harvest, search</p>
 		</dd>
 
 		<dt id="ale-ali">ale / ali</dt>
 		<dd>
-			<abbr title="adjective">adj.</abbr> all, every, complete, whole, abundant, countless, bountiful, plentiful<br>
-			<abbr title="noun">n.</abbr> abundance, everything, life, universe<br>
-			<abbr title="number">num.</abbr> 100, infinity
+			<p><abbr title="adjective">adj.</abbr> all, every, complete, whole, abundant, countless, bountiful, plentiful</p>
+			<p><abbr title="noun">n.</abbr> abundance, everything, life, universe</p>
+			<p><abbr title="number">num.</abbr> 100, infinity</p>
 		</dd>
 
 		<dt id="anpa">anpa</dt>
 		<dd>
-			<abbr title="adjective">adj.</abbr> bowing down, downward, humble, lowly, dependent<br>
-			<abbr title="verb">v.</abbr> conquer, defeat<br>
-			<abbr title="noun">n.</abbr> <em>(old, non-pu)</em> bottom, lower part, under, below, floor, beneath
+			<p><abbr title="adjective">adj.</abbr> bowing down, downward, humble, lowly, dependent</p>
+			<p><abbr title="verb">v.</abbr> conquer, defeat</p>
+			<p><abbr title="noun">n.</abbr> <em>(old, non-pu)</em> bottom, lower part, under, below, floor, beneath</p>
 		</dd>
 
 		<dt id="ante">ante</dt>
 		<dd>
-			<abbr title="adjective">adj.</abbr> different, altered, changed, other<br>
-			<abbr title="noun">n.</abbr> difference, change<br>
-			<abbr title="verb">v.</abbr> change, alter, modify, differ
+			<p><abbr title="adjective">adj.</abbr> different, altered, changed, other</p>
+			<p><abbr title="noun">n.</abbr> difference, change</p>
+			<p><abbr title="verb">v.</abbr> change, alter, modify, differ</p>
 		</dd>
 
 		<dt id="anu">anu</dt>
 		<dd>
-			<abbr title="conjunction">conj.</abbr> or
+			<p><abbr title="conjunction">conj.</abbr> or</p>
 		</dd>
 
 		<dt id="anu-seme">anu seme</dt>
 		<dd>
-			<abbr title="particle">part.</abbr> or what? [casual yes/no prompt]
+			<p><abbr title="particle">part.</abbr> or what? [casual yes/no prompt]</p>
 		</dd>
 
 		<dt id="anu-seme">apeja</dt>
 		<dd>
-			<abbr title="verb">v.</abbr> curse, shame<br>
-			<abbr title="noun">n.</abbr> <em>(nonstandard, old)</em> shame, guilt<br>
-			<abbr title="adjective">adj.</abbr> <em>(nonstandard, old)</em> shameful, guilty
+			<p><abbr title="verb">v.</abbr> curse, shame</p>
+			<p><abbr title="noun">n.</abbr> <em>(nonstandard, old)</em> shame, guilt</p>
+			<p><abbr title="adjective">adj.</abbr> <em>(nonstandard, old)</em> shameful, guilty</p>
 		</dd>
 
 		<dt id="awen">awen</dt>
 		<dd>
-			<abbr title="adjective">adj.</abbr> enduring, kept, protected, safe, waiting, staying, remaining, stationary, permanent, sedentary<br>
-			<abbr title="pre-verb">pv.</abbr> continue/keep on (doing something)<br>
-			<abbr title="verb">v.</abbr> keep, retain, stay, remain, wait, preserve, protect
-			<abbr title="noun">n.</abbr> protection, endurance<br>
+			<p><abbr title="adjective">adj.</abbr> enduring, kept, protected, safe, waiting, staying, remaining, stationary, permanent, sedentary</p>
+			<p><abbr title="pre-verb">pv.</abbr> continue/keep on (doing something)</p>
+			<p><abbr title="verb">v.</abbr> keep, retain, stay, remain, wait, preserve, protect</p>
+			<p><abbr title="noun">n.</abbr> protection, endurance</p>
 		</dd>
 
+		<a name="letter-e"></a>
 		<dt id="e">e</dt>
 		<dd>
-			<abbr title="particle">part.</abbr> [before direct object(s)]
+			<p><abbr title="particle">part.</abbr> [before direct object(s)]</p>
 			<aside>This is used to mark any direct objects that are targeted by the verb of a sentence.</aside>
 		</dd>
 
 		<dt id="en">en</dt>
 		<dd>
-			<abbr title="conjunction">conj.</abbr> and [between multiple subjects]
+			<p><abbr title="conjunction">conj.</abbr> and [between multiple subjects]</p>
 			<aside>This is only used when multiple subjects are performing the verb of a sentence.</aside>
 		</dd>
 
 		<dt id="epiku">epiku</dt>
 		<dd>
-			<abbr title="adjective">adj.</abbr> epic, awesome
+			<p><abbr title="adjective">adj.</abbr> epic, awesome</p>
 			<aside>
 				<blockquote>
 					<p>This word is typically used as a form of slang, and has also found common use in &ldquo;ma pona pi toki pona&rdquo;&rsquo;s &ldquo;acro&rdquo; games, as the only other non-particle word starting with &ldquo;e&rdquo; is &ldquo;esun&rdquo;.</p>
@@ -145,310 +148,314 @@
 
 		<dt id="esun">esun</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> market, shop, fair, bazaar, business transaction, trade, sale, purchase<br>
-			<abbr title="adjective">adj.</abbr> trade/exchange-related, commercial, traded, exchanged<br>
-			<abbr title="verb">v.</abbr> trade, exchange, buy, sell
+			<p><abbr title="noun">n.</abbr> market, shop, fair, bazaar, business transaction, trade, sale, purchase</p>
+			<p><abbr title="adjective">adj.</abbr> trade/exchange-related, commercial, traded, exchanged</p>
+			<p><abbr title="verb">v.</abbr> trade, exchange, buy, sell</p>
 		</dd>
 
+		<a name="letter-i"></a>
 		<dt id="ijo">ijo</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> thing, object, stuff, anything, matter, phenomenon<br>
-			<abbr title="adjective">adj.</abbr> material, physical<br>
-			<abbr title="verb">v.</abbr> do something, objectify
+			<p><abbr title="noun">n.</abbr> thing, object, stuff, anything, matter, phenomenon</p>
+			<p><abbr title="adjective">adj.</abbr> material, physical</p>
+			<p><abbr title="verb">v.</abbr> do something, objectify</p>
 		</dd>
 
 		<dt id="ike">ike</dt>
 		<dd>
-			<abbr title="adjective">adj.</abbr> bad, negative, wrong, unnecessary, irrelevant<br>
-			<abbr title="noun">n.</abbr> evil, negativity<br>
-			<abbr title="verb">v.</abbr> be bad, suck (colloquial), worsen<br>
-			<abbr title="interjection">interj.</abbr> oh no!, oh dear, woe, alas
+			<p><abbr title="adjective">adj.</abbr> bad, negative, wrong, unnecessary, irrelevant</p>
+			<p><abbr title="noun">n.</abbr> evil, negativity</p>
+			<p><abbr title="verb">v.</abbr> be bad, suck (colloquial), worsen</p>
+			<p><abbr title="interjection">interj.</abbr> oh no!, oh dear, woe, alas</p>
 		</dd>
 
 		<dt id="ilo">ilo</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> tool, machine, device<br>
-			<abbr title="adjective">adj.</abbr> useful<br>
-			<abbr title="verb">v.</abbr> use
+			<p><abbr title="noun">n.</abbr> tool, machine, device</p>
+			<p><abbr title="adjective">adj.</abbr> useful</p>
+			<p><abbr title="verb">v.</abbr> use</p>
 		</dd>
 
 		<dt id="insa">insa</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> center, content, internal organ, stomach<br>
-			<abbr title="preposition">prep.</abbr> inside, between<br>
-			<abbr title="adjective">adj.</abbr> inner, internal, central, core<br>
-			<abbr title="verb">v.</abbr> insert, put inside, send inside
+			<p><abbr title="noun">n.</abbr> center, content, internal organ, stomach</p>
+			<p><abbr title="preposition">prep.</abbr> inside, between</p>
+			<p><abbr title="adjective">adj.</abbr> inner, internal, central, core</p>
+			<p><abbr title="verb">v.</abbr> insert, put inside, send inside</p>
 		</dd>
 
+		<a name="letter-j"></a>
 		<dt id="jaki">jaki</dt>
 		<dd>
-			<abbr title="adjective">adj.</abbr> dirty, disgusting, repulsive, obscene, sickly, toxic, unclean, unsanitary<br>
-			<abbr title="noun">n.</abbr> dirt, waste, garbage, infection<br>
-			<abbr title="verb">v.</abbr> make something dirty, pollute<br>
-			<abbr title="interjection">interj.</abbr> ew, yuck
+			<p><abbr title="adjective">adj.</abbr> dirty, disgusting, repulsive, obscene, sickly, toxic, unclean, unsanitary</p>
+			<p><abbr title="noun">n.</abbr> dirt, waste, garbage, infection</p>
+			<p><abbr title="verb">v.</abbr> make something dirty, pollute</p>
+			<p><abbr title="interjection">interj.</abbr> ew, yuck</p>
 		</dd>
 
 		<dt id="jan">jan</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> person, human, being, somebody<br>
-			<abbr title="adjective">adj.</abbr> personal<br>
-			<abbr title="verb">v.</abbr> personify, anthropomorphize, humanize
+			<p><abbr title="noun">n.</abbr> person, human, being, somebody</p>
+			<p><abbr title="adjective">adj.</abbr> personal</p>
+			<p><abbr title="verb">v.</abbr> personify, anthropomorphize, humanize</p>
 		</dd>
 
 		<dt id="jan">jan lawa</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> leader, ruler, chief, captain, principal, executive
+			<p><abbr title="noun">n.</abbr> leader, ruler, chief, captain, principal, executive</p>
 		</dd>
 
 		<dt id="jan">jan pona</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> friend, good person
+			<p><abbr title="noun">n.</abbr> friend, good person</p>
 		</dd>
 
 		<dt id="jasima">jasima</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> mirror, reflection, echo<br>
-			<abbr title="adjective">adj.</abbr> opposite, reversed<br>
-			<abbr title="verb">v.</abbr> reverse, reflect, resound, echo
+			<p><abbr title="noun">n.</abbr> mirror, reflection, echo</p>
+			<p><abbr title="adjective">adj.</abbr> opposite, reversed</p>
+			<p><abbr title="verb">v.</abbr> reverse, reflect, resound, echo</p>
 		</dd>
 
 		<dt id="jelo">jelo</dt>
 		<dd>
-			<abbr title="adjective">adj.</abbr> yellow, yellowish, <em>(rare)</em> light green
+			<p><abbr title="adjective">adj.</abbr> yellow, yellowish, <em>(rare)</em> light green</p>
 		</dd>
 
 		<dt id="jo">jo</dt>
 		<dd>
-			<abbr title="verb">v.</abbr> have, carry, contain, hold, own<br>
-			<abbr title="noun">n.</abbr> possession (something you own), contents<br>
-			<abbr title="adjective">adj.</abbr> carried, contained, possessed, owned
+			<p><abbr title="verb">v.</abbr> have, carry, contain, hold, own</p>
+			<p><abbr title="noun">n.</abbr> possession (something you own), contents</p>
+			<p><abbr title="adjective">adj.</abbr> carried, contained, possessed, owned</p>
 		</dd>
 
+		<a name="letter-k"></a>
 		<dt id="kala">kala</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> fish, marine animal, sea creature<br>
-			<abbr title="adjective">adj.</abbr> aquatic, marine
+			<p><abbr title="noun">n.</abbr> fish, marine animal, sea creature</p>
+			<p><abbr title="adjective">adj.</abbr> aquatic, marine</p>
 		</dd>
 
 		<dt id="kalama">kalama</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> sound, noise<br>
-			<abbr title="adjective">adj.</abbr> loud, noisy, sound-making<br>
-			<abbr title="verb">v.</abbr> produce a sound, recite, utter aloud
+			<p><abbr title="noun">n.</abbr> sound, noise</p>
+			<p><abbr title="adjective">adj.</abbr> loud, noisy, sound-making</p>
+			<p><abbr title="verb">v.</abbr> produce a sound, recite, utter aloud</p>
 		</dd>
 
 		<dt id="kama">kama</dt>
 		<dd>
-			<abbr title="pre-verb">pv.</abbr> come, become, arrive, happen, start to, manage to, succeed in<br>
-			<abbr title="adjective">adj.</abbr> arriving, coming, future, summoned<br>
-			<abbr title="noun">n.</abbr> event, happening, chance, arrival, beginning<br>
-			<abbr title="verb">v.</abbr> bring about, summon
+			<p><abbr title="pre-verb">pv.</abbr> come, become, arrive, happen, start to, manage to, succeed in</p>
+			<p><abbr title="adjective">adj.</abbr> arriving, coming, future, summoned</p>
+			<p><abbr title="noun">n.</abbr> event, happening, chance, arrival, beginning</p>
+			<p><abbr title="verb">v.</abbr> bring about, summon</p>
 		</dd>
 
 		<dt id="kama-jo">kama jo</dt>
 		<dd>
-			<abbr title="verb">v.</abbr> receive, get, take, obtain
+			<p><abbr title="verb">v.</abbr> receive, get, take, obtain</p>
 		</dd>
 
 		<dt id="kama-jo">kama pona</dt>
 		<dd>
-			<abbr title="greeting">greeting</abbr> welcome
+			<p><abbr title="greeting">greeting</abbr> welcome</p>
 		</dd>
 
 		<dt id="kama-sona">kama sona</dt>
 		<dd>
-			<abbr title="verb">v.</abbr> learn, study
+			<p><abbr title="verb">v.</abbr> learn, study</p>
 		</dd>
 
 		<dt id="kasi">kasi</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> plant, vegetation, herb, leaf, tree, wood, fungi, coral<br>
-			<abbr title="adjective">adj.</abbr> botanical, herbal, vegetated<br>
-			<abbr title="noun">n.</abbr> vegetate
+			<p><abbr title="noun">n.</abbr> plant, vegetation, herb, leaf, tree, wood, fungi, coral</p>
+			<p><abbr title="adjective">adj.</abbr> botanical, herbal, vegetated</p>
+			<p><abbr title="noun">n.</abbr> vegetate</p>
 		</dd>
 
 		<dt id="ken">ken</dt>
 		<dd>
-			<abbr title="pre-verb">pv.</abbr> can, may, be able to, be allowed to<br>
-			<abbr title="adjective">adj.</abbr> possible<br>
-			<abbr title="noun">n.</abbr> ability, possibility, permission, chance, luck<br>
-			<abbr title="verb">v.</abbr> allow, enable, permit
+			<p><abbr title="pre-verb">pv.</abbr> can, may, be able to, be allowed to</p>
+			<p><abbr title="adjective">adj.</abbr> possible</p>
+			<p><abbr title="noun">n.</abbr> ability, possibility, permission, chance, luck</p>
+			<p><abbr title="verb">v.</abbr> allow, enable, permit</p>
 		</dd>
 
 		<dt id="ken-la">ken la,</dt>
 		<dd>
-			<abbr title="adverb">adv.</abbr> maybe (at start of sentence)
+			<p><abbr title="adverb">adv.</abbr> maybe (at start of sentence)</p>
 		</dd>
 
 		<dt id="kepeken">kepeken</dt>
 		<dd>
-			<abbr title="verb">v.</abbr> use<br>
-			<abbr title="preposition">prep.</abbr> (do something) using, by means of<br>
-			<abbr title="noun">n.</abbr> a use
+			<p><abbr title="verb">v.</abbr> use</p>
+			<p><abbr title="preposition">prep.</abbr> (do something) using, by means of</p>
+			<p><abbr title="noun">n.</abbr> a use</p>
 		</dd>
 
 		<dt id="kijetesantakalu">kijetesantakalu</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> <em>(joke word)</em> raccoon, skunk, weasel, otter, musteloid
+			<p><abbr title="noun">n.</abbr> <em>(joke word)</em> raccoon, skunk, weasel, otter, musteloid</p>
 		</dd>
 
 		<dt id="kili">kili</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> fruit, vegetable, nut, result, offspring, product<br>
-			<abbr title="noun">n.</abbr> <em>(old)</em> mushroom<br>
-			<abbr title="verb">v.</abbr> result, fruiten
+			<p><abbr title="noun">n.</abbr> fruit, vegetable, nut, result, offspring, product</p>
+			<p><abbr title="noun">n.</abbr> <em>(old)</em> mushroom</p>
+			<p><abbr title="verb">v.</abbr> result, fruiten</p>
 		</dd>
 
 		<dt id="kin">kin</dt>
 		<dd>
-			<abbr title="adverb">adv.</abbr> also, too, even, indeed [emphasizes the word(s) before]<br>
-			<abbr title="interjection">interj.</abbr> me too, indeed, really
+			<p><abbr title="adverb">adv.</abbr> also, too, even, indeed [emphasizes the word(s) before]</p>
+			<p><abbr title="interjection">interj.</abbr> me too, indeed, really</p>
 		</dd>
 
 		<dt id="kipisi">kipisi</dt>
 		<dd>
-			<abbr title="verb">v.</abbr> cut, divide, split, sever<br>
-			<abbr title="noun">n.</abbr> division, part, piece, portion
+			<p><abbr title="verb">v.</abbr> cut, divide, split, sever</p>
+			<p><abbr title="noun">n.</abbr> division, part, piece, portion</p>
 		</dd>
 
 		<dt id="kiwen">kiwen</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> hard object, metal, stone, solid, wood, bone, plastic<br>
-			<abbr title="adjective">adj.</abbr> hard, touch, metallic, solid, stone, rocky
+			<p><abbr title="noun">n.</abbr> hard object, metal, stone, solid, wood, bone, plastic</p>
+			<p><abbr title="adjective">adj.</abbr> hard, touch, metallic, solid, stone, rocky</p>
 		</dd>
 
 		<dt id="ko">ko</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> clay, dough, paste, powder, clot, clump<br>
-			<abbr title="adjective">adj.</abbr> semi-solid, squishy, powdery<br>
-			<abbr title="verb">v.</abbr> stick, cling, squash, pulverize
+			<p><abbr title="noun">n.</abbr> clay, dough, paste, powder, clot, clump</p>
+			<p><abbr title="adjective">adj.</abbr> semi-solid, squishy, powdery</p>
+			<p><abbr title="verb">v.</abbr> stick, cling, squash, pulverize</p>
 		</dd>
 
 		<dt id="kokosila">kokosila</dt>
 		<dd>
-			<abbr title="verb">v.</abbr> speak not in toki pona while in a toki pona group
+			<p><abbr title="verb">v.</abbr> speak not in toki pona while in a toki pona group</p>
 		</dd>
 
 		<dt id="kon">kon</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> air, essence, spirit, breath, wind<br>
-			<abbr title="adjective">adj.</abbr> invisible, ephemeral, gaseous, abstract, intangible, breathing<br>
-			<abbr title="verb">adj.</abbr> breathe, vaporize, sublimate, evaporate
+			<p><abbr title="noun">n.</abbr> air, essence, spirit, breath, wind</p>
+			<p><abbr title="adjective">adj.</abbr> invisible, ephemeral, gaseous, abstract, intangible, breathing</p>
+			<p><abbr title="verb">adj.</abbr> breathe, vaporize, sublimate, evaporate</p>
 		</dd>
 
 		<dt id="ku">ku</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> the toki pona dictionary<br>
-			<abbr title="adjective">adj.</abbr> as told in the toki pona dictionary<br>
-			<abbr title="verb">v.</abbr> interacting with the toki pona dictionary
+			<p><abbr title="noun">n.</abbr> the toki pona dictionary</p>
+			<p><abbr title="adjective">adj.</abbr> as told in the toki pona dictionary</p>
+			<p><abbr title="verb">v.</abbr> interacting with the toki pona dictionary</p>
 		</dd>
 
 		<dt id="kule">kule</dt>
 		<dd>
-			<abbr title="adjective">adj.</abbr> colourful, pigmented, painted, of or related to the LGBTQ+ community<br>
-			<abbr title="noun">n.</abbr> color<br>
-			<abbr title="verb">v.</abbr> color, paint
+			<p><abbr title="adjective">adj.</abbr> colourful, pigmented, painted, of or related to the LGBTQ+ community</p>
+			<p><abbr title="noun">n.</abbr> color</p>
+			<p><abbr title="verb">v.</abbr> color, paint</p>
 		</dd>
 
 		<dt id="kulupu">kulupu</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> group, community, company, nation, society, tribe<br>
-			<abbr title="adjective">adj.</abbr> communal, social, public, shared
+			<p><abbr title="noun">n.</abbr> group, community, company, nation, society, tribe</p>
+			<p><abbr title="adjective">adj.</abbr> communal, social, public, shared</p>
 		</dd>
 
 		<dt id="kute">kute</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> ear, hearing<br>
-			<abbr title="verb">v.</abbr> hear, listen, pay attention to, obey
+			<p><abbr title="noun">n.</abbr> ear, hearing</p>
+			<p><abbr title="verb">v.</abbr> hear, listen, pay attention to, obey</p>
 		</dd>
 
+		<a name="letter-l"></a>
 		<dt id="la">la</dt>
 		<dd>
-			<abbr title="particle">part.</abbr> [adverb/if/when marker, between the context phrase and the main sentence]
+			<p><abbr title="particle">part.</abbr> [adverb/if/when marker, between the context phrase and the main sentence]</p>
 		</dd>
 
 		<dt id="lanpan">lanpan</dt>
 		<dd>
-			<abbr title="verb">v.</abbr> seize, steal, capture, get, grab, catch
+			<p><abbr title="verb">v.</abbr> seize, steal, capture, get, grab, catch</p>
 		</dd>
 
 		<dt id="lape">lape</dt>
 		<dd>
-			<abbr title="noun">n.<abbr>: sleep, rest
-			<abbr title="verb">v.</abbr> sleep, rest
-			<abbr title="adjective">adj.</abbr> sleeping, restful
+			<p><abbr title="noun">n.</abbr> sleep, rest</p>
+			<p><abbr title="verb">v.</abbr> sleep, rest</p>
+			<p><abbr title="adjective">adj.</abbr> sleeping, restful</p>
 		</dd>
 
 		<dt id="laso">laso</dt>
 		<dd>
-			<abbr title="adjective">adj.</abbr> blue, bluish, green, greenish
+			<p><abbr title="adjective">adj.</abbr> blue, bluish, green, greenish</p>
 		</dd>
 
 		<dt id="lawa">lawa</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> head, mind<br>
-			<abbr title="adjective">adj.</abbr> main, primary, controlling, ruling<br>
-			<abbr title="verb">v.</abbr> control, direct, guide, lead, own, plan, rule
+			<p><abbr title="noun">n.</abbr> head, mind</p>
+			<p><abbr title="adjective">adj.</abbr> main, primary, controlling, ruling</p>
+			<p><abbr title="verb">v.</abbr> control, direct, guide, lead, own, plan, rule</p>
 		</dd>
 
 		<dt id="leko">leko</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> square, block, stair
+			<p><abbr title="noun">n.</abbr> square, block, stair</p>
 		</dd>
 
 		<dt id="len">len</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> cloth, clothing, fabric, textile, cover, layer of privacy<br>
-		<abbr title="adjective">adj.</abbr> clothed, made of cloth/fabric<br>
-			<abbr title="verb">v.</abbr> clothe, provide a layer of privacy
+			<p><abbr title="noun">n.</abbr> cloth, clothing, fabric, textile, cover, layer of privacy</p>
+		<p><abbr title="adjective">adj.</abbr> clothed, made of cloth/fabric</p>
+			<p><abbr title="verb">v.</abbr> clothe, provide a layer of privacy</p>
 		</dd>
 
 		<dt id="lete">lete</dt>
 		<dd>
-			<abbr title="adjective">adj.</abbr> cold, cool, uncooked, raw<br>
-			<abbr title="noun">n.</abbr> cold<br>
-			<abbr title="verb">v.</abbr> cool, chill
+			<p><abbr title="adjective">adj.</abbr> cold, cool, uncooked, raw</p>
+			<p><abbr title="noun">n.</abbr> cold</p>
+			<p><abbr title="verb">v.</abbr> cool, chill</p>
 		</dd>
 
 		<dt id="li">li</dt>
 		<dd>
-			<abbr title="particle">part.</abbr> [between subject (except mi or sina) and its verb], [introduce a new verb for the same subject]
+			<p><abbr title="particle">part.</abbr> [between subject (except mi or sina) and its verb], [introduce a new verb for the same subject]</p>
 		</dd>
 
 		<dt id="lili">lili</dt>
 		<dd>
-			<abbr title="adjective">adj.</abbr> little, small, short, few, a bit, young<br>
-			<abbr title="noun">n.</abbr> smallness<br>
-			<abbr title="verb">v.</abbr> reduce, shorten, shrink, lessen
+			<p><abbr title="adjective">adj.</abbr> little, small, short, few, a bit, young</p>
+			<p><abbr title="noun">n.</abbr> smallness</p>
+			<p><abbr title="verb">v.</abbr> reduce, shorten, shrink, lessen</p>
 		</dd>
 
 		<dt id="linja">linja</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> long and flexible thing (eg. cord, hair, rope, thread, yarn)
+			<p><abbr title="noun">n.</abbr> long and flexible thing (eg. cord, hair, rope, thread, yarn)</p>
 		</dd>
 
 		<dt id="lipu">lipu</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> flat object, book, document, paper, card, record, website<br>
-			<abbr title="adjective">adj.</abbr> flat, used as lipu, lipu-like
+			<p><abbr title="noun">n.</abbr> flat object, book, document, paper, card, record, website</p>
+			<p><abbr title="adjective">adj.</abbr> flat, used as lipu, lipu-like</p>
 		</dd>
 
 		<dt id="loje">loje</dt>
 		<dd>
-			<abbr title="adjective">adj.</abbr> red, reddish
+			<p><abbr title="adjective">adj.</abbr> red, reddish</p>
 		</dd>
 
 		<dt id="lon">lon</dt>
 		<dd>
-			<abbr title="preposition">prep.</abbr> (located) in/at/on<br>
-			<abbr title="noun">n.</abbr> truth, life, existence<br>
-			<abbr title="adjective">adj.</abbr> real, true, present, existing<br>
-			<abbr title="verb">v.</abbr> exist, be awake
+			<p><abbr title="preposition">prep.</abbr> (located) in/at/on</p>
+			<p><abbr title="noun">n.</abbr> truth, life, existence</p>
+			<p><abbr title="adjective">adj.</abbr> real, true, present, existing</p>
+			<p><abbr title="verb">v.</abbr> exist, be awake</p>
 		</dd>
 
 		<dt id="lon">lon seme</dt>
 		<dd>
-			<abbr title="question">q.</abbr> where is, what is<br>
+			<p><abbr title="question">q.</abbr> where is, what is</p>
 			<aside>
 				Used as the verb and direct object asking about the subject, i.e.<br>
 				<q>tomo telo li lon seme?</q> = <q>where is the washroom?</q><br>
@@ -458,90 +465,91 @@
 
 		<dt id="luka">luka</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> arm, hand, tactile organ<br>
-			<abbr title="number">num.</abbr> five
+			<p><abbr title="noun">n.</abbr> arm, hand, tactile organ</p>
+			<p><abbr title="number">num.</abbr> five</p>
 		</dd>
 
 		<dt id="lukin">lukin</dt>
 		<dd>
-			<abbr title="verb">v.</abbr> look at, see, examine, observe, read, watch<br>
-			<abbr title="pre-verb">pv.</abbr> seek, look for, try to
+			<p><abbr title="verb">v.</abbr> look at, see, examine, observe, read, watch</p>
+			<p><abbr title="pre-verb">pv.</abbr> seek, look for, try to</p>
 		</dd>
 
 		<dt id="lupa">lupa</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> door, hole, orifice, window
+			<p><abbr title="noun">n.</abbr> door, hole, orifice, window</p>
 		</dd>
 
+		<a name="letter-m"></a>
 		<dt id="ma">ma</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> earth, land, outdoors, world, country, territory, soil
+			<p><abbr title="noun">n.</abbr> earth, land, outdoors, world, country, territory, soil</p>
 		</dd>
 
 		<dt id="mama">mama</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> parent, ancestor, creator, origin, caretaker<br>
-			<abbr title="verb">v.</abbr> create, parent, take care of
+			<p><abbr title="noun">n.</abbr> parent, ancestor, creator, origin, caretaker</p>
+			<p><abbr title="verb">v.</abbr> create, parent, take care of</p>
 		</dd>
 
 		<dt id="mani">mani</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> money, cash, savings, wealth, large domesticated animal<br>
-			<abbr title="adjective">adj.</abbr> <em>(unconventional)</em> wealthy
+			<p><abbr title="noun">n.</abbr> money, cash, savings, wealth, large domesticated animal</p>
+			<p><abbr title="adjective">adj.</abbr> <em>(unconventional)</em> wealthy</p>
 		</dd>
 
 		<dt id="meli">meli</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> woman, wife, girlfriend<br>
-			<abbr title="adjective">adj.</abbr> feminine, female
+			<p><abbr title="noun">n.</abbr> woman, wife, girlfriend</p>
+			<p><abbr title="adjective">adj.</abbr> feminine, female</p>
 		</dd>
 
 		<dt id="meso">meso</dt>
 		<dd>
-			<abbr title="adjective">adj.</abbr> average, medium
+			<p><abbr title="adjective">adj.</abbr> average, medium</p>
 		</dd>
 
 		<dt id="mi">mi</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> I, me, we, us<br>
-			<abbr title="adjective">adj.</abbr> my, our
+			<p><abbr title="noun">n.</abbr> I, me, we, us</p>
+			<p><abbr title="adjective">adj.</abbr> my, our</p>
 		</dd>
 
 		<dt id="mije">mije</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> man, husband, boyfriend<br>
-			<abbr title="adjective">adj.</abbr> masculine, male
+			<p><abbr title="noun">n.</abbr> man, husband, boyfriend</p>
+			<p><abbr title="adjective">adj.</abbr> masculine, male</p>
 		</dd>
 
 		<dt id="misikeke">misikeke</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> medication, medicine, cure
+			<p><abbr title="noun">n.</abbr> medication, medicine, cure</p>
 		</dd>
 
 		<dt id="moku">moku</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> food<br>
-			<abbr title="adjective">adj.</abbr> edible, of food<br>
-			<abbr title="verb">v.</abbr> eat, drink, swallow, consume, ingest
+			<p><abbr title="noun">n.</abbr> food</p>
+			<p><abbr title="adjective">adj.</abbr> edible, of food</p>
+			<p><abbr title="verb">v.</abbr> eat, drink, swallow, consume, ingest</p>
 		</dd>
 
 		<dt id="moli">moli</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> death<br>
-			<abbr title="adjective">adj.</abbr> dead, dying, deadly, fatal<br>
-			<abbr title="verb">v.</abbr> kill, die
+			<p><abbr title="noun">n.</abbr> death</p>
+			<p><abbr title="adjective">adj.</abbr> dead, dying, deadly, fatal</p>
+			<p><abbr title="verb">v.</abbr> kill, die</p>
 		</dd>
 
 		<dt id="monsi">monsi</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> back, rear, butt, behind<br>
-			<abbr title="adjective">adj.</abbr> back, rear
+			<p><abbr title="noun">n.</abbr> back, rear, butt, behind</p>
+			<p><abbr title="adjective">adj.</abbr> back, rear</p>
 		</dd>
 
 		<dt id="monsuta">monsuta</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> fear, horror, monster<br>
-			<abbr title="adjective">adj.</abbr> scary
+			<p><abbr title="noun">n.</abbr> fear, horror, monster</p>
+			<p><abbr title="adjective">adj.</abbr> scary</p>
 			<aside>
 				<blockquote>
 					<p>The usage of this word can be especially confusing without extra context. Some people refer to this confusion as <a href="https://lipukule.org/post/2021/01/29/monsutatesu" target="_blank" rel="nofollow">&ldquo;monsutatesu&rdquo;</a>.</p>
@@ -552,400 +560,405 @@
 
 		<dt id="mu">mu</dt>
 		<dd>
-			<abbr title="interjection">interj.</abbr> [animal noise or communication]
+			<p><abbr title="interjection">interj.</abbr> [animal noise or communication]</p>
 		</dd>
 
 		<dt id="mun">mun</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> moon, star, night sky object<br>
-			<abbr title="adjective">adj.</abbr> lunar, stellar
+			<p><abbr title="noun">n.</abbr> moon, star, night sky object</p>
+			<p><abbr title="adjective">adj.</abbr> lunar, stellar</p>
 		</dd>
 
 		<dt id="musi">musi</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> fun, entertainment, game, art, recreation<br>
-			<abbr title="adjective">adj.</abbr> artistic, entertaining, amusing, playful, recreational<br>
-			<abbr title="verb">v.</abbr> amuse, entertain, play, have fun
+			<p><abbr title="noun">n.</abbr> fun, entertainment, game, art, recreation</p>
+			<p><abbr title="adjective">adj.</abbr> artistic, entertaining, amusing, playful, recreational</p>
+			<p><abbr title="verb">v.</abbr> amuse, entertain, play, have fun</p>
 		</dd>
 
 		<dt id="mute">mute</dt>
 		<dd>
-			<abbr title="adjective">adj.</abbr> many, very, much, several, a lot, abundant, numerous, more<br>
-			<abbr title="noun">n.</abbr> amount, quantity
+			<p><abbr title="adjective">adj.</abbr> many, very, much, several, a lot, abundant, numerous, more</p>
+			<p><abbr title="noun">n.</abbr> amount, quantity</p>
 		</dd>
 
+		<a name="letter-n"></a>
 		<dt id="n">n</dt>
 		<dd>
-			<abbr title="interjection">interj.</abbr> um..., mm..., hmm..., [filler word]
+			<p><abbr title="interjection">interj.</abbr> um..., mm..., hmm..., [filler word]</p>
 		</dd>
 
 		<dt id="namako">namako</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> spice (liberal, eg, namako suwi walo = sugar)<br>
-			<abbr title="adjective">adj.</abbr> extra, additional
+			<p><abbr title="noun">n.</abbr> spice (liberal, eg, namako suwi walo = sugar)</p>
+			<p><abbr title="adjective">adj.</abbr> extra, additional</p>
 		</dd>
 
 		<dt id="nanpa">nanpa</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> number<br>
-			<abbr title="adjective">adj.</abbr> -th (ordinal number), numeric
+			<p><abbr title="noun">n.</abbr> number</p>
+			<p><abbr title="adjective">adj.</abbr> -th (ordinal number), numeric</p>
 		</dd>
 
 		<dt id="nasa">nasa</dt>
 		<dd>
-			<abbr title="adjective">adj.</abbr> unusual, strange, foolish, crazy, drunk
+			<p><abbr title="adjective">adj.</abbr> unusual, strange, foolish, crazy, drunk</p>
 		</dd>
 
 		<dt id="nasin">nasin</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> path, road, street, doctrine, way, custom<br>
-			<abbr title="adjective">adj.</abbr> street-, true to the way/custom
+			<p><abbr title="noun">n.</abbr> path, road, street, doctrine, way, custom</p>
+			<p><abbr title="adjective">adj.</abbr> street-, true to the way/custom</p>
 		</dd>
 
 		<dt id="nena">nena</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> hill, mountain, button, bump, nose, protuberance<br>
-			<abbr title="adjective">adj.</abbr> hilly, mountainous, bumpy
+			<p><abbr title="noun">n.</abbr> hill, mountain, button, bump, nose, protuberance</p>
+			<p><abbr title="adjective">adj.</abbr> hilly, mountainous, bumpy</p>
 		</dd>
 
 		<dt id="ni">ni</dt>
 		<dd>
-		<abbr title="noun">n.</abbr> this, that<br>
-		<abbr title="adjective">adj.</abbr> that, this
+			<p><abbr title="noun">n.</abbr> this, that</p>
+			<p><abbr title="adjective">adj.</abbr> that, this</p>
 		</dd>
 
 		<dt id="nimi">nimi</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> word, name
+			<p><abbr title="noun">n.</abbr> word, name</p>
 		</dd>
 
 		<dt id="noka">noka</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> foot, leg, organ of locomotion, bottom, lower part<br>
-			<abbr title="preposition">prep.</abbr> under
+			<p><abbr title="noun">n.</abbr> foot, leg, organ of locomotion, bottom, lower part</p>
+			<p><abbr title="preposition">prep.</abbr> under</p>
 		</dd>
 
+		<a name="letter-o"></a>
 		<dt id="o">o</dt>
 		<dd>
-			<abbr title="particle">part.</abbr> [vocative (calling to someone)], [imperative (replaces li)]<br>
-			<abbr title="interjection">interj.</abbr> hey! (calling for attention)
+			<p><abbr title="particle">part.</abbr> [vocative (calling to someone)], [imperative (replaces li)]</p>
+			<p><abbr title="interjection">interj.</abbr> hey! (calling for attention)</p>
 		</dd>
 
 		<dt id="oko">oko</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> eye, vision
+			<p><abbr title="noun">n.</abbr> eye, vision</p>
 		</dd>
 
 		<dt id="olin">olin</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> love, compassion, affection, respect<br>
-			<abbr title="adjective">adj.</abbr> loved, favorite, respected<br>
-			<abbr title="verb">v.</abbr> love, have compassion for, respect, show affection to
+			<p><abbr title="noun">n.</abbr> love, compassion, affection, respect</p>
+			<p><abbr title="adjective">adj.</abbr> loved, favorite, respected</p>
+			<p><abbr title="verb">v.</abbr> love, have compassion for, respect, show affection to</p>
 		</dd>
 
 		<dt id="ona">ona</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> he, she, it, they<br>
-			<abbr title="adjective">adj.</abbr> his, her, their, its
+			<p><abbr title="noun">n.</abbr> he, she, it, they</p>
+			<p><abbr title="adjective">adj.</abbr> his, her, their, its</p>
 		</dd>
 
 		<dt id="open">open</dt>
 		<dd>
-			<abbr title="verb">v.</abbr> begin, start, open, turn on<br>
-			<abbr title="noun">n.</abbr> start, beginning<br>
-			<abbr title="adjective">adj.</abbr> initial, starting
+			<p><abbr title="verb">v.</abbr> begin, start, open, turn on</p>
+			<p><abbr title="noun">n.</abbr> start, beginning</p>
+			<p><abbr title="adjective">adj.</abbr> initial, starting</p>
 		</dd>
 
+		<a name="letter-p"></a>
 		<dt id="pakala">pakala</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> damage, mistake<br>
-			<abbr title="adjective">adj.</abbr> broken, damaged, harmed, messed up, wrong<br>
-			<abbr title="verb">v.</abbr> break, make mistakes<br>
-			<abbr title="particle">part.</abbr> [generic curse]
+			<p><abbr title="noun">n.</abbr> damage, mistake</p>
+			<p><abbr title="adjective">adj.</abbr> broken, damaged, harmed, messed up, wrong</p>
+			<p><abbr title="verb">v.</abbr> break, make mistakes</p>
+			<p><abbr title="particle">part.</abbr> [generic curse]</p>
 		</dd>
 
 		<dt id="pali">pali</dt>
 		<dd>
-			<abbr title="verb">v.</abbr> do, work on, build, make, prepare<br>
-			<abbr title="noun">n.</abbr> work, labor, activity, project<br>
-			<abbr title="adjective">adj.</abbr> working, active, functional
+			<p><abbr title="verb">v.</abbr> do, work on, build, make, prepare</p>
+			<p><abbr title="noun">n.</abbr> work, labor, activity, project</p>
+			<p><abbr title="adjective">adj.</abbr> working, active, functional</p>
 		</dd>
 
 		<dt id="palisa">palisa</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> long solid object, branch, rod, stick<br>
-			<abbr title="adjective">adj.</abbr> long
+			<p><abbr title="noun">n.</abbr> long solid object, branch, rod, stick</p>
+			<p><abbr title="adjective">adj.</abbr> long</p>
 		</dd>
 
 		<dt id="pan">pan</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> grain, bread, barley, corn, oat, rice, wheat, pasta
+			<p><abbr title="noun">n.</abbr> grain, bread, barley, corn, oat, rice, wheat, pasta</p>
 		</dd>
 
 		<dt id="pana">pana</dt>
 		<dd>
-			<abbr title="verb">v.</abbr> give, send, emit, provide, put, release<br>
-			<abbr title="noun">n.</abbr> transfer, exchange<br>
-			<abbr title="adjective">adj.</abbr> sent, released
+			<p><abbr title="verb">v.</abbr> give, send, emit, provide, put, release</p>
+			<p><abbr title="noun">n.</abbr> transfer, exchange</p>
+			<p><abbr title="adjective">adj.</abbr> sent, released</p>
 		</dd>
 
 		<dt id="pi">pi</dt>
 		<dd>
-			<abbr title="particle">part.</abbr> of [regroups two or more modifiers]
+			<p><abbr title="particle">part.</abbr> of [regroups two or more modifiers]</p>
 		</dd>
 
 		<dt id="pilin">pilin</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> heart, feeling, touch, sense<br>
-			<abbr title="adjective">adj.</abbr> feeling, touch-based<br>
-			<abbr title="verb">v.</abbr> touch, think, feel
+			<p><abbr title="noun">n.</abbr> heart, feeling, touch, sense</p>
+			<p><abbr title="adjective">adj.</abbr> feeling, touch-based</p>
+			<p><abbr title="verb">v.</abbr> touch, think, feel</p>
 		</dd>
 
 		<dt id="pimeja">pimeja</dt>
 		<dd>
-			<abbr title="adjective">adj.</abbr> black, dark, unlit<br>
-			<abbr title="noun">n.</abbr> darkness, shadow
+			<p><abbr title="adjective">adj.</abbr> black, dark, unlit</p>
+			<p><abbr title="noun">n.</abbr> darkness, shadow</p>
 		</dd>
 
 		<dt id="pini">pini</dt>
 		<dd>
-			<abbr title="adjective">adj.</abbr> final, completed, ended, finished, past<br>
-			<abbr title="noun">n.</abbr> ending, finish<br>
-			<abbr title="verb">v.</abbr> end, finish, close, turn off
+			<p><abbr title="adjective">adj.</abbr> final, completed, ended, finished, past</p>
+			<p><abbr title="noun">n.</abbr> ending, finish</p>
+			<p><abbr title="verb">v.</abbr> end, finish, close, turn off</p>
 		</dd>
 
 		<dt id="pipi">pipi</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> bug, insect, spider
+			<p><abbr title="noun">n.</abbr> bug, insect, spider</p>
 		</dd>
 
 		<dt id="poka">poka</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> hip, side, neighbor, vicinity<br>
-			<abbr title="adjective">adj.</abbr> neighboring, nearby, at one's side
+			<p><abbr title="noun">n.</abbr> hip, side, neighbor, vicinity</p>
+			<p><abbr title="adjective">adj.</abbr> neighboring, nearby, at one's side</p>
 		</dd>
 
 		<dt id="poki">poki</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> container, bag, box, bowl, cup, cupboard, drawer, vessel
+			<p><abbr title="noun">n.</abbr> container, bag, box, bowl, cup, cupboard, drawer, vessel</p>
 		</dd>
 
 		<dt id="pona">pona</dt>
 		<dd>
-			<abbr title="adjective">adj.</abbr> good, positive, useful, friendly, peaceful, simple<br>
-			<abbr title="noun">n.</abbr> good, simplicity<br>
-			<abbr title="verb">v.</abbr> improve, fix<br>
-			<abbr title="interjection">interj.</abbr> great!, good!, thanks!, ok!, cool!, yay!<br>
-			<abbr title="response">response</abbr> &lt;verb&gt; pona!
+			<p><abbr title="adjective">adj.</abbr> good, positive, useful, friendly, peaceful, simple</p>
+			<p><abbr title="noun">n.</abbr> good, simplicity</p>
+			<p><abbr title="verb">v.</abbr> improve, fix</p>
+			<p><abbr title="interjection">interj.</abbr> great!, good!, thanks!, ok!, cool!, yay!</p>
+			<p><abbr title="response">response</abbr> &lt;verb&gt; pona!</p>
 		</dd>
 
 		<dt id="pu">pu</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> the official toki pona book<br>
-			<abbr title="adjective">adj.</abbr> as told in the official toki pona book<br>
-			<abbr title="verb">v.</abbr> interacting with the official toki pona book
+			<p><abbr title="noun">n.</abbr> the official toki pona book</p>
+			<p><abbr title="adjective">adj.</abbr> as told in the official toki pona book</p>
+			<p><abbr title="verb">v.</abbr> interacting with the official toki pona book</p>
 		</dd>
 
+		<a name="letter-s"></a>
 		<dt id="sama">sama</dt>
 		<dd>
-			<abbr title="adjective">adj.</abbr> same, similar, sibiling, equal<br>
-			<abbr title="noun">n.</abbr> similarity, sibling, peer, fellow<br>
-			<abbr title="preposition">prep.</abbr> as, like, seem
+			<p><abbr title="adjective">adj.</abbr> same, similar, sibiling, equal</p>
+			<p><abbr title="noun">n.</abbr> similarity, sibling, peer, fellow</p>
+			<p><abbr title="preposition">prep.</abbr> as, like, seem</p>
 		</dd>
 
 		<dt id="seli">seli</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> heat, warmth, chemical reaction, heat source<br>
-			<abbr title="adjective">adj.</abbr> warm, hot, cooked<br>
-			<abbr title="verb">v.</abbr> heat, warm, cook
+			<p><abbr title="noun">n.</abbr> heat, warmth, chemical reaction, heat source</p>
+			<p><abbr title="adjective">adj.</abbr> warm, hot, cooked</p>
+			<p><abbr title="verb">v.</abbr> heat, warm, cook</p>
 		</dd>
 
 		<dt id="selo">selo</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> outside, surface, skin, shell, boundary, bark, peel<br>
-			<abbr title="adjective">adj.</abbr> outer
+			<p><abbr title="noun">n.</abbr> outside, surface, skin, shell, boundary, bark, peel</p>
+			<p><abbr title="adjective">adj.</abbr> outer</p>
 		</dd>
 
 		<dt id="seme">seme</dt>
 		<dd>
-			<abbr title="particle">part.</abbr> what, which, [question word in place of unknown]
+			<p><abbr title="particle">part.</abbr> what, which, [question word in place of unknown]</p>
 		</dd>
 
 		<dt id="sewi">sewi</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> area above, top, highest part, sky, god<br>
-			<abbr title="adjective">adj.</abbr> divine, sacred, supernatural, superior, high, religious, formal<br>
-			<abbr title="preposition">prep.</abbr> above, over
+			<p><abbr title="noun">n.</abbr> area above, top, highest part, sky, god</p>
+			<p><abbr title="adjective">adj.</abbr> divine, sacred, supernatural, superior, high, religious, formal</p>
+			<p><abbr title="preposition">prep.</abbr> above, over</p>
 		</dd>
 
 		<dt id="sijelo">sijelo</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> body, physical state, torso<br>
-			<abbr title="adjective">adj.</abbr> physical, of sijelo
+			<p><abbr title="noun">n.</abbr> body, physical state, torso</p>
+			<p><abbr title="adjective">adj.</abbr> physical, of sijelo</p>
 		</dd>
 
 		<dt id="sike">sike</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> round or circular thing, ball, circle, cycle, wheel<br>
-			<abbr title="adjective">adj.</abbr> round, circular, spherical, cyclical, of one year<br>
-			<abbr title="verb">v.</abbr> make a circle around, surround
+			<p><abbr title="noun">n.</abbr> round or circular thing, ball, circle, cycle, wheel</p>
+			<p><abbr title="adjective">adj.</abbr> round, circular, spherical, cyclical, of one year</p>
+			<p><abbr title="verb">v.</abbr> make a circle around, surround</p>
 		</dd>
 
 		<dt id="sin">sin</dt>
 		<dd>
-			<abbr title="adjective">adj.</abbr> new, fresh, another, more<br>
-			<abbr title="noun">n.</abbr> novelty, addition<br>
-			<abbr title="verb">v.</abbr> add, update, renew, renovate, freshen
+			<p><abbr title="adjective">adj.</abbr> new, fresh, another, more</p>
+			<p><abbr title="noun">n.</abbr> novelty, addition</p>
+			<p><abbr title="verb">v.</abbr> add, update, renew, renovate, freshen</p>
 		</dd>
 
 		<dt id="sina">sina</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> you<br>
-			<abbr title="adjective">adj.</abbr> your
+			<p><abbr title="noun">n.</abbr> you</p>
+			<p><abbr title="adjective">adj.</abbr> your</p>
 		</dd>
 
 		<dt id="sinpin">sinpin</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> front, chest, face, wall<br>
-			<abbr title="adjective">adj.</abbr> foremost
+			<p><abbr title="noun">n.</abbr> front, chest, face, wall</p>
+			<p><abbr title="adjective">adj.</abbr> foremost</p>
 		</dd>
 
 		<dt id="sitelen">sitelen</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> image, picture, representation, symbol, mark, writing<br>
-			<abbr title="adjective">adj.</abbr> symbolic, written, recorded<br>
-			<abbr title="verb">v.</abbr> write, draw, record
+			<p><abbr title="noun">n.</abbr> image, picture, representation, symbol, mark, writing</p>
+			<p><abbr title="adjective">adj.</abbr> symbolic, written, recorded</p>
+			<p><abbr title="verb">v.</abbr> write, draw, record</p>
 		</dd>
 
 		<dt id="soko">soko</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> mushroom, fungus
+			<p><abbr title="noun">n.</abbr> mushroom, fungus</p>
 		</dd>
 
 		<dt id="sona">sona</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> knowledge, information, wisdom, intelligence, understanding<br>
-			<abbr title="adjective">adj.</abbr> known<br>
-			<abbr title="verb">v.</abbr> know, be skilled in, be wise about, have information on<br>
-			<abbr title="pre-verb">pv.</abbr> know how to
+			<p><abbr title="noun">n.</abbr> knowledge, information, wisdom, intelligence, understanding</p>
+			<p><abbr title="adjective">adj.</abbr> known</p>
+			<p><abbr title="verb">v.</abbr> know, be skilled in, be wise about, have information on</p>
+			<p><abbr title="pre-verb">pv.</abbr> know how to</p>
 		</dd>
 
 		<dt id="soweli">soweli</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> animal, beast, land mammal
+			<p><abbr title="noun">n.</abbr> animal, beast, land mammal</p>
 		</dd>
 
 		<dt id="suli">suli</dt>
 		<dd>
-			<abbr title="adjective">adj.</abbr> big, heavy, large, long, tall, important, adult<br>
-			<abbr title="noun">n.</abbr> size, greatness<br>
-			<abbr title="verb">v.</abbr> enlarge, grow, lengthen
+			<p><abbr title="adjective">adj.</abbr> big, heavy, large, long, tall, important, adult</p>
+			<p><abbr title="noun">n.</abbr> size, greatness</p>
+			<p><abbr title="verb">v.</abbr> enlarge, grow, lengthen</p>
 		</dd>
 
 		<dt id="suno">suno</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> sun, light, brightness, radiance, light source<br>
-			<abbr title="adjective">adj.</abbr> solar, bright, radiant<br>
-			<abbr title="verb">v.</abbr> light, shine, glow
+			<p><abbr title="noun">n.</abbr> sun, light, brightness, radiance, light source</p>
+			<p><abbr title="adjective">adj.</abbr> solar, bright, radiant</p>
+			<p><abbr title="verb">v.</abbr> light, shine, glow</p>
 		</dd>
 
 		<dt id="supa">supa</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> horizontal surface (e.g furniture, table, chair, pillow, floor)
+			<p><abbr title="noun">n.</abbr> horizontal surface (e.g furniture, table, chair, pillow, floor)</p>
 		</dd>
 
 		<dt id="suwi">suwi</dt>
 		<dd>
-			<abbr title="adjective">adj.</abbr> sweet, fragrant, cute, innocent
+			<p><abbr title="adjective">adj.</abbr> sweet, fragrant, cute, innocent</p>
 		</dd>
 
+		<a name="letter-t"></a>
 		<dt id="tan">tan</dt>
 		<dd>
-			<abbr title="preposition">prep.</abbr> by, from, because of<br>
-			<abbr title="noun">n.</abbr> cause, reason, origin<br>
-			<abbr title="adjective">adj.</abbr> original
+			<p><abbr title="preposition">prep.</abbr> by, from, because of</p>
+			<p><abbr title="noun">n.</abbr> cause, reason, origin</p>
+			<p><abbr title="adjective">adj.</abbr> original</p>
 		</dd>
 
 		<dt id="taso">taso</dt>
 		<dd>
 			particle (beginning of sentence): but, however
-			<abbr title="adjective">adj.</abbr> only, just
+			<p><abbr title="adjective">adj.</abbr> only, just</p>
 		</dd>
 
 		<dt id="tawa">tawa</dt>
 		<dd>
-			<abbr title="preposition">prep.</abbr> to, going to, toward, in order to, for, from the perspective of<br>
-			<abbr title="adjective">adj.</abbr> moving, mobile<br>
-			<abbr title="noun">n.</abbr> movement, transportation<br>
-			<abbr title="verb">v.</abbr> move, displace, go to, walk, travel, leave
+			<p><abbr title="preposition">prep.</abbr> to, going to, toward, in order to, for, from the perspective of</p>
+			<p><abbr title="adjective">adj.</abbr> moving, mobile</p>
+			<p><abbr title="noun">n.</abbr> movement, transportation</p>
+			<p><abbr title="verb">v.</abbr> move, displace, go to, walk, travel, leave</p>
 		</dd>
 
 		<dt id="mi-tawa">mi tawa</dt>
 		<dd>
-			<abbr title="farewell">farewell</abbr> goodbye, i am going (to do something)
+			<p><abbr title="farewell">farewell</abbr> goodbye, i am going (to do something)</p>
 		</dd>
 
 		<dt id="telo">telo</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> water, fluid, liquid, juice, sauce<br>
-			<abbr title="adjective">adj.</abbr> wet, fluid, liquid<br>
-			<abbr title="verb">v.</abbr> water, clean
+			<p><abbr title="noun">n.</abbr> water, fluid, liquid, juice, sauce</p>
+			<p><abbr title="adjective">adj.</abbr> wet, fluid, liquid</p>
+			<p><abbr title="verb">v.</abbr> water, clean</p>
 		</dd>
 
 		<dt id="tenpo">tenpo</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> time, duration, moment, occasion, period, situation<br>
-			<abbr title="adjective">adj.</abbr> temporal
+			<p><abbr title="noun">n.</abbr> time, duration, moment, occasion, period, situation</p>
+			<p><abbr title="adjective">adj.</abbr> temporal</p>
 		</dd>
 
 		<dt id="tenpo-kama">tenpo kama</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> future<br>
-			<abbr title="adjective">adj.</abbr> later, future
+			<p><abbr title="noun">n.</abbr> future</p>
+			<p><abbr title="adjective">adj.</abbr> later, future</p>
 		</dd>
 
 		<dt id="tenpo-ni">tenpo ni</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> present<br>
-			<abbr title="adjective">adj.</abbr> now, present
+			<p><abbr title="noun">n.</abbr> present</p>
+			<p><abbr title="adjective">adj.</abbr> now, present</p>
 		</dd>
 
 		<dt id="tenpo-pini">tenpo pini</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> past<br>
-			<abbr title="adjective">adj.</abbr> earlier, past
+			<p><abbr title="noun">n.</abbr> past</p>
+			<p><abbr title="adjective">adj.</abbr> earlier, past</p>
 		</dd>
 
 		<dt id="tenpo-sike">tenpo sike</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> year
+			<p><abbr title="noun">n.</abbr> year</p>
 		</dd>
 
 		<dt id="toki">toki</dt>
 		<dd>
-			<abbr title="verb">v.</abbr> communicate, say, speak, say, talk, use language, think<br>
-			<abbr title="noun">n.</abbr> speech, conversation, language<br>
-			<abbr title="adjective">adj.</abbr> verbal, conversational<br>
-			<abbr title="greeting">greeting</abbr> hello!
+			<p><abbr title="verb">v.</abbr> communicate, say, speak, say, talk, use language, think</p>
+			<p><abbr title="noun">n.</abbr> speech, conversation, language</p>
+			<p><abbr title="adjective">adj.</abbr> verbal, conversational</p>
+			<p><abbr title="greeting">greeting</abbr> hello!</p>
 		</dd>
 
 		<dt id="tomo">tomo</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> home, building, structure, indoor space, room<br>
-			<abbr title="adjective">adj.</abbr> indoor, urban, domestic, household
+			<p><abbr title="noun">n.</abbr> home, building, structure, indoor space, room</p>
+			<p><abbr title="adjective">adj.</abbr> indoor, urban, domestic, household</p>
 		</dd>
 
 		<dt id="tonsi">tonsi</dt>
 		<dd>
-			<abbr title="adjective">adj.</abbr> non-binary, gender non-confirming, transgender
+			<p><abbr title="adjective">adj.</abbr> non-binary, gender non-confirming, transgender</p>
 		</dd>
 
 		<dt id="tu">tu</dt>
 		<dd>
-			<abbr title="number">num.</abbr> two<br>
-			<abbr title="noun">n.</abbr> duo, pair<br>
-			<abbr title="adjective">adj.</abbr> divided<br>
-			<abbr title="verb">v.</abbr> double, divide
+			<p><abbr title="number">num.</abbr> two</p>
+			<p><abbr title="noun">n.</abbr> duo, pair</p>
+			<p><abbr title="adjective">adj.</abbr> divided</p>
+			<p><abbr title="verb">v.</abbr> double, divide</p>
 			<aside>
 				<blockquote>
 					<p>Using &ldquo;tu&rdquo; at the end of a noun phrase is generally associated with the number 2. The meaning &ldquo;divided&rdquo; is usually specified by using a &ldquo;li&rdquo; particle:</p>
@@ -958,37 +971,39 @@
 			</aside>
 		</dd>
 
+		<a name="letter-u"></a>
 		<dt id="unpa">unpa</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> sex, sexuality<br>
-			<abbr title="adjective">adj.</abbr> sexual, erotic<br>
-			<abbr title="verb">v.</abbr> have sex (with)
+			<p><abbr title="noun">n.</abbr> sex, sexuality</p>
+			<p><abbr title="adjective">adj.</abbr> sexual, erotic</p>
+			<p><abbr title="verb">v.</abbr> have sex (with)</p>
 		</dd>
 
 		<dt id="uta">uta</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> mouth, lips, jaw<br>
-			<abbr title="adjective">adj.</abbr> oral
+			<p><abbr title="noun">n.</abbr> mouth, lips, jaw</p>
+			<p><abbr title="adjective">adj.</abbr> oral</p>
 		</dd>
 
 		<dt id="utala">utala</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> fight, attack, challenge, battle, conflict, disharmony, competition, war, argument<br>
-			<abbr title="adjective">adj.</abbr> aggressive, warlike, violent<br>
-			<abbr title="verb">v.</abbr> fight, hit, attack, battle, challenge, compete against, struggle against
+			<p><abbr title="noun">n.</abbr> fight, attack, challenge, battle, conflict, disharmony, competition, war, argument</p>
+			<p><abbr title="adjective">adj.</abbr> aggressive, warlike, violent</p>
+			<p><abbr title="verb">v.</abbr> fight, hit, attack, battle, challenge, compete against, struggle against</p>
 		</dd>
 
+		<a name="letter-w"></a>
 		<dt id="walo">walo</dt>
 		<dd>
-			<abbr title="adjective">adj.</abbr> white, whitish, light-coloured, pale
+			<p><abbr title="adjective">adj.</abbr> white, whitish, light-coloured, pale</p>
 		</dd>
 
 		<dt id="wan">wan</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> unit, element, particle, part, piece<br>
-			<abbr title="adjective">adj.</abbr> unique, united (with li)<br>
-			<abbr title="number">num.</abbr> one<br>
-			<abbr title="verb">v.</abbr> to unite
+			<p><abbr title="noun">n.</abbr> unit, element, particle, part, piece</p>
+			<p><abbr title="adjective">adj.</abbr> unique, united (with li)</p>
+			<p><abbr title="number">num.</abbr> one</p>
+			<p><abbr title="verb">v.</abbr> to unite</p>
 			<aside>
 				<blockquote>
 					<p>Using &ldquo;wan&rdquo; at the end of a noun phrase is generally associated with the number 1. The meaning &ldquo;united&rdquo; is usually specified by using a &ldquo;li&rdquo; particle:</p>
@@ -1005,29 +1020,29 @@
 
 		<dt id="waso">waso</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> bird, flying creature, winged animal
+			<p><abbr title="noun">n.</abbr> bird, flying creature, winged animal</p>
 		</dd>
 
 		<dt id="wawa">wawa</dt>
 		<dd>
-			<abbr title="adjective">adj.</abbr> strong, powerful, confident, sure, energetic, intense, fierce<br>
-			<abbr title="noun">n.</abbr> strength, power, energy<br>
-			<abbr title="verb">v.</abbr> strengthen, energize, empower
+			<p><abbr title="adjective">adj.</abbr> strong, powerful, confident, sure, energetic, intense, fierce</p>
+			<p><abbr title="noun">n.</abbr> strength, power, energy</p>
+			<p><abbr title="verb">v.</abbr> strengthen, energize, empower</p>
 		</dd>
 
 		<dt id="weka">weka</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> absence, remoteness<br>
-			<abbr title="adjective">adj.</abbr> absent, away, missing, ignored, remote<br>
-			<abbr title="verb">v.</abbr> remove, get rid of
+			<p><abbr title="noun">n.</abbr> absence, remoteness</p>
+			<p><abbr title="adjective">adj.</abbr> absent, away, missing, ignored, remote</p>
+			<p><abbr title="verb">v.</abbr> remove, get rid of</p>
 		</dd>
 
 		<dt id="wile">wile</dt>
 		<dd>
-			<abbr title="noun">n.</abbr> want, need, desire<br>
-			<abbr title="adjective">adj.</abbr> desired, needed, required, necessary<br>
-			<abbr title="verb">v.</abbr> must, need, require, should, want, wish<br>
-			<abbr title="pre-verb">pv.</abbr> must do, need to, require something, should do, want to, wish to
+			<p><abbr title="noun">n.</abbr> want, need, desire</p>
+			<p><abbr title="adjective">adj.</abbr> desired, needed, required, necessary</p>
+			<p><abbr title="verb">v.</abbr> must, need, require, should, want, wish</p>
+			<p><abbr title="pre-verb">pv.</abbr> must do, need to, require something, should do, want to, wish to</p>
 		</dd>
 	</dl>
 
@@ -1045,29 +1060,83 @@
 		<i>mi wile suli e lipu ni tawa pona mute a!</i>
 	</div>
 </footer>
-<!--<script>
+<script>
 /* Minified from https://github.com/bevacqua/fuzzysearch/blob/master/index.js */
 function fuzzysearch(r,e){var n=e.length,t=r.length;if(n<t)return!1;if(t===n)return r===e;r:for(var f=0,u=0;f<t;f++){for(var a=r.charCodeAt(f);u<n;)if(e.charCodeAt(u++)===a)continue r;return!1}return!0}
-</script>-->
+</script>
 <script>
 const wordEls = document.querySelectorAll('dl>dt');
-const uniqueLetters = new Set(Array.from(wordEls).map(w => w.innerText[0]))
-const letterJump = document.querySelector('nav > ul')
-uniqueLetters.forEach(l => {
-	letterJump.innerHTML += `<li><a href="#letter-${l}">${l}</a></li>`;
-	const first = Array.from(wordEls).find(w => w.innerText[0] === l);
-	const anchor = document.createElement('a');
-	anchor.name = `letter-${l}`;
-	first.parentElement.insertBefore(anchor, first);
+const dictionary = {};
+Array.from(wordEls).forEach(w => {
+	const ddChildren = w.nextElementSibling.children;
+	dictionary[w.innerText] = {
+		el: w,
+		id: w.id,
+		definitions: Array.from(ddChildren).filter(el => el.tagName.toLowerCase() === 'p').map(el => {
+			const pos = el.querySelector('abbr');
+			return {
+				el,
+				pos,
+				def: el.innerText.replace(pos.innerText, '').trim(),
+			};
+		}),
+	};
 });
-// const form = document.getElementById('search');
-// const full = document.querySelector('dl').innerHTML;
-// const posEls = document.querySelectorAll('dd>i');
-// const pos = new Set(Array.from(posEls).map(i=>i.innerText));
-// pos.forEach(p => form.pos.innerHTML += `<label><input name="filter" type="checkbox" value="${p}" checked>${p}</label>`);
-// function search(e) {
-// 	e.preventDefault();
-// }
+const form = document.getElementById('search');
+const full = document.querySelector('dl').innerHTML;
+const posEls = document.querySelectorAll('dd abbr');
+const pos = new Set(Array.from(posEls).map(p=>p.title).filter(p=>!!p).sort());
+pos.forEach(p => {
+	form.pos.innerHTML += `<label><input name="filter" type="checkbox" value="${p}" checked>${p}</label>`;
+});
+Array.from(form.pos.querySelectorAll('input')).forEach(p => {
+	p.onchange = e => filter(e);
+});
+function search(e) {
+	if (e) e.preventDefault();
+	const term = form.query.value;
+	const where = form.in.value;
+	for (const word in dictionary) {
+		let match = false;
+		if (['word', 'any'].includes(where) && !match) {
+			match = fuzzysearch(term, word);
+		}
+		if (['def', 'any'].includes(where) && !match) {
+			const defs = dictionary[word].definitions;
+			for (let i = 0; i < defs.length; i++) {
+				match = fuzzysearch(term, defs[i].def);
+				if (match) break;
+			}
+		}
+		if (term.length > 0 && !match) {
+			dictionary[word].el.style.display = 'none';
+			dictionary[word].el.nextElementSibling.style.display = 'none';
+		} else {
+			dictionary[word].el.style.display = '';
+			dictionary[word].el.nextElementSibling.style.display = '';
+		}
+	}
+}
+function filter() {
+	const active = Array.from(form.filter).filter(f => f.checked).map(f => f.value);
+	posEls.forEach(p => {
+		if (!active.includes(p.title)) {
+			p.parentElement.style.display = 'none';
+		} else {
+			p.parentElement.style.display = '';
+		}
+		const dd = p.parentElement.parentElement;
+		const definitionHidden = Array.from(dd.children).every(e => e.style.display === 'none');
+		if (definitionHidden) {
+			dd.style.display = 'none';
+			dd.previousElementSibling.style.display = 'none';
+		} else {
+			dd.style.display = '';
+			dd.previousElementSibling.style.display = '';
+		}
+	});
+}
+form.style.display = '';
 </script>
 </body>
 </html>
