@@ -11,7 +11,7 @@
 	/* From https://github.com/Alamantus/lighter/blob/master/dist/lighter.css */
 	.c-white{color:#fff}.bg-primary{background-color:#409}.bg-accent{background-color:#f73}.m0{margin:0}.p0{padding:0}.tc{text-align:center}
 	/* Custom */
-	header,footer{margin:0}header>.c,footer>.c{padding-top:2em;padding-bottom:2em}a:is([target="_blank"]):after{font-size:70%;vertical-align:top;margin-left:3px;content:"\29C9"}nav ul{list-style:none;margin:.5em 0;padding:0}nav li{display:inline-block;margin:0 .5em}label{display:inline-block}dt{font-weight:bold;margin-bottom:0}dd{margin:0 0 1em 1em}dd abbr{padding-right:1em;text-decoration:none;font-style:italic;cursor:help}dd>aside{margin:.2em 1em;padding:.5em;border:1px solid #ddd;font-size:12pt}
+	header,footer{margin:0}header>.c,footer>.c{padding-top:2em;padding-bottom:2em}a:is([target="_blank"]):after{font-size:70%;vertical-align:top;margin-left:3px;content:"\29C9"}nav ul{list-style:none;margin:.5em 0;padding:0}nav li{display:inline-block;margin:0 .5em}label{display:inline-block;margin:.2em .5em}dt{font-weight:bold;margin-bottom:0}dd{margin:0 0 1em 1em}dd>p{margin:0 0 .2em}dd abbr{padding-right:1em;text-decoration:none;font-style:italic;cursor:help}dd>aside{margin:.2em 1em;padding:.5em;border:1px solid #ddd;font-size:12pt}
 	</style>
 </head>
 <body>
@@ -40,7 +40,7 @@
 	<form id="search" style="display:none" onsubmit="search(event)">
 		<fieldset id="what">
 			<legend>Search</legend>
-			<label>for <input name="query"></label>
+			<label>for <input name="query" type="search" oninput="search(event)"></label>
 			<label for="in">in</label>
 			<label><input name="in" type="radio" value="word" onchange="search()" checked>word</label>
 			<label><input name="in" type="radio" value="def" onchange="search()">definition(s)</label>
@@ -50,7 +50,7 @@
 			<legend>Filter Parts of Speech</legend>
 		</fieldset>
 	</form>
-	<dl>
+	<dl id="dictionary">
 		<a name="letter-a"></a>
 		<dt id="a">a</dt>
 		<dd>
@@ -1062,7 +1062,7 @@
 </footer>
 <script>
 /* Minified from https://github.com/bevacqua/fuzzysearch/blob/master/index.js */
-function fuzzysearch(r,e){var n=e.length,t=r.length;if(n<t)return!1;if(t===n)return r===e;r:for(var f=0,u=0;f<t;f++){for(var a=r.charCodeAt(f);u<n;)if(e.charCodeAt(u++)===a)continue r;return!1}return!0}
+function fuzzysearch(n,h){var nl=h.length,hl=n.length;if(nl<hl)return!1;if(hl===nl)return n===h;n:for(var f=0,u=0;f<hl;f++){for(var a=n.charCodeAt(f);u<nl;)if(h.charCodeAt(u++)===a)continue n;return!1}return!0}
 </script>
 <script>
 const wordEls = document.querySelectorAll('dl>dt');
@@ -1096,25 +1096,55 @@ function search(e) {
 	if (e) e.preventDefault();
 	const term = form.query.value;
 	const where = form.in.value;
+	const matches = [];
 	for (const word in dictionary) {
-		let match = false;
-		if (['word', 'any'].includes(where) && !match) {
-			match = fuzzysearch(term, word);
+		let weight = 1;
+		if (['word', 'any'].includes(where) && weight > 0) {
+			// If the term is exact, sort it higher. If it's fuzzy, don't move it. Otherwise, sort it lower.
+			weight = term === word ? -1 : (fuzzysearch(term, word) ? 0 : 1);
 		}
-		if (['def', 'any'].includes(where) && !match) {
+		if (['def', 'any'].includes(where) && weight > 0) {
 			const defs = dictionary[word].definitions;
+			const regexp = new RegExp(`.*${term}.*`, 'i');
+			// Check each definition, and if it contains the term, sort it higher. If it's fuzzy, don't move it. If a previous definition was fuzzy, don't move it. Otherwise sort it lower.
 			for (let i = 0; i < defs.length; i++) {
-				match = fuzzysearch(term, defs[i].def);
-				if (match) break;
+				const def = defs[i].def;
+				weight = def.match(regexp) !== null ? -1 : (
+					fuzzysearch(term, def) ? 0 : (
+						weight < 1 ? weight : 1
+					)
+				);
+				if (weight < 0) break;
 			}
 		}
-		if (term.length > 0 && !match) {
-			dictionary[word].el.style.display = 'none';
-			dictionary[word].el.nextElementSibling.style.display = 'none';
-		} else {
-			dictionary[word].el.style.display = '';
-			dictionary[word].el.nextElementSibling.style.display = '';
+		if (weight < 1) {
+			matches.push({
+				word,
+				weight,
+			});
 		}
+	}
+
+	const dictionaryEl = document.getElementById('dictionary');
+	const results = document.getElementById('results');
+	if (results) results.parentElement.removeChild(results);
+	if (term.length > 0) {
+		dictionaryEl.style.display = 'none';
+		const results = document.createElement('dl');
+		results.id = 'results';
+		if (matches.length > 0) {
+			matches.sort((a, b) => a.weight);
+			for (let i = 0; i < matches.length; i++) {
+				const matchWord = matches[i].word;
+				results.appendChild(dictionary[matchWord].el.cloneNode(true));
+				results.appendChild(dictionary[matchWord].el.nextElementSibling.cloneNode(true));
+			}
+		} else {
+			results.innerHTML = `<p>No matches found for ${term}</p>`;
+		}
+		dictionaryEl.parentElement.insertBefore(results, dictionaryEl);
+	} else {
+		dictionaryEl.style.display = '';
 	}
 }
 function filter() {
@@ -1126,7 +1156,7 @@ function filter() {
 			p.parentElement.style.display = '';
 		}
 		const dd = p.parentElement.parentElement;
-		const definitionHidden = Array.from(dd.children).every(e => e.style.display === 'none');
+		const definitionHidden = Array.from(dd.children).every(e => e.style.display === 'none' || e.tagName.toLowerCase() === 'aside');
 		if (definitionHidden) {
 			dd.style.display = 'none';
 			dd.previousElementSibling.style.display = 'none';
@@ -1135,6 +1165,9 @@ function filter() {
 			dd.previousElementSibling.style.display = '';
 		}
 	});
+	if (form.query.value.length > 0) {
+		search();
+	}
 }
 form.style.display = '';
 </script>
