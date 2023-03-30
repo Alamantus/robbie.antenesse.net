@@ -38,7 +38,7 @@ If you're like me, you've enjoyed Google's free photo upload system as a wildly 
 
 If you're not willing to pay Google and/or you're concerned about your [data privacy](https://en.wikipedia.org/wiki/Privacy_concerns_regarding_Google) (or maybe you just want to get your photos off Google to put on a different cloud hosting platform), read on! Do be warned, Google doesn't _want_ you to switch platforms, so they make it as inconvenient as possible to accomplish your goal. It's annoying and it takes a long time, but you stick with it, you can do it and this guide will help you!
 
-<aside>I also packaged up my own Google Photos export organizer so you can get your photos exported and sorted into a more usable and easier to view format. That'll be covered <a href="#processing-your-export">further down in the guide</a>.</aside>
+<aside>I also packaged up my own Google Photos export organizer so you can get your photos exported and sorted into a more usable and easier to view format. That's be covered <a href="#processing-your-export">further down in the guide</a>, but after more than 2 years, it's likely that Google has changed their metadata format and made the organizer obsolete.</aside>
 
 ## Getting Started
 
@@ -221,6 +221,11 @@ figure.src-replace figcaption {
 ## Processing Your Export
 
 When you're finally done extracting and merging, you'll have all of your images from Google Photos in one place on your own computer! You did it!
+
+<div class="card callout">
+<p><strong>Please note:</strong> the Google Photos Export Organizer app linked here is at least 2 years out of date, and some have reported that it does not work correctly for them anymore.</p>
+<p>I do not plan to do significant work to get it working again, so the rest of this post may no longer be helpful!</p>
+</div>
 
 But if you actually want to be able to look through your pictures in any reasonable way, you'll need to do something about the bonkers folder structure that Google left you with. To do that, you would need to go through and organize things yourself, which is commendable and perfectly respectable, but it's a huge pain in the butt and takes absolutely forever.
 
