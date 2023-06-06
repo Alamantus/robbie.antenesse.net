@@ -3,7 +3,7 @@ layout: project
 title: Lexiconga
 time: 2015–Ongoing
 slug: lexiconga
-link: https://lexicon.ga
+link: https://lexiconga.com
 order: 2
 ---
 
