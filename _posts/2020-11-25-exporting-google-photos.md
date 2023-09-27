@@ -233,7 +233,7 @@ Luckily, I made a script for myself during the process, and I've tweaked it and 
 
 The program goes through your extracted Google Photos folder and moves every image and video it finds into nicely-organized folders based on the year and month the photo was taken (or created)! It can also extract _and_ merge the files for you to save you the effort of doing that manually!
 
-<a href="https://alamantus.github.io/GooglePhotosExportOrganizer/" class="primary button umami--click--Google-Photos-Export-Organizer">
+<a href="https://alamantus.github.io/GooglePhotosExportOrganizer/" class="primary button tinystats">
   Get the Google Photos Export Organizer
 </a>
 

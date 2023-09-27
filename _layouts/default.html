@@ -65,21 +65,32 @@
 
   {% include footer.html %}
 
-<!-- Matomo -->
-<script>
-  var _paq = window._paq = window._paq || [];
-  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="//analytics.alamantus.com/";
-    _paq.push(['setTrackerUrl', u+'matomo.php']);
-    _paq.push(['setSiteId', '1']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-  })();
+<script type="text/javascript" src="https://stats.alamantus.com/"></script>
+<script type="text/javascript">
+(function() {
+  window.tinystats = new TinyStats(function () {
+    const extraData = {};
+    if (document.referrer) extraData.referrer = document.referrer;
+    if (this.clickTrigger) {
+      extraData.clicked = {
+        text: this.clickTrigger.innerText,
+      };
+      if (this.clickTrigger.href) extraData.clicked.href = this.clickTrigger.href;
+      if (this.clickTrigger.id) extraData.clicked.id = this.clickTrigger.id;
+      delete this.clickTrigger;
+    }
+    const hasData = Object.keys(extraData).reduce((result, key) => (result === true || Object.hasOwn(extraData, key)), false);
+    return hasData ? extraData : null;
+  });
+  document.querySelectorAll('.tinystats').forEach(el => {
+    el.addEventListener('click', e => {
+      window.tinystats.clickTrigger = event.target;
+      window.tinystats.report();
+    });
+  });
+  window.tinystats.report();
+})();
 </script>
-<!-- End Matomo Code -->
 </body>
 
 </html>
