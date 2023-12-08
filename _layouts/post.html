@@ -21,6 +21,7 @@ layout: default
 </section>
 
 <section id="comments"{% if page.featured %} class="featured"{% endif %}>
+  <script type="text/javascript" src="https://alamantus.com/comments/comments.php"></script>
   {% if site.enable_comments == true and page.comments == true %}
   <header class="container">
     <h2>Leave a Comment</h2>
@@ -47,6 +48,7 @@ layout: default
     </form>
   </header>
   {% endif %}
+  {% comment %}
   {% for p in site.data.comments %}
   {% if p[0] == page_slug %}
   <section class="container">
@@ -69,4 +71,5 @@ layout: default
   </section>
   {% endif %}
   {% endfor %}
+  {% endcomment %}
 </section>
