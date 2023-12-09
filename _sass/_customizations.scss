@@ -65,7 +65,7 @@ main > section {
   display: block;
 }
 
-.container {
+.container, .hashover {
   width: 95%;
   max-width: 1000px;
   margin: 0 auto;
@@ -212,11 +212,10 @@ button, .button {
 }
 
 #comments {
-  @extend .background-green;
-
+  background-color: $green;
   padding-bottom: 1.2em;
 
-  header form {
+  /*header form {
     box-shadow: $picnic-card-shadow;
     border-radius: $picnic-card-radius;
     border: $picnic-card-border;
@@ -244,7 +243,7 @@ button, .button {
         margin-bottom:1em;
       }
     }
-  }
+  }*/
 }
 
 .featured {
@@ -275,7 +274,7 @@ button, .button {
   figure {
     margin: 1em auto;
   }
-  .container {
+  .container, .hashover {
     max-width: 850px;
   }
   .fancy-accent.top { bottom: 90%; }
