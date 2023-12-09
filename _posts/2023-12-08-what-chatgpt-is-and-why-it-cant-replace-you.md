@@ -1,6 +1,6 @@
 ---
 layout: post
-title: What ChatGPT Is and Why It Can't Replace You
+title: "How ChatGPT Works (In Simple Terms) and Why You Still Matter"
 date: 2023-12-08 20:15:00 -0700
 comments: true
 tags:
@@ -18,6 +18,7 @@ tags:
 - responsibility
 - writing
 - content creation
+- natural language
 ---
 There's an awful lot of hype and fervor around ChatGPT and other impressive chatbots
 that reply with very natural-sounding responses being called "Artificial
