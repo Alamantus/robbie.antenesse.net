@@ -236,9 +236,9 @@ instead of just the amalgamation of billions of things produced before.
 
 Beyond plagiarism, many employers and content producers have already attempted
 to [cut costs](https://blog.dropbox.com/topics/company/a-message-from-drew)
-([web archives](https://web.archive.org/web/20231204190826/https:/blog.dropbox.com/topics/company/a-message-from-drew))
+([web archive](https://web.archive.org/web/20231204190826/https:/blog.dropbox.com/topics/company/a-message-from-drew))
 by [replacing their employees](https://www.businessinsider.com/microsoft-news-cuts-dozens-of-staffers-in-shift-to-ai-2020-5)
-([web archives](https://web.archive.org/web/20231103174038/https:/www.businessinsider.com/microsoft-news-cuts-dozens-of-staffers-in-shift-to-ai-2020-5))
+([web archive](https://web.archive.org/web/20231103174038/https:/www.businessinsider.com/microsoft-news-cuts-dozens-of-staffers-in-shift-to-ai-2020-5))
 with AI powered by GPTs. This misguided overreliance on AI is a huge problem,
 not only for the real human experts losing their jobs but also for users of
 the end product, which quite possibly contains wildly inaccurate information.
