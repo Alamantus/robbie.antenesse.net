@@ -92,9 +92,9 @@ caused by homonymns and also allows very clever manipulation of words. The vecto
 representation of tokens even allows mathematical computation between tokens
 to get new words based on how the relationships between vectors has been
 previously seen and used before. These mathematical relationships inevitably
-reveal very interesting correlations between words and concepts that shine a
+reveal interesting correlations between words and concepts that additionally shine a
 light on any biases present in the LLM's text samples.</p>
-<p>[This article](https://www.understandingai.org/p/large-language-models-explained-with)
+<p><a href="https://www.understandingai.org/p/large-language-models-explained-with" target="_blank">This article</a>
 does a great job going into even more detail to explain exactly how these
 numerical structures work and gives a good sense of just how overwhelming
 the scope of these connections are. Anyway, while the idea of "word proximity" as
