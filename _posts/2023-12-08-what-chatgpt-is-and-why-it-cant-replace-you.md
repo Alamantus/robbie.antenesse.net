@@ -78,6 +78,31 @@ in that the software developers have gone to great lengths to collect an
 unfathomable number of sample texts and meticulously categorize those samples
 in as many ways as possible.
 
+<details>
+<summary style="cursor:pointer;font-style:italic;">Expand for some more additional advanced context about LLMs</summary>
+
+<p>Since posting, some concern has been raised about the simplified explanation of
+LLMs in this section, so here's some details about how LLMs specifically use
+sets of numbers (called "vectors") to create context for the words in their database.</p>
+<p>Rather than literally using the text of words and how they are placed in relation
+to each other, every word (called a "token") is represented as a vector, and every
+token vector is associated with other token vectors based on how they have been
+used in the sample data in the database. Storing words this way removes the problems
+caused by homonymns and also allows very clever manipulation of words. The vector
+representation of tokens even allows mathematical computation between tokens
+to get new words based on how the relationships between vectors has been
+previously seen and used before. These mathematical relationships inevitably
+reveal very interesting correlations between words and concepts that shine a
+light on any biases present in the LLM's text samples.</p>
+<p>[This article](https://www.understandingai.org/p/large-language-models-explained-with)
+does a great job going into even more detail to explain exactly how these
+numerical structures work and gives a good sense of just how overwhelming
+the scope of these connections are. Anyway, while the idea of "word proximity" as
+I use it in this post is indeed an oversimplification of how the text data is used,
+I believe it is plenty to help most people to get a better grasp of the massive
+matrix of word relationships modeled by large language models.</p>
+</details>
+
 ## What is a GPT and How Does It Work?
 
 The "GPT" in "ChatGPT" stands for "Generative Pre-trained Transformer." To
@@ -174,7 +199,7 @@ working with, analyzing, categorizing, and organizing gigabytes (possibly
 terabytes) of text samples that are processed and used based on prompts that
 _anyone_ can supply. For reference, one letter is a _byte_ and a _gigabyte_
 is roughly a _trillion_ bytes while a terabyte is _one thousand gigabytes_—the
-average novel is about 10 _thousand_ words totaling only a few hundred thousand
+average novel is around 50 _thousand_ words totaling only a few hundred thousand
 bytes total.
 
 Add in the fact that ChatGPT stores previous input and output to create a
