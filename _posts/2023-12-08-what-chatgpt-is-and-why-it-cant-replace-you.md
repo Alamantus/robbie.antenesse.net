@@ -201,7 +201,7 @@ working with, analyzing, categorizing, and organizing gigabytes (possibly
 terabytes) of text samples that are processed and used based on prompts that
 _anyone_ can supply. For reference, one letter is a _byte_ and a _gigabyte_
 is roughly a _trillion_ bytes while a terabyte is _one thousand gigabytes_—the
-average novel is about 10 _thousand_ words totaling only a few hundred thousand
+average novel is around 50 _thousand_ words totaling only a few hundred thousand
 bytes total.
 
 Add in the fact that ChatGPT stores previous input and output to create a
