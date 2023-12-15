@@ -88,7 +88,8 @@ in as many ways as possible.
   <p>Rather than literally using the text of words and how they are placed in relation
   to each other, every word (called a "token") is represented as a vector, and every
   token vector is associated with other token vectors based on how they have been
-  used in the sample data in the database. Storing words this way removes the problems
+  used in the sample data in the database. The text itself is stored in a separate data set
+  that the AI pulls from when using the model. Storing words this way removes the problems
   caused by homonymns and also allows very clever manipulation of words. The vector
   representation of tokens even allows mathematical computation between tokens
   to get new words based on how the relationships between vectors has been
@@ -200,7 +201,7 @@ the things that developers like OpenAI do with ChatGPT really are. They're
 working with, analyzing, categorizing, and organizing gigabytes (possibly
 terabytes) of text samples that are processed and used based on prompts that
 _anyone_ can supply. For reference, one letter is a _byte_ and a _gigabyte_
-is roughly a _trillion_ bytes while a terabyte is _one thousand gigabytes_—the
+is roughly a _billion_ bytes while a terabyte is _one thousand gigabytes_—the
 average novel is around 50 _thousand_ words totaling only a few hundred thousand
 bytes total.
 
