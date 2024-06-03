@@ -19,7 +19,9 @@ Robbie has several projects from several interests going.
     - Fixing bugs and writing extensions
 - Developed & released [siteleteer](https://alamantus.codeberg.page/siteleteer/)
     - Probably not a lot more to add to it moving forward...
-- Set up a home server for running [Invidious](https://github.com/iv-org/invidious) for myself
+- Experimenting with a rewrite for [Lexiconga](https://lexiconga.com)
+    - The 10-year anniversary is coming up in 2025, and I thought it would be nice to have a fresh take!
+- ~~Set up a home server for running [Invidious](https://github.com/iv-org/invidious) for myself~~ YouTube has been diligently killing any third-party access to its videos, so this is dead.
     - Using [Yattee](https://github.com/yattee/yattee) to play from my apple devices has been a major game-changer!
 
 ## Games
@@ -28,10 +30,11 @@ Robbie has several projects from several interests going.
     - It's a big one that involves changing some of the main words and adding more clarity for game masters.
 - Started playing [Tunic](https://tunicgame.com) on the Switch
     - Super interesting game design and awesome interconnected map design!
-
+- Started playing [Pokémon Legends: Arceus](https://legends.arceus.pokemon.com/en-us/)
+    - Very nice fresh take on the standard Pokémon formula with more strategic battles and interesting problems to solve! It would be great to see more like this.
 ## Home
 
 - Started learning to make yarn and crochet
-    - Got a Humble Bundle full of books, now I just need the tools to make things...
+    - Got a Humble Bundle full of books, and I crocheted a silly little hat for my puppy.
 - Training my new puppy
-    - She's adorable and extremely good for a puppy, but she's still a puppy with lots to learn...!
+    - She's adorable and extremely good for a puppy, but she's still a puppy with lots to learn.
