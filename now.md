@@ -8,7 +8,7 @@ This is Robbie's [Now Page](https://nownownow.com/about), which he tries to keep
 of things changing (but no promises). It contains assorted personal projects and accomplishments as well as
 more professional ones.
 
-This page was last updated on March 5, 2024.
+This page was last updated on June 3, 2024.
 
 Aside from his ongoing responsibilities of full-time work at [Touchstone IQ](https://touchstoneiq.com) and taking care of his 3 dogs,
 Robbie has several projects from several interests going.
@@ -38,3 +38,5 @@ Robbie has several projects from several interests going.
     - Got a Humble Bundle full of books, and I crocheted a silly little hat for my puppy.
 - Training my new puppy
     - She's adorable and extremely good for a puppy, but she's still a puppy with lots to learn.
+- Damaged the car and it had to be in the shop for more than 2 months
+    - Living with 1 car was really rough, but we made it through and have the car back again.
