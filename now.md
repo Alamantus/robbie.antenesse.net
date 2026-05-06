@@ -36,7 +36,8 @@ but he has been slowly working on improving his Feather Wiki project and is tryi
 - Caring for old dogs
     - Taking care of our older dog has kind of overtaken our whole life
     - Oldest dog needs weekly physical therapy and daily exercise, which is hard because she's being stubborn and lazy
-    - Second oldest dog needs more exercise than he's getting, but tnere's not enough time in the day
+    - Second oldest dog needs more exercise than he's getting, but there's not enough time in the day
+    - Youngest dog is such a good girl, and she deserves way more activity than she gets. The old lady's needs supercede everyone else's needs
 - Little improvements to our backyard deck
     - Adding extra shade and curtains so we can enjoy the deck even when the sun is out in force!
     - Added some decorative artificial plants to the side of the house to make it feel a little nicer.
