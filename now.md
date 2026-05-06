@@ -8,35 +8,35 @@ This is Robbie's [Now Page](https://nownownow.com/about), which he tries to keep
 of things changing (but no promises). It contains assorted personal projects and accomplishments as well as
 more professional ones.
 
-This page was last updated on June 3, 2024.
+This page was last updated on May 6, 2026.
 
-Aside from his ongoing responsibilities of full-time work at [Touchstone IQ](https://touchstoneiq.com) and taking care of his 3 dogs,
-Robbie has several projects from several interests going.
+Robbie has primarily been focused on his ongoing responsibilities of full-time work at [Touchstone IQ](https://touchstoneiq.com) and taking care of his 3 dogs,
+but he has been slowly working on improving his Feather Wiki project and is trying to make more time for video games.
 
 ## Tech
 
 - Maintaining & supporting [Feather Wiki](https://feather.wiki)
-    - Fixing bugs and writing extensions
-- Developed & released [siteleteer](https://alamantus.codeberg.page/siteleteer/)
-    - Probably not a lot more to add to it moving forward...
-- Experimenting with a rewrite for [Lexiconga](https://lexiconga.com)
-    - The 10-year anniversary is coming up in 2025, and I thought it would be nice to have a fresh take!
-- ~~Set up a home server for running [Invidious](https://github.com/iv-org/invidious) for myself~~ YouTube has been diligently killing any third-party access to its videos, so this is dead.
-    - Using [Yattee](https://github.com/yattee/yattee) to play from my apple devices has been a major game-changer!
+    - Adding translations and releasing version 1.9.0 soon!
+- Wrestling with generative AI
+    - Hoping this bubble bursts before the blast radius gets irreversably large...
 
 ## Games
 
-- Working on an update to [The GUTS+ System](https://guts.plus)
+- Trying to find time to update [The GUTS+ System](https://guts.plus)
     - It's a big one that involves changing some of the main words and adding more clarity for game masters.
-- Started playing [Tunic](https://tunicgame.com) on the Switch
-    - Super interesting game design and awesome interconnected map design!
-- Started playing [Pokémon Legends: Arceus](https://legends.arceus.pokemon.com/en-us/)
-    - Very nice fresh take on the standard Pokémon formula with more strategic battles and interesting problems to solve! It would be great to see more like this.
+- Started playing [Sea of Stars](https://seaofstarsgame.co) on the Switch
+    - Fun turn-based [JRPG](https://en.wikipedia.org/wiki/History_of_Eastern_role-playing_video_games) that's made me realize that I just really do like JRPGs.
+    - Trying to stick with it and play it until the end, unlike many other games
+- I have so many other games I want to play
+    - Oh god, why do I keep collecting games?
+    - When do I think I'll actually be able to try any of them?
+
 ## Home
 
-- Started learning to make yarn and crochet
-    - Got a Humble Bundle full of books, and I crocheted a silly little hat for my puppy.
-- Training my new puppy
-    - She's adorable and extremely good for a puppy, but she's still a puppy with lots to learn.
-- Damaged the car and it had to be in the shop for more than 2 months
-    - Living with 1 car was really rough, but we made it through and have the car back again.
+- Caring for old dogs
+    - Taking care of our older dog has kind of overtaken our whole life
+    - Oldest dog needs weekly physical therapy and daily exercise, which is hard because she's being stubborn and lazy
+    - Second oldest dog needs more exercise than he's getting, but tnere's not enough time in the day
+- Little improvements to our backyard deck
+    - Adding extra shade and curtains so we can enjoy the deck even when the sun is out in force!
+    - Added some decorative artificial plants to the side of the house to make it feel a little nicer.
